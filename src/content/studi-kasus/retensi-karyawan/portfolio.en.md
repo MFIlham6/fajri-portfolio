@@ -1,8 +1,8 @@
 **The Retention Budget Was About to Be Split Between Two Departments, Yet All Seven Differ by Only 7.3 Points**
 
-Employee retention analysis · mid-sized technology company · Spreadsheet · 1,980 clean employee records from 2,010 raw rows
+Employee retention analysis, mid-sized technology company, Spreadsheet, 1,980 clean employee records from 2,010 raw rows
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, mfajriilhamn@gmail.com
 
 *Data note: the figures below come from a simulated dataset that mimics the staffing patterns of a technology company. It is not real company data, and it is not presented as work experience at any company.*
 

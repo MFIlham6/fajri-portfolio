@@ -1,6 +1,6 @@
 **Target Pendapatan Hendak Disusun dari Pertumbuhan 24,6%, Padahal Volume Awal Tahun Sudah Berhenti Bertambah**  
-Ramalan pendapatan · perusahaan menengah · Spreadsheet · 482 catatan keuangan bersih dari 500 baris mentah, 27 bulan  
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · mfajriilhamn@gmail.com  
+Ramalan pendapatan, perusahaan menengah, Spreadsheet, 482 catatan keuangan bersih dari 500 baris mentah, 27 bulan  
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, mfajriilhamn@gmail.com  
 *Catatan data: angka di bawah dihitung dari dataset simulasi yang meniru pola pencatatan keuangan perusahaan menengah. Ini bukan data perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*  
 **Ringkasan.** Sebuah perusahaan menengah hendak menyusun target pendapatan tahunan dari angka pertumbuhan 24,6% tahun sebelumnya. Angka itu benar, tetapi pembongkarannya menunjukkan seluruh kenaikan berasal dari bertambahnya jumlah transaksi, dan pada kuartal pertama tahun berjalan jumlah transaksi itu sudah tidak bertambah. Pekerjaan ini menghasilkan ramalan berbentuk rentang, satu angka anggaran beserta alasannya, dan daftar indikator yang bisa dipantau bulanan.  
 **Kenapa laporan ini ada.** Angka target menentukan lebih dari isi dokumen anggaran: ia jadi dasar target tiap tim, perencanaan perekrutan, dan batas biaya yang boleh direncanakan. Pimpinan keuangan meminta satu angka untuk rapat anggaran. Terlalu tinggi, seluruh organisasi mengejar volume yang kapasitasnya belum ada; terlalu rendah, sumber daya tidak disiapkan. Keputusan itu tetap akan diambil, dengan atau tanpa analisis.  

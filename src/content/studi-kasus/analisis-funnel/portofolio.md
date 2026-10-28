@@ -4,7 +4,7 @@ Studi kasus analisis funnel onboarding, dikerjakan dengan SQL
 
 Sebuah super-app tahu konversi totalnya 19,88%, tapi tidak tahu di tahap mana pengguna barunya hilang. Saya membangun funnel lima tahap dari 80.000 baris peristiwa untuk menjawabnya.
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1G4zWKbhuikCkt27hnz621Ik5kkPo6I1O) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1G4zWKbhuikCkt27hnz621Ik5kkPo6I1O), mfajriilhamn@gmail.com
 
 Catatan data: angka di halaman ini dihitung dari dataset latihan yang dirancang meniru pola peristiwa aplikasi super-app. Ini bukan data perusahaan sungguhan dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.
 

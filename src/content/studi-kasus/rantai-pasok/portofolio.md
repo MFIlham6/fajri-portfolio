@@ -1,8 +1,8 @@
-Studi kasus · SQL · ketepatan waktu pengiriman
+Studi kasus, SQL, ketepatan waktu pengiriman
 
 # Tiga jalur bervolume besar menyumbang 34,77% denda keterlambatan, dan tidak satu pun termasuk jalur dengan kinerja terendah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1z1ksCqZQyWMhGfFgOlkHnpAUVc1-hwCC) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1z1ksCqZQyWMhGfFgOlkHnpAUVc1-hwCC), mfajriilhamn@gmail.com
 
 Penafian: perusahaan dan datanya rekaan. Pekerjaan ini studi kasus latihan dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.
 

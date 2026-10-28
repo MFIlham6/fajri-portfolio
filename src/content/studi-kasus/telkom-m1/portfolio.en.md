@@ -1,8 +1,8 @@
-Case study · RevoU × Telkom Indonesia · Milestone 1
+Case study, RevoU × Telkom Indonesia, Milestone 1
 
 # OCA Message Volume Fell 28% in One Quarter, and the Drop in Email Was the Main Cause
 
-Tableau Public · Solo · Dashboard, KPI Reporting, Channel Analysis, Stakeholder Mapping
+Tableau Public, Solo, Dashboard, KPI Reporting, Channel Analysis, Stakeholder Mapping
 
 ## 1. Summary
 
@@ -106,7 +106,7 @@ SMS almost always succeeds and accounts for 38.7% of revenue, but holds only 16%
 
 The data covers only one quarter, so it can't yet be told whether the email drop is seasonal or comes from a technical problem. The exact cause also can't be seen from transaction data alone and needs email delivery logs.
 
-Audit trail: [Tableau Public dashboard](https://public.tableau.com/views/OCAIndonesia-UnifiedChannelPerformance/OCAIndonesia-UnifiedChannelPerformance) · Stakeholder presentation slides, 18 slides, PDF (link to come)
+Audit trail: [Tableau Public dashboard](https://public.tableau.com/views/OCAIndonesia-UnifiedChannelPerformance/OCAIndonesia-UnifiedChannelPerformance), Stakeholder presentation slides, 18 slides, PDF (link to come)
 
 ### If I did it again
 

@@ -1,10 +1,10 @@
-Demand forecasting case study · Python (Google Colab) · practice data
+Demand forecasting case study, Python (Google Colab), practice data
 
 # August 2022 Stock Forecast for Five Q-Commerce Hubs: The Simplest Method Turned Out to Be the Most Accurate
 
 August demand is forecast at 394,242 units, with 40% in the last week. SARIMA, first chosen for its 5.04% MAPE, missed by 14% to 80% when tested on forecasting a full month.
 
-Mochamad Fajri Ilham, Team 6 · notebook and supporting files: [Google Drive folder](https://drive.google.com/drive/folders/1jk8wOdxjqNUFT7m-CwR94zbNxKYuf3Tq) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham, Team 6, notebook and supporting files: [Google Drive folder](https://drive.google.com/drive/folders/1jk8wOdxjqNUFT7m-CwR94zbNxKYuf3Tq), mfajriilhamn@gmail.com
 
 The company and its data are fictional, for practice. Every figure is calculated from the same shipment file and can be recalculated with its notebook.
 

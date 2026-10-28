@@ -1,6 +1,6 @@
 **A Revenue Target Was About to Be Built on 24.6% Growth, Yet Early-Year Volume Had Already Stopped Rising**  
-Revenue forecast · mid-sized company · Spreadsheet · 482 clean financial records from 500 raw rows, 27 months  
-Mochamad Fajri Ilham Nurdin · completed October 2026 · mfajriilhamn@gmail.com  
+Revenue forecast, mid-sized company, Spreadsheet, 482 clean financial records from 500 raw rows, 27 months  
+Mochamad Fajri Ilham Nurdin, completed October 2026, mfajriilhamn@gmail.com  
 *Data note: the figures below come from a simulated dataset that mimics the financial records of a mid-sized company. It is not real company data, and it is not presented as work experience at any company.*  
 **Summary.** A mid-sized company was about to set its annual revenue target from the previous year's 24.6% growth. That figure is correct, but breaking it down shows all of the increase came from a higher number of transactions, and in the first quarter of the current year that number had stopped rising. This work produces a forecast as a range, one budget figure with its reasoning, and a list of indicators that can be tracked monthly.  
 **Why this report exists.** The target figure decides more than the budget document: it becomes the basis for each team's target, hiring plans, and how much cost may be planned. The head of finance asked for one number for the budget meeting. Too high, and the whole organization chases volume it doesn't have the capacity for; too low, and resources aren't prepared. That decision will be made with or without an analysis.  

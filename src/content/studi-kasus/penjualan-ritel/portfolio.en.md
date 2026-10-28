@@ -1,8 +1,8 @@
 **Total Sales Were Inflated by 23.6% Before a Single Broken Row Was Touched**
 
-Retail sales analysis · ten-branch retail chain · Spreadsheet · 4,112 clean 2025 transactions from 5,145 raw rows
+Retail sales analysis, ten-branch retail chain, Spreadsheet, 4,112 clean 2025 transactions from 5,145 raw rows
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, mfajriilhamn@gmail.com
 
 *Data note: the figures below come from a simulated dataset that mimics the sales patterns of a multi-branch retailer. It is not real company data, and it is not presented as work experience at any company.*
 

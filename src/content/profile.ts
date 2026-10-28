@@ -36,7 +36,7 @@ export const profile = {
   education: {
     degree: t("B.Eng. Industrial Engineering", "S1 Teknik Industri"),
     school: "Telkom University",
-    meta: t("GPA 3.51 · Cum Laude · Graduated 2024", "IPK 3,51 · Cum Laude · Lulus 2024"),
+    meta: t("GPA 3.51, Cum Laude, Graduated 2024", "IPK 3,51, Cum Laude, Lulus 2024"),
   },
 };
 
@@ -166,7 +166,7 @@ const builtInExperience: Experience[] = [
   {
     id: "revou",
     org: "RevoU × Telkom Indonesia",
-    role: t("Virtual Data Analyst Intern · Remote", "Virtual Data Analyst Intern · Remote"),
+    role: t("Virtual Data Analyst Intern, Remote", "Virtual Data Analyst Intern, Remote"),
     date: t("August – October 2025", "Agustus sampai Oktober 2025"),
     intro: t(
       "A project-based virtual internship mentored by the RevoU and Telkom teams. I analyzed OCA Indonesia's WhatsApp, SMS, Email, and Voice Call transaction data, then completed two end-to-end projects with recommendations for the Product and Business teams.",
@@ -195,7 +195,7 @@ const builtInExperience: Experience[] = [
   {
     id: "duniatex",
     org: "PT Duniatex",
-    role: t("Production Planning and Inventory Control (PPIC) Intern · Ungaran", "Production Planning and Inventory Control (PPIC) Intern · Ungaran"),
+    role: t("Production Planning and Inventory Control (PPIC) Intern, Ungaran", "Production Planning and Inventory Control (PPIC) Intern, Ungaran"),
     date: t("July – October 2023", "Juli sampai Oktober 2023"),
     bullets: [
       t(
@@ -246,13 +246,16 @@ export type Cert = {
 const drivePdf = (id: string) => `https://drive.google.com/file/d/${id}/view`;
 const viewCert = t("View certificate", "Lihat sertifikat");
 
-export const certifications: Cert[] = [
+/** Certificates kept here but not shown on the site for now (by id). */
+const HIDDEN_CERTS = new Set(["windata"]);
+
+const allCertifications: Cert[] = [
   {
     id: "windata",
     title: "30 Days 30 Case Studies",
     issuer: "Windata Academy",
     badge: "30/30",
-    meta: t("October 2026 · In progress, 14 of 30 case studies done", "Oktober 2026 · Sedang berjalan, 14 dari 30 studi kasus selesai"),
+    meta: t("October 2026, In progress, 14 of 30 case studies done", "Oktober 2026, Sedang berjalan, 14 dari 30 studi kasus selesai"),
     description: t(
       "A program of one business case study per day. I work each case from raw data to a one-page decision memo and a portfolio, then a mentor grades it. The first seven cases use spreadsheets and the next seven use SQL. Topics range from retail sales and inventory to fraud detection and logistics.",
       "Program satu studi kasus bisnis per hari. Setiap kasus saya kerjakan dari data mentah sampai memo keputusan satu halaman dan portofolio, lalu dinilai mentor. Tujuh kasus pertama memakai spreadsheet dan tujuh berikutnya SQL. Topiknya beragam, dari penjualan ritel dan persediaan sampai deteksi kecurangan dan logistik.",
@@ -268,7 +271,7 @@ export const certifications: Cert[] = [
     title: "Supply Chain Management and Analytics",
     issuer: "Unilever via Coursera",
     badge: "SCM",
-    meta: t("Completed 24 September 2026 · Final grade 91.87% · 5 modules, about 30 hours", "Selesai 24 September 2026 · Nilai akhir 91,87% · 5 modul, sekitar 30 jam"),
+    meta: t("Completed 24 September 2026, Final grade 91.87%, 5 modules, about 30 hours", "Selesai 24 September 2026, Nilai akhir 91,87%, 5 modul, sekitar 30 jam"),
     description: t(
       "The first of four courses in the Unilever Supply Chain Data Analyst Professional Certificate.",
       "Kursus pertama dari empat dalam Unilever Supply Chain Data Analyst Professional Certificate.",
@@ -309,7 +312,7 @@ export const certifications: Cert[] = [
     title: "The Ultimate SAP S/4HANA Course 2026: From Zero to Expert",
     issuer: "Udemy",
     badge: "SAP",
-    meta: t("September 2026 · 36 sections across 12 topics", "September 2026 · 36 section dalam 12 topik"),
+    meta: t("September 2026, 36 sections across 12 topics", "September 2026, 36 section dalam 12 topik"),
     description: t(
       "An SAP S/4HANA course from ERP basics to the main business modules, with case studies in the key modules.",
       "Kursus SAP S/4HANA dari dasar ERP sampai modul bisnis utama, dengan studi kasus di modul-modul utamanya.",
@@ -343,7 +346,7 @@ export const certifications: Cert[] = [
     title: "Full-Stack Data Analytics",
     issuer: "RevoU",
     badge: "FSDA",
-    meta: t("February 2025 batch, completed June 2025 · Certificate of Excellence, issued October 2025", "Batch Februari 2025, selesai Juni 2025 · Certificate of Excellence, terbit Oktober 2025"),
+    meta: t("February 2025 batch, completed June 2025, Certificate of Excellence, issued October 2025", "Batch Februari 2025, selesai Juni 2025, Certificate of Excellence, terbit Oktober 2025"),
     description: t("A project-based data analytics program of about four months.", "Program data analytics berbasis proyek sekitar empat bulan."),
     modules: [
       t("Thinking about business with data: defining and communicating problems, business metrics across industries, and funnel analysis.", "Berpikir bisnis dengan data: mendefinisikan dan mengomunikasikan masalah, business metrics di berbagai industri, dan funnel analysis."),
@@ -368,10 +371,12 @@ export const certifications: Cert[] = [
   },
 ];
 
+export const certifications = allCertifications.filter((c) => !HIDDEN_CERTS.has(c.id));
+
 export const otherCertificates: { text: L; href?: string }[] = [
   {
-    text: t("SQL (Intermediate), HackerRank · March 2025 · 35-minute test, 2 problems, including complex joins", "SQL (Intermediate), HackerRank · Maret 2025 · Tes 35 menit, 2 soal, termasuk complex joins"),
+    text: t("SQL (Intermediate), HackerRank, March 2025, 35-minute test, 2 problems, including complex joins", "SQL (Intermediate), HackerRank, Maret 2025, Tes 35 menit, 2 soal, termasuk complex joins"),
     href: "https://www.hackerrank.com/certificates/8048624cf458",
   },
-  { text: t("EPrT English Proficiency Test, Telkom University · July 2024 · Score 523", "EPrT English Proficiency Test, Telkom University · Juli 2024 · Skor 523"), href: drivePdf("1tZjj22rHik3iHCD-9ar26BWm-WvH6aHV") },
+  { text: t("EPrT English Proficiency Test, Telkom University, July 2024, Score 523", "EPrT English Proficiency Test, Telkom University, Juli 2024, Skor 523"), href: drivePdf("1tZjj22rHik3iHCD-9ar26BWm-WvH6aHV") },
 ];

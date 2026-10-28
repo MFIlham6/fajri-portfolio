@@ -1,10 +1,10 @@
-**Case Study · Digital Ad Spend Efficiency**
+**Case Study, Digital Ad Spend Efficiency**
 
 # **Platform Efficiency Differs 2.4 Times, but Campaign Type Separates 4.0 Times**
 
-Ad spend efficiency analysis · digital marketing agency, three platforms · Spreadsheet · scope of 975 clean campaigns from 1,012 raw rows
+Ad spend efficiency analysis, digital marketing agency, three platforms, Spreadsheet, scope of 975 clean campaigns from 1,012 raw rows
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, completed October 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Data note: the figures below come from a dataset designed to mimic digital ad spending patterns. It is not real company data, and it is not presented as work experience at any company.*
 

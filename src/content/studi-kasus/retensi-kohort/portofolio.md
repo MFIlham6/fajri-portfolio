@@ -1,10 +1,10 @@
-Studi Kasus · Analisis Retensi Pelanggan Berlangganan
+Studi Kasus, Analisis Retensi Pelanggan Berlangganan
 
 # **Retensi Kohort Baru Tampak Runtuh 50 Poin, dan Penurunan Itu Ternyata Artefak Jendela Pengamatan**
 
-Analisis kohort dan retensi · perusahaan perangkat lunak berlangganan · Spreadsheet · lingkup lebih dari sepuluh ribu pengguna, 15 kohort bulanan
+Analisis kohort dan retensi, perusahaan perangkat lunak berlangganan, Spreadsheet, lingkup lebih dari sepuluh ribu pengguna, 15 kohort bulanan
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Catatan data: angka-angka di bawah dihitung dari dataset yang dirancang meniru pola langganan perangkat lunak. Ini bukan data sebuah perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

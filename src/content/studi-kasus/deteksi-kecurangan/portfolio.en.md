@@ -4,7 +4,7 @@ Review-priority queue case study, done with SQL
 
 A digital wallet's risk team can only review 200 cases a day out of about 50,000 transactions. I built a priority queue from four behavioral signals and checked what its thresholds and weights actually decide.
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1dNayzpUA-FOX7Diu8NGoEzT-vdKCQ91R) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1dNayzpUA-FOX7Diu8NGoEzT-vdKCQ91R), mfajriilhamn@gmail.com
 
 Data note: the figures on this page come from a practice dataset designed to mimic digital wallet transaction patterns. The company and its data are fictional, and this work is not presented as work experience at any company.
 

@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { children?: React.ReactNode; params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   if (!isLang(lang)) return {};
-  const title = `${profile.name} | Data Analyst · Supply Chain · PPIC`;
+  const title = `${profile.name} | Data Analyst, Supply Chain, PPIC`;
   const description = profile.tagline[lang];
   return {
     metadataBase: new URL(SITE_URL),

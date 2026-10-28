@@ -1,10 +1,10 @@
-Studi kasus cleaning dan analisis data · ritel e-commerce, supply chain · Python (pandas, SciPy)
+Studi kasus cleaning dan analisis data, ritel e-commerce, supply chain, Python (pandas, SciPy)
 
 # Keterlambatan Pengiriman DataCo: Masalahnya di Janji Kirim, Region dan Produk Tidak Berpengaruh
 
 57,3% pesanan DataCo tiba lewat janji. First Class dijanjikan 1 hari dan selalu tiba di hari ke-2, sementara Second Class sama lambatnya dengan Standard. Menyesuaikan janji First Class saja menurunkan keterlambatan ke 42,0%.
 
-Mochamad Fajri Ilham · notebook, data bersih, dan berkas pendukung: [folder Google Drive](https://drive.google.com/drive/folders/1duVt4871pYcAj2Dt2-O6mPjqh1F3nz2h) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham, notebook, data bersih, dan berkas pendukung: [folder Google Drive](https://drive.google.com/drive/folders/1duVt4871pYcAj2Dt2-O6mPjqh1F3nz2h), mfajriilhamn@gmail.com
 
 Dataset DataCo Smart Supply Chain dipublikasikan di Mendeley Data (Constante, Silva, dan Pereira, 2019, CC BY 4.0). Datanya hampir pasti hasil simulasi (lihat Temuan 5), jadi temuan di sini menjelaskan data tersebut, belum tentu operasi perusahaan nyata.
 

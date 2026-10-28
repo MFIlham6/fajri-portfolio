@@ -1,8 +1,8 @@
 **All 361 Reorder Points Sit Below Their Standard Formula, and the Gap Comes From a Single Operator**
 
-Inventory analysis · three-warehouse distribution network · Spreadsheet · scope of 361 clean SKUs from 401 raw rows
+Inventory analysis, three-warehouse distribution network, Spreadsheet, scope of 361 clean SKUs from 401 raw rows
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, completed October 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Data note: the figures below come from a simulated dataset that mimics the inventory patterns of a distribution network. It is not real company data, and it is not presented as work experience at any company.*
 

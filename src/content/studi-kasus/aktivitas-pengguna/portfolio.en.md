@@ -1,8 +1,8 @@
-User activity analysis case study · SQL · a head of product decides which feature to fund first
+User activity analysis case study, SQL, a head of product decides which feature to fund first
 
 # New-User Arrivals Fell From 340 to 25 a Month While Stickiness Sat at 24%, and That Decides Which Experiment Can Run First
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · full queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1SLtnN9fwUOx-oeWT-u6vaY2YYvxaiatJ) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, full queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1SLtnN9fwUOx-oeWT-u6vaY2YYvxaiatJ), mfajriilhamn@gmail.com
 
 The company, people, and data are fictional, made for practice. This work is a case study, not work experience at any company.
 

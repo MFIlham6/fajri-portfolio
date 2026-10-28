@@ -1,8 +1,8 @@
 **Total Penjualan Membengkak 23,6% Sebelum Satu Baris Rusak pun Disentuh**
 
-Analisis penjualan ritel · jaringan sepuluh cabang · Spreadsheet · 4.112 transaksi bersih 2025 dari 5.145 baris mentah
+Analisis penjualan ritel, jaringan sepuluh cabang, Spreadsheet, 4.112 transaksi bersih 2025 dari 5.145 baris mentah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, mfajriilhamn@gmail.com
 
 *Catatan data: angka di bawah dihitung dari dataset simulasi yang meniru pola penjualan ritel multi-cabang. Ini bukan data perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

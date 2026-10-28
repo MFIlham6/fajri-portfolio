@@ -28,7 +28,7 @@ export function ProjectCard({ p, lang, size }: { p: Project; lang: Lang; size?: 
           )}
         </span>
         <span className="pcard__meta">
-          <span className="mono">{projectContext(p, lang).join(" · ")}</span>
+          <span className="mono">{projectContext(p, lang).join(", ")}</span>
           {p.featured && <span className="pcard__badge mono">{ui.projects.featuredBadge}</span>}
         </span>
         <span className="pcard__title">{projectLabel(p, lang)}</span>

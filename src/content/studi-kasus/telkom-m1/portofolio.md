@@ -1,8 +1,8 @@
-Studi kasus · RevoU × Telkom Indonesia · Milestone 1
+Studi kasus, RevoU × Telkom Indonesia, Milestone 1
 
 # Volume pesan OCA turun 28% dalam satu kuartal, dan penurunan email menjadi penyebab utamanya
 
-Tableau Public · Dikerjakan sendiri · Dashboard, KPI Reporting, Analisis Channel, Stakeholder Mapping
+Tableau Public, Dikerjakan sendiri, Dashboard, KPI Reporting, Analisis Channel, Stakeholder Mapping
 
 ## 1. Ringkasan
 
@@ -106,7 +106,7 @@ SMS hampir selalu berhasil dan menyumbang 38,7% revenue, tetapi hanya memegang 1
 
 Data hanya mencakup satu kuartal, jadi belum bisa dibedakan apakah penurunan email bersifat musiman atau berasal dari masalah teknis. Penyebab pastinya juga tidak terlihat dari data transaksi saja dan membutuhkan log pengiriman email.
 
-Telusur: [Dashboard Tableau Public](https://public.tableau.com/views/OCAIndonesia-UnifiedChannelPerformance/OCAIndonesia-UnifiedChannelPerformance) · Slide presentasi ke stakeholder, 18 slide, PDF (link menyusul)
+Telusur: [Dashboard Tableau Public](https://public.tableau.com/views/OCAIndonesia-UnifiedChannelPerformance/OCAIndonesia-UnifiedChannelPerformance), Slide presentasi ke stakeholder, 18 slide, PDF (link menyusul)
 
 ### Kalau diulang
 

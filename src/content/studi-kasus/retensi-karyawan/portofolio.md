@@ -1,8 +1,8 @@
 **Anggaran Retensi Hendak Dibagi ke Dua Departemen, Padahal Ketujuhnya Hanya Berselisih 7,3 Poin**
 
-Analisis retensi karyawan · perusahaan teknologi menengah · Spreadsheet · 1.980 karyawan bersih dari 2.010 baris mentah
+Analisis retensi karyawan, perusahaan teknologi menengah, Spreadsheet, 1.980 karyawan bersih dari 2.010 baris mentah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, mfajriilhamn@gmail.com
 
 *Catatan data: angka di bawah dihitung dari dataset simulasi yang meniru pola kepegawaian perusahaan teknologi. Ini bukan data perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

@@ -1,10 +1,10 @@
-Year-on-year growth analysis case study · SQL · practice data
+Year-on-year growth analysis case study, SQL, practice data
 
 # 12.37% Growth Clears the 10% Bar, Carried by Volume and Four of Five Product Lines
 
 Revenue at the fictional distributor RetailMax rose from Rp 5,120.15 million to Rp 5,753.58 million. That figure held after 2,020 dirty rows were removed, but only six of the twelve months of 2025 actually cleared the bar.
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · full queries and their results: [Google Drive folder](https://drive.google.com/drive/folders/1KmSMKyHa7fL0Gdp-20WZ4ePFMs4QqNUi) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, full queries and their results: [Google Drive folder](https://drive.google.com/drive/folders/1KmSMKyHa7fL0Gdp-20WZ4ePFMs4QqNUi), mfajriilhamn@gmail.com
 
 The company and its data are fictional, made for Windata Academy practice. Every figure below is calculated from the same transaction file and can be recalculated by anyone.
 

@@ -1,8 +1,8 @@
-Studi kasus analisis aktivitas pengguna · SQL · kepala produk memutuskan fitur mana yang dibiayai lebih dulu
+Studi kasus analisis aktivitas pengguna, SQL, kepala produk memutuskan fitur mana yang dibiayai lebih dulu
 
 # Kedatangan pengguna baru turun dari 340 ke 25 orang sebulan saat stickiness diam di 24%, dan itu menentukan percobaan mana yang bisa dijalankan lebih dulu
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · kueri lengkap dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1SLtnN9fwUOx-oeWT-u6vaY2YYvxaiatJ) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri lengkap dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1SLtnN9fwUOx-oeWT-u6vaY2YYvxaiatJ), mfajriilhamn@gmail.com
 
 Perusahaan, tokoh, dan datanya rekaan untuk bahan latihan. Pekerjaan ini studi kasus, bukan pengalaman kerja di perusahaan mana pun.
 

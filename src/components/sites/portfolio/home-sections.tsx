@@ -242,7 +242,8 @@ export function OrganizationsSection({ lang }: { lang: Lang }) {
           {organizations.map((o, i) => (
             <li className="step" data-step key={o.role.en}>
               <span className="mono step__no">
-                {String(i + 1).padStart(2, "0")} · {o.date[lang]}
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                <span>{o.date[lang]}</span>
               </span>
               <h3>{o.role[lang]}</h3>
               <div className="step__media">

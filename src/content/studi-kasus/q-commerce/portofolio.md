@@ -1,10 +1,10 @@
-Studi kasus forecasting permintaan · Python (Google Colab) · data latihan
+Studi kasus forecasting permintaan, Python (Google Colab), data latihan
 
 # Forecast Stok Agustus 2022 untuk Lima Hub Q-Commerce: Metode Paling Sederhana Ternyata Paling Akurat
 
 Permintaan Agustus diperkirakan 394.242 unit dengan 40% di minggu terakhir. SARIMA yang semula dipilih karena MAPE 5,04% meleset 14% sampai 80% saat diuji meramal satu bulan penuh.
 
-Mochamad Fajri Ilham, Team 6 · notebook dan berkas pendukung: [folder Google Drive](https://drive.google.com/drive/folders/1jk8wOdxjqNUFT7m-CwR94zbNxKYuf3Tq) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham, Team 6, notebook dan berkas pendukung: [folder Google Drive](https://drive.google.com/drive/folders/1jk8wOdxjqNUFT7m-CwR94zbNxKYuf3Tq), mfajriilhamn@gmail.com
 
 Perusahaan dan datanya rekaan untuk latihan. Seluruh angka dihitung dari satu berkas pengiriman yang sama dan bisa dihitung ulang dengan notebooknya.
 

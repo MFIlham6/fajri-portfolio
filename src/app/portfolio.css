@@ -599,7 +599,7 @@ section[id] { scroll-margin-top: 20px; }
 .steps-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .step { position: relative; display: flex; flex-direction: column; padding: 0 32px 64px 0; }
 .step + .step { padding-left: 32px; }
-.step__no { display: block; color: var(--muted); margin-bottom: 30px; }
+.step__no { display: flex; gap: 1.1em; color: var(--muted); margin-bottom: 30px; }
 .step h3 { margin: 0 0 20px; font-family: var(--f-display); font-weight: 400; font-size: clamp(1.35rem, calc(0.85rem + 0.95vw), 1.8rem); letter-spacing: -0.04em; line-height: 1.08; text-wrap: pretty; }
 .step__photo { margin: 0 0 18px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
 /* Photo carousel (organizations): native scroll-snap so touch swipe works, plus buttons and dots. */
@@ -722,7 +722,7 @@ section[id] { scroll-margin-top: 20px; }
 
 /* Project summary page (layer 2) */
 .proj-title { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(2.3rem, calc(2.25rem + 2.5vw), 4.6rem); letter-spacing: -0.05em; line-height: .98; max-width: 22ch; text-wrap: balance; }
-.proj-info { margin: 22px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.8; }
+.proj-info { display: flex; flex-wrap: wrap; gap: 0 1.6em; margin: 22px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.8; }
 .proj-quick { display: inline-flex; margin-top: 16px; }
 .proj-quick--soon { color: var(--muted); }
 .proj-figure { margin: 0; padding: clamp(14px, calc(9.6px + 1vw), 24px); background: var(--surface); border: 1px solid var(--line); border-radius: 22px; }

@@ -45,7 +45,7 @@ export function Hero({ lang }: { lang: Lang }) {
               <li className="hero__chapter" key={c.label}>
                 <span className="hero__chapter-label">
                   <span>{String(i + 1).padStart(2, "0")}</span>
-                  <span>{c.label.replace(/ · /g, " – ")}</span>
+                  <span>{c.label}</span>
                 </span>
                 <span className="hero__chapter-line">{c.line}</span>
               </li>

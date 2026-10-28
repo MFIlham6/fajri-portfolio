@@ -1,10 +1,10 @@
-Studi kasus analisis pertumbuhan tahun ke tahun · SQL · data latihan
+Studi kasus analisis pertumbuhan tahun ke tahun, SQL, data latihan
 
 # Pertumbuhan 12,37% Lolos Ambang 10%, Ditopang Volume dan Empat dari Lima Lini Produk
 
 Pendapatan distributor fiktif RetailMax naik dari 5.120,15 juta menjadi 5.753,58 juta rupiah. Angka itu bertahan setelah 2.020 baris kotor dibuang, tetapi hanya enam dari dua belas bulan 2025 yang benar-benar melewati ambang.
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · kueri lengkap dan hasilnya: [folder Google Drive](https://drive.google.com/drive/folders/1KmSMKyHa7fL0Gdp-20WZ4ePFMs4QqNUi) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri lengkap dan hasilnya: [folder Google Drive](https://drive.google.com/drive/folders/1KmSMKyHa7fL0Gdp-20WZ4ePFMs4QqNUi), mfajriilhamn@gmail.com
 
 Perusahaan dan datanya rekaan, dibuat untuk latihan Windata Academy. Seluruh angka di bawah dihitung dari satu berkas transaksi yang sama dan bisa dihitung ulang siapa pun.
 

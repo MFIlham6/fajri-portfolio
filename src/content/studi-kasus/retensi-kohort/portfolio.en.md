@@ -1,10 +1,10 @@
-Case Study · Subscription Customer Retention Analysis
+Case Study, Subscription Customer Retention Analysis
 
 # **New-Cohort Retention Appears to Collapse by 50 Points, and the Drop Turns Out to Be an Artifact of the Observation Window**
 
-Cohort and retention analysis · subscription software company · Spreadsheet · scope of more than ten thousand users, 15 monthly cohorts
+Cohort and retention analysis, subscription software company, Spreadsheet, scope of more than ten thousand users, 15 monthly cohorts
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, completed October 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Data note: the figures below come from a dataset designed to mimic software subscription patterns. It is not real company data, and it is not presented as work experience at any company.*
 

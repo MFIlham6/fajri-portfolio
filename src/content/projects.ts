@@ -991,22 +991,22 @@ const builtInProjects: Project[] = [
       ],
       stakeholders: [
         {
-          label: t("Vice Dean for Finance and Resources · problem owner", "Wakil Dekan Bidang Keuangan dan Sumber Daya · problem owner"),
+          label: t("Vice Dean for Finance and Resources – problem owner", "Wakil Dekan Bidang Keuangan dan Sumber Daya – problem owner"),
           text: t(
             "Different access rights per user, password change, a view of all asset data, approval of investment proposals, management of asset categories and users, and downloadable reports on planned and realized investments.",
             "Hak akses berbeda per pengguna, ganti password, tampilan seluruh data aset, persetujuan usulan investasi, pengelolaan kategori aset dan pengguna, serta laporan rencana dan realisasi investasi yang bisa diunduh.",
           ),
         },
         {
-          label: t("Finance and Resources · user", "Keuangan dan Sumber Daya · user"),
+          label: t("Finance and Resources – user", "Keuangan dan Sumber Daya – user"),
           text: t("Record asset realization and add assets, see approved proposals, and get accurate reports.", "Mencatat realisasi aset dan menambah aset, melihat usulan yang sudah disetujui, dan mendapat laporan yang akurat."),
         },
         {
-          label: t("Unit heads and study program heads · user", "Kepala urusan dan kepala program studi · user"),
+          label: t("Unit heads and study program heads – user", "Kepala urusan dan kepala program studi – user"),
           text: t("Submit and manage investment proposals, report on them, and follow their realization.", "Mengajukan dan mengelola usulan investasi, melaporkannya, dan memantau realisasinya."),
         },
         {
-          label: t("Faculty of Industrial Engineering · problem customer", "Fakultas Rekayasa Industri · problem customer"),
+          label: t("Faculty of Industrial Engineering – problem customer", "Fakultas Rekayasa Industri – problem customer"),
           text: t("Gets asset planning and monitoring that is structured and up to date.", "Mendapat perencanaan dan pemantauan aset yang terstruktur dan selalu terbaru."),
         },
       ],
@@ -1099,7 +1099,7 @@ export function figureSrc(p: Project, lang: Lang) {
   return (lang === "en" && p.figure.srcEn) || p.figure.src;
 }
 
-/** "Industry · Field" for lists and cards; the field is left out when it is the same word as the industry. */
+/** "Industry, Field" for lists and cards; the field is left out when it is the same word as the industry. */
 export function projectContext(p: Project, lang: Lang) {
   const parts = [p.industry, p.field && p.field.en !== p.industry?.en ? p.field : undefined];
   return parts.filter((x): x is L => !!x).map((x) => x[lang]);
@@ -1127,7 +1127,7 @@ export const publicFiles = (p: Project) => (SHOW_DRIVE_FOLDERS ? p.files : p.fil
 export function hideDriveFolders(markdown: string) {
   if (SHOW_DRIVE_FOLDERS) return markdown;
   const rules: [string, string][] = [
-    [String.raw`\s*·\s*[^·\n]*?:\s*\[[^\]]*\]\(${DRIVE_FOLDER}\)`, ""],
+    [String.raw`\s*,\s*(?:notebook,[^:\n]*|[^,:\n]*):\s*\[[^\]]*\]\(${DRIVE_FOLDER}\)`, ""],
     [String.raw`\s*(?:Semua ada di|All are in the same) \[[^\]]*\]\(${DRIVE_FOLDER}\)[^.\n]*\.`, ""],
     [String.raw`[ \t]*[^.\n]*?(?::|\bdi|\bat)\s+${DRIVE_FOLDER}\.?`, ""],
     [String.raw`\s(?:di|in the|in)\s\[[^\]]*\]\(${DRIVE_FOLDER}\)`, ""],

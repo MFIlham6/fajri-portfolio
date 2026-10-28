@@ -1,8 +1,8 @@
-Case study · SQL · on-time delivery
+Case study, SQL, on-time delivery
 
 # Three High-Volume Routes Account for 34.77% of Late-Delivery Penalties, and None of Them Is Among the Worst Performers
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1z1ksCqZQyWMhGfFgOlkHnpAUVc1-hwCC) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1z1ksCqZQyWMhGfFgOlkHnpAUVc1-hwCC), mfajriilhamn@gmail.com
 
 Disclaimer: the company and its data are fictional. This work is a practice case study and is not presented as work experience at any company.
 

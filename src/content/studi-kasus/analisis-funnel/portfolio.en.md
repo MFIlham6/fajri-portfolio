@@ -4,7 +4,7 @@ Onboarding funnel analysis case study, done with SQL
 
 A super-app knew its total conversion was 19.88%, but not at which stage its new users were lost. I built a five-stage funnel from 80,000 event rows to answer that.
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1G4zWKbhuikCkt27hnz621Ik5kkPo6I1O) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, queries and check files: [Google Drive folder](https://drive.google.com/drive/folders/1G4zWKbhuikCkt27hnz621Ik5kkPo6I1O), mfajriilhamn@gmail.com
 
 Data note: the figures on this page come from a practice dataset designed to mimic super-app event patterns. It is not real company data and is not presented as work experience at any company.
 

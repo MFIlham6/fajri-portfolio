@@ -20,7 +20,7 @@ export function MiniDashboard({ slug }: { slug: string }) {
     case "telkom-m2":
       return (
         <div className="mini">
-          <Bar title={"OCA · Client segments"} meta="RFM + K-Means" />
+          <Bar title={"OCA client segments"} meta="RFM + K-Means" />
           <div className="mini__grid">
             <div className="mini__card s2"><span className="t">Loyal Premium</span><span className="k accent">3</span><span className="t">60% revenue</span></div>
             <div className="mini__card s2"><span className="t">Mid Tier</span><span className="k">5</span><span className="t">25% revenue</span></div>
@@ -36,7 +36,7 @@ export function MiniDashboard({ slug }: { slug: string }) {
     case "telkom-m1":
       return (
         <div className="mini">
-          <Bar title={"OCA Blast · Message dashboard"} meta="Tableau" />
+          <Bar title={"OCA Blast message dashboard"} meta="Tableau" />
           <div className="mini__grid">
             <div className="mini__card s3"><span className="t">{"Message volume"}</span><span className="k accent">−28%</span><span className="t">{"49,534 → 35,492"}</span></div>
             <div className="mini__card s3"><span className="t">Email</span><span className="k">−60%</span></div>
@@ -64,7 +64,7 @@ export function MiniDashboard({ slug }: { slug: string }) {
     case "case-9":
       return (
         <div className="mini">
-          <Bar title={"Product bundles · 3,000 baskets"} meta="SQL" />
+          <Bar title={"Product bundles, 3,000 baskets"} meta="SQL" />
           <div className="mini__grid">
             <div className="mini__card s3"><span className="t">{"Bundles chosen"}</span><span className="k accent">3</span></div>
             <div className="mini__card s3"><span className="t">{"Pairs tested"}</span><span className="k">105</span></div>

@@ -74,7 +74,7 @@ export function Footer({ lang }: { lang: Lang }) {
               <a href={m.href} target="_blank" rel="noopener noreferrer">
                 {m.title}
               </a>{" "}
-              · {m.author}
+              by {m.author}
               {i < modelCredits.length - 1 ? "; " : "."}
             </span>
           ))}

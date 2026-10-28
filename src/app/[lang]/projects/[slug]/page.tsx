@@ -126,9 +126,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ lang: 
           </p>
           <h1 className="proj-title">{p.title[lang]}</h1>
           <p className="proj-info mono">
-            {p.info.map((i, n) => (
+            {p.info.map((i) => (
               <span key={i.en}>
-                {n > 0 && <span aria-hidden="true"> · </span>}
                 <Rich text={i[lang]} />
               </span>
             ))}
@@ -204,7 +203,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ lang: 
         <section className="next-case dark" data-header-theme="dark">
           <div className="wrap">
             <Link href={`/${lang}/projects/${next.slug}`} data-transition={projectLabel(next, lang)}>
-              <span className="eyebrow">{t.next} · {projectLabel(next, lang)}</span>
+              <span className="eyebrow">{t.next}: {projectLabel(next, lang)}</span>
               <span className="next-case__title">{next.title[lang]} →</span>
             </Link>
           </div>

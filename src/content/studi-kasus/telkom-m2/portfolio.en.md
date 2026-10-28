@@ -1,8 +1,8 @@
-Case study · RevoU × Telkom Indonesia · Milestone 2
+Case study, RevoU × Telkom Indonesia, Milestone 2
 
 # 20 Clients, 3 Segments, and Only Sending Volume Tells Them Apart
 
-Python (pandas, NumPy, SciPy, scikit-learn, seaborn), Google Colab · Solo · Python, Descriptive Statistics, RFM, Clustering, Segmentation
+Python (pandas, NumPy, SciPy, scikit-learn, seaborn), Google Colab, Solo, Python, Descriptive Statistics, RFM, Clustering, Segmentation
 
 ## 1. Summary
 
@@ -117,7 +117,7 @@ The largest Potential client sent 1,593 messages, while the smallest Mid Tier cl
 
 The very high silhouette shows the groups really are well separated, but with data this small, manual rules are already enough, so K-Means works as a confirmation. The early churn signal's accuracy can't be tested yet because there's no Q2 data.
 
-Audit trail: Notebook (GitHub link to come) · Stakeholder presentation slides, 18 slides, PDF (link to come)
+Audit trail: Notebook (GitHub link to come), Stakeholder presentation slides, 18 slides, PDF (link to come)
 
 ### If I did it again
 

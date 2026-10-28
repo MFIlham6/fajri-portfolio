@@ -1,8 +1,8 @@
 **Seluruh 361 Ambang Pemesanan Berada di Bawah Rumus Bakunya, dan Selisihnya Berasal dari Satu Tanda Operasi**
 
-Analisis persediaan · jaringan distribusi tiga gudang · Spreadsheet · lingkup 361 SKU bersih dari 401 baris mentah
+Analisis persediaan, jaringan distribusi tiga gudang, Spreadsheet, lingkup 361 SKU bersih dari 401 baris mentah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Catatan data: angka di bawah dihitung dari dataset simulasi yang meniru pola persediaan jaringan distribusi. Ini bukan data perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

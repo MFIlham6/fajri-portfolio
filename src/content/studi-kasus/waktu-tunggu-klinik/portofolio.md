@@ -1,10 +1,10 @@
-Studi Kasus · Waktu Tunggu Layanan Kesehatan
+Studi Kasus, Waktu Tunggu Layanan Kesehatan
 
 # **Peringkat Cabang Tidak Bisa Dibedakan dari Undian, dan Selisih Antar-Tenaga Medis Ternyata Kurang dari Separuh Angka Mentahnya**
 
-Analisis waktu tunggu pasien · jaringan klinik delapan cabang · Spreadsheet · lingkup 744 kunjungan bersih dari 782 baris mentah
+Analisis waktu tunggu pasien, jaringan klinik delapan cabang, Spreadsheet, lingkup 744 kunjungan bersih dari 782 baris mentah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Catatan data: angka-angka di bawah dihitung dari dataset yang dirancang meniru pola kunjungan klinik. Ini bukan data sebuah perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

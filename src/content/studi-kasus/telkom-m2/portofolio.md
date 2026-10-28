@@ -1,8 +1,8 @@
-Studi kasus · RevoU × Telkom Indonesia · Milestone 2
+Studi kasus, RevoU × Telkom Indonesia, Milestone 2
 
 # 20 klien, 3 segmen, dan hanya volume kirim yang membedakan mereka
 
-Python (pandas, NumPy, SciPy, scikit-learn, seaborn), Google Colab · Dikerjakan sendiri · Python, Statistik Deskriptif, RFM, Clustering, Segmentasi
+Python (pandas, NumPy, SciPy, scikit-learn, seaborn), Google Colab, Dikerjakan sendiri, Python, Statistik Deskriptif, RFM, Clustering, Segmentasi
 
 ## 1. Ringkasan
 
@@ -117,7 +117,7 @@ Klien Potential terbesar mengirim 1.593 pesan, sedangkan Mid Tier terkecil 6.010
 
 Silhouette yang sangat tinggi menunjukkan kelompoknya memang terpisah jauh, tetapi dengan data sekecil ini aturan manual sudah cukup, sehingga K-Means berfungsi sebagai konfirmasi. Sinyal churn dini belum bisa diuji ketepatannya karena belum ada data Q2.
 
-Telusur: Notebook (link GitHub menyusul) · Slide presentasi ke stakeholder, 18 slide, PDF (link menyusul)
+Telusur: Notebook (link GitHub menyusul), Slide presentasi ke stakeholder, 18 slide, PDF (link menyusul)
 
 ### Kalau diulang
 

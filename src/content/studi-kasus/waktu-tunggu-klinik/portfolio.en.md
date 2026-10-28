@@ -1,10 +1,10 @@
-Case Study · Healthcare Waiting Times
+Case Study, Healthcare Waiting Times
 
 # **Branch Rankings Can't Be Told Apart From a Lottery, and the Gap Between Medical Staff Turns Out to Be Less Than Half Its Raw Figure**
 
-Patient waiting-time analysis · eight-branch clinic network · Spreadsheet · scope of 744 clean visits from 782 raw rows
+Patient waiting-time analysis, eight-branch clinic network, Spreadsheet, scope of 744 clean visits from 782 raw rows
 
-Mochamad Fajri Ilham Nurdin · completed October 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, completed October 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Data note: the figures below come from a dataset designed to mimic clinic visit patterns. It is not real company data, and it is not presented as work experience at any company.*
 

@@ -37,7 +37,7 @@ export function ProjectList({ projects, lang, sizes }: { projects: Project[]; la
                 ))}
               </span>
               <span className="prow__title">{projectLabel(p, lang)}</span>
-              <span className="prow__tags">{p.tags.slice(0, 3).map((t) => t[lang]).join(" · ")}</span>
+              <span className="prow__tags">{p.tags.slice(0, 3).map((t) => t[lang]).join(", ")}</span>
               <span className="prow__arrow" aria-hidden="true">
                 <ArrowRight />
               </span>

@@ -1,10 +1,10 @@
-Data cleaning and analysis case study · e-commerce retail, supply chain · Python (pandas, SciPy)
+Data cleaning and analysis case study, e-commerce retail, supply chain, Python (pandas, SciPy)
 
 # DataCo Late Deliveries: The Problem Is the Delivery Promise; Region and Product Make No Difference
 
 57.3% of DataCo's orders arrive after their promise. First Class is promised in 1 day and always arrives on day 2, while Second Class is as slow as Standard. Adjusting the First Class promise alone brings lateness down to 42.0%.
 
-Mochamad Fajri Ilham · notebook, clean data, and supporting files: [Google Drive folder](https://drive.google.com/drive/folders/1duVt4871pYcAj2Dt2-O6mPjqh1F3nz2h) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham, notebook, clean data, and supporting files: [Google Drive folder](https://drive.google.com/drive/folders/1duVt4871pYcAj2Dt2-O6mPjqh1F3nz2h), mfajriilhamn@gmail.com
 
 The DataCo Smart Supply Chain dataset is published on Mendeley Data (Constante, Silva, and Pereira, 2019, CC BY 4.0). The data is almost certainly simulated (see Finding 5), so the findings here describe that data, not necessarily a real company's operations.
 

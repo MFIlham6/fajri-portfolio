@@ -1,10 +1,10 @@
-**Studi Kasus · Efisiensi Belanja Iklan Digital**
+**Studi Kasus, Efisiensi Belanja Iklan Digital**
 
 # **Efisiensi Antar-Platform Berselisih 2,4 Kali, tetapi Jenis Kampanye Memisahkan 4,0 Kali**
 
-Analisis efisiensi belanja iklan · agensi pemasaran digital, tiga platform · Spreadsheet · lingkup 975 kampanye bersih dari 1.012 baris mentah
+Analisis efisiensi belanja iklan, agensi pemasaran digital, tiga platform, Spreadsheet, lingkup 975 kampanye bersih dari 1.012 baris mentah
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, [mfajriilhamn@gmail.com](mailto:mfajriilhamn@gmail.com)
 
 *Catatan data: angka-angka di bawah dihitung dari dataset yang dirancang meniru pola belanja iklan digital. Ini bukan data sebuah perusahaan sungguhan, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.*
 

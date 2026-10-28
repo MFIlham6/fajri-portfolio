@@ -4,7 +4,7 @@ Studi kasus antrean prioritas tinjauan, dikerjakan dengan SQL
 
 Tim risiko sebuah dompet digital hanya sanggup meninjau 200 kasus sehari dari sekitar 50.000 transaksi. Saya membangun antrean prioritas dari empat isyarat perilaku dan memeriksa apa saja yang ditentukan oleh ambang dan bobotnya.
 
-Mochamad Fajri Ilham Nurdin · dikerjakan Oktober 2026 · kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1dNayzpUA-FOX7Diu8NGoEzT-vdKCQ91R) · mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1dNayzpUA-FOX7Diu8NGoEzT-vdKCQ91R), mfajriilhamn@gmail.com
 
 Catatan data: angka di halaman ini dihitung dari dataset latihan yang dirancang meniru pola transaksi dompet digital. Perusahaan dan datanya rekaan, dan pekerjaan ini tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.
 
