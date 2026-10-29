@@ -14,7 +14,7 @@ const display = Familjen_Grotesk({ variable: "--font-display", subsets: ["latin"
 const text = Hanken_Grotesk({ variable: "--font-text", subsets: ["latin"], weight: ["400", "500", "600"] });
 const mono = Martian_Mono({ variable: "--font-mono", subsets: ["latin"], weight: ["400"] });
 
-const SITE_URL = "https://your-domain.com";
+const SITE_URL = "https://mfajriilham-portofolio.vercel.app";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));

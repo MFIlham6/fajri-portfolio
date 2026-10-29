@@ -2,7 +2,7 @@
 
 Portfolio of Mochamad Fajri Ilham Nurdin: data analyst, supply chain and PPIC.
 
-Live: https://site-next.vercel.app
+Live: https://mfajriilham-portofolio.vercel.app
 
 Built with Next.js, React and Tailwind CSS, in English and Indonesian.
 
