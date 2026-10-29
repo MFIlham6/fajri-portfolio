@@ -33,7 +33,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
   }
 
   return (
-    <main id="main" className="page-projects">
+    <main id="main">
       <section className="page-hero wrap" aria-labelledby="projects-title">
         <p className="crumbs mono">
           <Link href={`/${lang}`}>← {lang === "id" ? "Beranda" : "Home"}</Link>
