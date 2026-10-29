@@ -58,16 +58,16 @@ export const organizations: Organization[] = [
     date: t("September – December 2021", "September sampai Desember 2021"),
     bullets: [
       t(
-        "Directed a group of 15+ members, achieving a 100% completion rate for all orientation milestones through structured coaching and effective task delegation.",
-        "Memimpin kelompok berisi 15+ anggota hingga seluruh milestone orientasi selesai 100%, lewat pendampingan terstruktur dan pembagian tugas yang jelas.",
+        "Led a group of 15+ members through orientation, and the group completed every milestone. I coached the members and split the tasks between them.",
+        "Memimpin kelompok berisi 15+ anggota sampai seluruh milestone orientasi selesai. Saya mendampingi anggota dan membagi tugas di antara mereka.",
       ),
       t(
-        "Monitored group performance and participation metrics, ensuring all activities were executed on schedule and aligned with program objectives.",
-        "Memantau kinerja dan tingkat partisipasi kelompok agar setiap kegiatan berjalan sesuai jadwal dan tujuan program.",
+        "Tracked how the group performed and who took part, so activities ran on schedule and matched the program's goals.",
+        "Memantau kinerja dan partisipasi kelompok supaya kegiatan berjalan sesuai jadwal dan tujuan program.",
       ),
       t(
-        "Facilitated cross-functional communication within the group, effectively resolving internal conflicts and maintaining high engagement levels throughout the program.",
-        "Menjembatani komunikasi di dalam kelompok, menyelesaikan konflik internal, dan menjaga keterlibatan anggota tetap tinggi sepanjang program.",
+        "Kept communication open inside the group, settled internal conflicts, and kept members involved until the program ended.",
+        "Menjaga komunikasi di dalam kelompok, menyelesaikan konflik internal, dan membuat anggota tetap terlibat sampai program selesai.",
       ),
     ],
     chips: [t("15+ members", "15+ anggota"), t("100% milestones", "100% milestone")],
@@ -87,16 +87,16 @@ export const organizations: Organization[] = [
     },
     bullets: [
       t(
-        "Supervised event operations for over 90 students, ensuring strict adherence to the timeline and achieving a 98% participant satisfaction rating.",
-        "Mengawasi jalannya acara untuk lebih dari 90 mahasiswa agar tetap sesuai timeline, dengan tingkat kepuasan peserta 98%.",
+        "Supervised the event for more than 90 students and kept it on the timeline. Participant satisfaction came in at 98%.",
+        "Mengawasi jalannya acara untuk lebih dari 90 mahasiswa agar sesuai timeline. Kepuasan peserta mencapai 98%.",
       ),
       t(
-        "Standardized organizational documentation by developing over 30 technical guidelines, which streamlined the coordination process between the committee and faculty stakeholders.",
-        "Menyeragamkan dokumentasi organisasi dengan menyusun lebih dari 30 panduan teknis, sehingga koordinasi antara panitia dan pihak fakultas lebih lancar.",
+        "Wrote more than 30 technical guidelines so the committee's documents followed one format, which made coordinating with the faculty easier.",
+        "Menyusun lebih dari 30 panduan teknis supaya dokumen panitia seragam, sehingga koordinasi dengan pihak fakultas lebih lancar.",
       ),
       t(
-        "Managed data collection and reporting for candidate screening results, ensuring all evaluations were documented transparently and delivered accurately to the board.",
-        "Mengelola pengumpulan dan pelaporan data hasil seleksi kandidat, sehingga setiap penilaian tercatat transparan dan sampai ke pengurus dengan akurat.",
+        "Collected and reported the candidate screening results, so every evaluation was on record and reached the board accurately.",
+        "Mengumpulkan dan melaporkan hasil seleksi kandidat, sehingga setiap penilaian tercatat dan sampai ke pengurus dengan akurat.",
       ),
     ],
     chips: [t("90+ students", "90+ mahasiswa"), t("98% satisfaction", "Kepuasan 98%"), t("30+ guidelines", "30+ panduan")],
@@ -138,12 +138,12 @@ export const organizations: Organization[] = [
     ],
     bullets: [
       t(
-        "Initiated digital fundraising campaigns via social media platforms, managing promotional content coordination to maximize audience reach and donor participation.",
-        "Memulai kampanye penggalangan dana digital lewat media sosial dan mengoordinasikan konten promosinya untuk memperluas jangkauan dan menambah donatur.",
+        "Started a fundraising campaign on social media and coordinated its promotional posts to reach more people and bring in more donors.",
+        "Memulai kampanye penggalangan dana di media sosial dan mengoordinasikan konten promosinya agar menjangkau lebih banyak orang dan menambah donatur.",
       ),
       t(
-        "Optimized the sponsorship and funding documentation system using Google Drive, ensuring all transaction data was transparently recorded and accessible for real-time tracking.",
-        "Merapikan sistem dokumentasi sponsorship dan pendanaan di Google Drive agar setiap transaksi tercatat transparan dan bisa dipantau kapan saja.",
+        "Reorganized the sponsorship and funding records in Google Drive, so every transaction was logged and the team could check it at any time.",
+        "Merapikan catatan sponsorship dan pendanaan di Google Drive agar setiap transaksi tercatat dan bisa dicek tim kapan saja.",
       ),
     ],
     chips: [t("Social media", "Media sosial"), t("Google Drive", "Google Drive")],
@@ -203,12 +203,12 @@ const builtInExperience: Experience[] = [
         "Menyiapkan dan memelihara Bill of Materials, Production Version, dan Routing untuk beberapa produk kain sebagai dasar MRP dan MPS.",
       ),
       t(
-        "Calculated production capacity at each process to support capacity planning and production readiness.",
-        "Menghitung kapasitas produksi di tiap proses untuk mendukung perencanaan kapasitas dan kesiapan produksi.",
+        "Calculated the production capacity of each process, as input for capacity planning.",
+        "Menghitung kapasitas produksi tiap proses sebagai bahan perencanaan kapasitas.",
       ),
       t(
-        "Tracked daily raw-material inventory in Excel against production needs, to spot shortages early and support timely replenishment.",
-        "Memantau persediaan bahan baku harian di Excel terhadap kebutuhan produksi, untuk mendeteksi kekurangan lebih awal dan mendukung pengisian ulang tepat waktu.",
+        "Tracked raw-material stock daily in Excel against production needs, so shortages showed up early and stock could be reordered in time.",
+        "Memantau stok bahan baku harian di Excel terhadap kebutuhan produksi, supaya kekurangan terlihat lebih awal dan stok bisa dipesan ulang tepat waktu.",
       ),
       t(
         "Coordinated with Marketing, SCM, and Production to align customer orders, material availability, schedules, and order lead times.",

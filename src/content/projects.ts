@@ -358,8 +358,8 @@ const builtInProjects: Project[] = [
     info: [t("Spreadsheet", "Spreadsheet"), windata],
     figure: { src: img("retensi-karyawan", "lead-en.png"), label: t("Figure 1: resignation range across five ways of grouping", "Gambar 1: rentang resign pada lima cara pengelompokan") },
     summary: t(
-      "A tech company wanted to split its retention budget between the two departments with the highest resignations. It turned out all seven departments differ by only 7.3 points. Working hours and satisfaction separate employees 7.6 to 9.4 times more sharply.",
-      "Sebuah perusahaan teknologi ingin membagi anggaran retensi ke dua departemen dengan resign tertinggi. Ternyata ketujuh departemen hanya berselisih 7,3 poin. Jam kerja dan kepuasan memisahkan karyawan 7,6 sampai 9,4 kali lebih tajam.",
+      "A tech company wanted to split its retention budget between the two departments with the highest resignations. All seven departments differ by only 7.3 points. Working hours and satisfaction separate employees 7.6 to 9.4 times more sharply.",
+      "Sebuah perusahaan teknologi ingin membagi anggaran retensi ke dua departemen dengan resign tertinggi. Ketujuh departemen hanya berselisih 7,3 poin. Jam kerja dan kepuasan memisahkan karyawan 7,6 sampai 9,4 kali lebih tajam.",
     ),
     data: t(
       "2,010 rows of HR data, 1,980 clean employees, snapshot as of 1 April 2026. Five employees were recorded working 26 to 29 hours a day, and 240 promotion dates fell after the reference date.",
@@ -564,8 +564,8 @@ const builtInProjects: Project[] = [
     info: [t("Spreadsheet", "Spreadsheet"), windata],
     figure: { src: img("waktu-tunggu-klinik", "lead-en.png"), label: t("Figure 1: permutation test results for branch, department, and medical staff", "Gambar 1: hasil uji acak untuk cabang, departemen, dan tenaga medis") },
     summary: t(
-      "An eight-branch clinic network wanted to add doctors at the branch with the longest waiting time. The gap between branches turned out to be as large as chance alone could produce. The real difference is between medical staff, and it's less than half the raw figure.",
-      "Jaringan klinik delapan cabang ingin menambah dokter di cabang dengan waktu tunggu terlama. Selisih antarcabang ternyata sebesar yang bisa muncul dari kebetulan. Perbedaan yang nyata ada antartenaga medis, dan besarnya kurang dari separuh angka mentah.",
+      "An eight-branch clinic network wanted to add doctors at the branch with the longest waiting time. The gap between branches is no larger than chance alone would produce. The real difference is between medical staff, and it's less than half the raw figure.",
+      "Jaringan klinik delapan cabang ingin menambah dokter di cabang dengan waktu tunggu terlama. Selisih antarcabang tidak lebih besar dari yang bisa muncul karena kebetulan. Perbedaan yang nyata ada antartenaga medis, dan besarnya kurang dari separuh angka mentah.",
     ),
     data: t("782 visit rows, 744 clean. The data doesn't record visit time or the number of doctors per session.", "782 baris kunjungan, 744 bersih. Data tidak mencatat jam kunjungan dan jumlah dokter per sesi."),
     decisions: [
