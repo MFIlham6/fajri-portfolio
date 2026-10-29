@@ -879,7 +879,18 @@ section[id] { scroll-margin-top: 20px; }
   .certs { grid-template-columns: 1fr; }
   .cert, .cert + .cert { padding: 24px 0; border-left: 0; border-top: 1px solid var(--line); }
   .cert:first-child { border-top: 0; }
-  .polaroids { height: clamp(300px, 88vw, 420px); }
+  /* Phones: justified lines leave wide gaps at this width, so body text sits flush left. */
+  .about__text > p:not(.about__tagline):not(.kicker), .xp__panel-text, .xp__body li > span, .step__list li,
+  .proj-sec__body > p, .proj-sec__body > ul li, .proj-sec__body > ol li, .md > p, .md li, .md-note { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+  /* Phones: the photo on top and the two stat cards side by side below, so none covers another's text. */
+  .polaroids { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 14px; }
+  .polaroid { position: relative; inset: auto; width: auto; }
+  .polaroid--c { order: -1; grid-column: 1 / -1; justify-self: center; width: 62%; }
+  .polaroid--a { transform: rotate(-4deg); }
+  .polaroid--b { transform: rotate(4deg); }
+  .polaroids:hover .polaroid--a { transform: rotate(-4deg); }
+  .polaroids:hover .polaroid--b { transform: rotate(4deg); }
+  .polaroids:hover .polaroid--c { transform: rotate(-1.5deg); }
   .polaroid figcaption { font-size: .56rem; }
   .polaroid .placeholder { font-size: .54rem; left: 8px; right: 8px; bottom: 8px; text-align: center; }
   .prow__link { grid-template-columns: minmax(0, 1fr) 44px; gap: 8px 12px; padding: 20px 0; margin: 0; }
