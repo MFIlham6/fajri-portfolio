@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { getUI, type Lang } from "@/content/i18n";
-import { figureSrc, projectContext, projectLabel, type Project } from "@/content/projects";
+import { figureSrc, projectContext, projectLabel, type ProjectCardData } from "@/content/projects";
 import { MiniDashboard, miniDashboardSlugs } from "./mini-dashboards";
 
 export type ImageSizes = Record<string, { width: number; height: number }>;
 
-export function ProjectCard({ p, lang, size }: { p: Project; lang: Lang; size?: { width: number; height: number } }) {
+export function ProjectCard({ p, lang, size }: { p: ProjectCardData; lang: Lang; size?: { width: number; height: number } }) {
   const ui = getUI(lang);
   const src = figureSrc(p, lang);
   return (
@@ -49,7 +49,7 @@ export function ProjectCard({ p, lang, size }: { p: Project; lang: Lang; size?: 
 type FilterKey = "industry" | "field" | "tools";
 
 /** The values a project has for one filter: its industry, its field, or each of its tools. */
-function valuesOf(p: Project, key: FilterKey, lang: Lang): { key: string; label: string }[] {
+function valuesOf(p: ProjectCardData, key: FilterKey, lang: Lang): { key: string; label: string }[] {
   if (key === "tools") return (p.tools ?? []).map((t) => ({ key: t, label: t }));
   const v = p[key];
   return v ? [{ key: v.en, label: v[lang] }] : [];
@@ -57,11 +57,11 @@ function valuesOf(p: Project, key: FilterKey, lang: Lang): { key: string; label:
 
 /** Project grid with dropdown filters for industry, field, and tools (all projects shown by default).
     Each option shows how many projects it would leave given the other filters; options that would leave none are disabled. */
-export function ProjectGrid({ projects, lang, sizes, filter = true }: { projects: Project[]; lang: Lang; sizes: ImageSizes; filter?: boolean }) {
+export function ProjectGrid({ projects, lang, sizes, filter = true }: { projects: ProjectCardData[]; lang: Lang; sizes: ImageSizes; filter?: boolean }) {
   const ui = getUI(lang);
   const keys: FilterKey[] = ["industry", "field", "tools"];
   const [picked, setPicked] = useState<Record<FilterKey, string>>({ industry: "", field: "", tools: "" });
-  const matches = (p: Project, skip?: FilterKey) =>
+  const matches = (p: ProjectCardData, skip?: FilterKey) =>
     keys.every((k) => k === skip || !picked[k] || valuesOf(p, k, lang).some((v) => v.key === picked[k]));
   const list = projects.filter((p) => matches(p));
 

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ProjectGrid, type ImageSizes } from "@/components/sites/portfolio/project-grid";
 import { getUI, isLang } from "@/content/i18n";
 import { profile } from "@/content/profile";
-import { bsaProjects, dataProjects, figureSrc, projects } from "@/content/projects";
+import { bsaProjects, dataProjects, figureSrc, projects, toCardData } from "@/content/projects";
 import { publicImageMeta } from "@/lib/studi-kasus";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -53,7 +53,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
           <h2 className="h2" id="da-title">{ui.projectsMenu.data}</h2>
           <p>{ui.projects.dataLead}</p>
         </div>
-        <ProjectGrid projects={dataProjects} lang={lang} sizes={sizes} />
+        <ProjectGrid projects={dataProjects.map(toCardData)} lang={lang} sizes={sizes} />
       </section>
 
       <section className="wrap cat" id="business-system-analyst" aria-labelledby="bsa-title">
@@ -61,7 +61,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
           <h2 className="h2" id="bsa-title">{ui.projectsMenu.bsa}</h2>
           <p>{ui.projects.bsaLead}</p>
         </div>
-        <ProjectGrid projects={bsaProjects} lang={lang} sizes={sizes} filter={false} />
+        <ProjectGrid projects={bsaProjects.map(toCardData)} lang={lang} sizes={sizes} filter={false} />
       </section>
     </main>
   );

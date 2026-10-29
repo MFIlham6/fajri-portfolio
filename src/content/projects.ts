@@ -1094,19 +1094,25 @@ export const dataProjects = projects.filter((p) => p.category === "data");
 export const bsaProjects = projects.filter((p) => p.category === "bsa");
 export const featuredProjects = projects.filter((p) => p.featured);
 
+/** What a project card needs. Client components get only this, so the rest of the content (Drive links
+    included) stays out of the page payload. */
+export type ProjectCardData = Pick<Project, "slug" | "code" | "name" | "industry" | "field" | "tools" | "featured" | "title" | "tags" | "figure">;
+export const toCardData = ({ slug, code, name, industry, field, tools, featured, title, tags, figure }: Project): ProjectCardData =>
+  ({ slug, code, name, industry, field, tools, featured, title, tags, figure: { src: figure.src, srcEn: figure.srcEn, label: figure.label } });
+
 /** The chart for a language: the English version on English pages when there is one. */
-export function figureSrc(p: Project, lang: Lang) {
+export function figureSrc(p: Pick<Project, "figure">, lang: Lang) {
   return (lang === "en" && p.figure.srcEn) || p.figure.src;
 }
 
 /** "Industry, Field" for lists and cards; the field is left out when it is the same word as the industry. */
-export function projectContext(p: Project, lang: Lang) {
+export function projectContext(p: Pick<Project, "industry" | "field">, lang: Lang) {
   const parts = [p.industry, p.field && p.field.en !== p.industry?.en ? p.field : undefined];
   return parts.filter((x): x is L => !!x).map((x) => x[lang]);
 }
 
 /** Display label: the project name when it has one, otherwise its code. */
-export function projectLabel(p: Project, lang: Lang) {
+export function projectLabel(p: Pick<Project, "name" | "code">, lang: Lang) {
   return p.name?.[lang] ?? p.code;
 }
 
