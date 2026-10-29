@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ lang: 
   ];
 
   return (
-    <main id="main">
+    <main id="main" className="page-projects">
       <article>
         <header className="proj-hero wrap">
           <p className="crumbs mono">

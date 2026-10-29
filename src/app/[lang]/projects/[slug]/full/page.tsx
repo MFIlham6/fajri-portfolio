@@ -36,7 +36,7 @@ export default async function FullCasePage({ params }: { params: Promise<{ lang:
   const data = await loadCase(c.slug, lang);
 
   return (
-    <main id="main">
+    <main id="main" className="page-projects">
       <article className="sk-page">
         <header className="proj-hero wrap">
           <p className="crumbs mono">
