@@ -197,22 +197,27 @@ const builtInExperience: Experience[] = [
     org: "PT Duniatex",
     role: t("Production Planning and Inventory Control (PPIC) Intern, Ungaran", "Production Planning and Inventory Control (PPIC) Intern, Ungaran"),
     date: t("July – October 2023", "Juli sampai Oktober 2023"),
+    // Matches LinkedIn and the CV as of 31 October 2026. Figures from the internal capacity plan stay off the site.
+    intro: t(
+      "Production planning internship with the PPIC team at a denim textile mill in Ungaran, working on weaving capacity, master data, and raw material stock.",
+      "Magang perencanaan produksi bersama tim PPIC di pabrik tekstil denim di Ungaran, mengerjakan kapasitas tenun, data induk produksi, dan stok bahan baku.",
+    ),
     bullets: [
       t(
-        "Prepared and maintained Bills of Materials, Production Versions, and Routings for several fabric products as the basis for MRP and MPS.",
-        "Menyiapkan dan memelihara Bill of Materials, Production Version, dan Routing untuk beberapa produk kain sebagai dasar MRP dan MPS.",
+        "Built the monthly weaving capacity plan for 16 denim varieties across 5 loom types, converting pick density, RPM, and efficiency into yards per machine per day and per month.",
+        "Menyusun rencana kapasitas tenun bulanan untuk 16 varian denim di 5 jenis mesin tenun, dengan menghitung pick pakan, RPM, dan efisiensi menjadi hasil produksi dalam yard per mesin per hari dan per bulan.",
       ),
       t(
-        "Calculated the production capacity of each process, as input for capacity planning.",
-        "Menghitung kapasitas produksi tiap proses sebagai bahan perencanaan kapasitas.",
+        "Prepared BOM (warp and weft yarn, indigo, sizing), production versions, and routings for 10 to 15 denim varieties a month, and submitted them to Accounting to obtain the Block of Production in SAP.",
+        "Menyiapkan daftar kebutuhan bahan (BOM) berisi benang lusi, benang pakan, indigo, dan kanji, beserta versi produksi dan urutan proses (routing) untuk 10 sampai 15 varian denim per bulan, lalu mengajukannya ke bagian Akuntansi untuk mendapatkan Block of Production di SAP.",
       ),
       t(
-        "Tracked raw-material stock daily in Excel against production needs, so shortages showed up early and stock could be reordered in time.",
-        "Memantau stok bahan baku harian di Excel terhadap kebutuhan produksi, supaya kekurangan terlihat lebih awal dan stok bisa dipesan ulang tepat waktu.",
+        "Tracked daily stock of warp and weft yarn, indigo, and sizing against production needs, and reported shortages to my supervisor in daily and weekly reports.",
+        "Memantau stok harian benang lusi, benang pakan, indigo, dan kanji terhadap kebutuhan produksi, lalu melaporkan kekurangan bahan kepada atasan melalui laporan harian dan mingguan.",
       ),
       t(
-        "Coordinated with Marketing, SCM, and Production to align customer orders, material availability, schedules, and order lead times.",
-        "Berkoordinasi dengan Marketing, SCM, dan Produksi untuk menyelaraskan pesanan pelanggan, ketersediaan bahan, jadwal, dan lead time pesanan.",
+        "Confirmed order lead times with Marketing, SCM, and Production by checking each customer order against material availability and the production schedule.",
+        "Memastikan waktu penyelesaian pesanan (lead time) bersama bagian Pemasaran, Rantai Pasok, dan Produksi dengan mencocokkan setiap pesanan pelanggan terhadap ketersediaan bahan dan jadwal produksi.",
       ),
     ],
     related: [],
@@ -282,23 +287,26 @@ const allCertifications: Cert[] = [
         "Modul 1, dasar manajemen supply chain: proses dan mitra utama dalam supply chain, sejarah dan peristiwa besar yang memengaruhi nilai bagi pelanggan, komponen supply chain, serta tren teknologi ke depan.",
       ),
       t(
-        "Module 2, planning analytics: the supply chain analyst's role, inventory control and policy, quantitative and qualitative forecasting methods, and how to measure forecast error. The practice task: finding ways to reduce product waste in Prosacco's supply chain.",
-        "Modul 2, analitik perencanaan: peran analis supply chain, kontrol dan kebijakan persediaan, metode peramalan kuantitatif dan kualitatif, serta cara mengukur kesalahan peramalan. Tugas praktiknya mencari cara mengurangi limbah produk di rantai pasok Prosacco.",
+        "Module 2, planning analytics: the supply chain analyst's role, inventory control and policy, quantitative and qualitative forecasting methods, and how to measure forecast error. The practice task: finding ways to reduce product waste in the case company's supply chain.",
+        "Modul 2, analitik perencanaan: peran analis supply chain, kontrol dan kebijakan persediaan, metode peramalan kuantitatif dan kualitatif, serta cara mengukur kesalahan peramalan. Tugas praktiknya mencari cara mengurangi limbah produk di rantai pasok perusahaan kasus.",
       ),
       t(
-        "Module 3, demand planning, scheduling, and manufacturing: demand planning vs demand sensing, on-time in-full delivery, production scheduling and its risks, manufacturing strategy and quality, and scenario planning for customer priorities. The practice task: building a PSI (purchase, sales, inventory) plan for Prosacco.",
-        "Modul 3, demand planning, penjadwalan, dan manufaktur: perbedaan demand planning dan demand sensing, pengiriman penuh dan tepat waktu, penjadwalan produksi beserta risikonya, strategi dan kualitas manufaktur, serta perencanaan skenario untuk prioritas pelanggan. Tugas praktiknya menyusun rencana PSI (purchase, sales, inventory) untuk Prosacco.",
+        "Module 3, demand planning, scheduling, and manufacturing: demand planning vs demand sensing, on-time in-full delivery, production scheduling and its risks, manufacturing strategy and quality, and scenario planning for customer priorities. The practice task: building a PSI (purchase, sales, inventory) plan for the case company.",
+        "Modul 3, demand planning, penjadwalan, dan manufaktur: perbedaan demand planning dan demand sensing, pengiriman penuh dan tepat waktu, penjadwalan produksi beserta risikonya, strategi dan kualitas manufaktur, serta perencanaan skenario untuk prioritas pelanggan. Tugas praktiknya menyusun rencana PSI (purchase, sales, inventory) untuk perusahaan kasus.",
       ),
       t(
-        "Module 4, finance and logistics: cost control, inbound and outbound transport, warehouse activities, and optimizing resources under constraints. The practice task: choosing transport alternatives so demand is met on time, and planning Prosacco's seasonal execution from the finance and logistics side.",
-        "Modul 4, keuangan dan logistik: pengendalian biaya, transportasi masuk dan keluar, aktivitas gudang, dan optimasi sumber daya dengan batasan yang ada. Tugas praktiknya memilih alternatif transportasi supaya permintaan terpenuhi tepat waktu dan merencanakan eksekusi musiman Prosacco dari sisi keuangan dan logistik.",
+        "Module 4, finance and logistics: cost control, inbound and outbound transport, warehouse activities, and optimizing resources under constraints. The practice task: choosing transport alternatives so demand is met on time, and planning the case company's seasonal execution from the finance and logistics side.",
+        "Modul 4, keuangan dan logistik: pengendalian biaya, transportasi masuk dan keluar, aktivitas gudang, dan optimasi sumber daya dengan batasan yang ada. Tugas praktiknya memilih alternatif transportasi supaya permintaan terpenuhi tepat waktu dan merencanakan eksekusi musiman perusahaan kasus dari sisi keuangan dan logistik.",
       ),
       t(
         "Module 5, security and sustainability: physical and cyber security in the supply chain, monitoring security risks, the supply chain network's impact on sustainability targets, and using data to improve processes. The practice task: a supply chain security risk assessment.",
         "Modul 5, keamanan dan keberlanjutan: keamanan fisik dan siber di supply chain, pemantauan risiko keamanan, dampak jaringan supply chain pada target keberlanjutan, dan pemakaian data untuk perbaikan proses. Tugas praktiknya melakukan penilaian risiko keamanan rantai pasok.",
       ),
     ],
-    afterModules: t("Prosacco practice task scores: 95% to 100%.", "Nilai tugas praktik Prosacco 95% sampai 100%."),
+    afterModules: t(
+      "Course case activities for a tobacco company: classified products by inventory type to assign stock policies (95%), built a weekly PSI plan that showed the week one SKU would run short (100%), and checked regional warehouse capacity and costs for a seasonal plan (100%).",
+      "Aktivitas studi kasus kursus untuk perusahaan tembakau: mengelompokkan produk berdasarkan jenis persediaan untuk memilih kebijakan stok (95%), menyusun rencana PSI mingguan yang menunjukkan minggu saat satu SKU akan kekurangan stok (100%), dan mengecek kapasitas gudang serta biaya per wilayah untuk rencana musiman (100%).",
+    ),
     skills: t(
       "Demand planning, Forecasting, Inventory control, PSI planning, Production scheduling, Logistics, Risk management",
       "Demand planning, Peramalan, Kontrol persediaan, Rencana PSI, Penjadwalan produksi, Logistik, Manajemen risiko",
