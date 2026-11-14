@@ -103,6 +103,7 @@ const field = {
   asset: t("Asset management", "Manajemen aset"),
 };
 const windata = t("Windata Academy", "Windata Academy");
+const windataMeta = [windata, t("October 2026", "Oktober 2026"), t("Simulated data", "Data simulasi")];
 const img = (folder: string, file: string) => `/studi-kasus/${folder}/images/${file}`;
 const folderNote = (en: string, id: string) => t(en, id);
 
@@ -217,7 +218,7 @@ const builtInProjects: Project[] = [
     title: t("12.37% growth clears the 10% bar, but only six months did", "Pertumbuhan 12,37% lolos ambang 10%, tapi hanya enam bulan yang melewatinya"),
     sentence: t("Year-on-year growth analysis ahead of a Rp 12 billion funding decision", "Analisis pertumbuhan tahunan sebelum keputusan pendanaan Rp 12 miliar"),
     tags: [tag.sql, tag.finance],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("pertumbuhan-tahunan", "lead-en.png"), label: t("Figure 1: year-on-year growth by month, 2025", "Gambar 1: pertumbuhan tahun ke tahun per bulan 2025") },
     summary: t(
       "A distributor needed proof of growth above 10% to apply for Rp 12 billion in funding. 2025 revenue grew 12.37% over 2024. That figure held up after cleaning, but the growth wasn't even.",
@@ -262,7 +263,7 @@ const builtInProjects: Project[] = [
     title: t("The top-scoring product pair appears in only 146 of 3,000 baskets", "Pasangan produk dengan angka tertinggi hanya ada di 146 dari 3.000 keranjang"),
     sentence: t("Choosing three product bundles for an Rp 80 million campaign", "Pemilihan tiga bundel produk untuk kampanye Rp 80 juta"),
     tags: [tag.sql, tag.stats, tag.basket],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("analisis-keranjang", "lead-en.png"), label: t("Figure 1: distribution of 105 product pairs", "Gambar 1: sebaran 105 pasangan produk") },
     summary: t(
       "A beauty e-commerce business was preparing an Rp 80 million bundle campaign. Of 105 product pairs, three qualified as bundles. I rejected the pair with the highest association score because too few customers bought it.",
@@ -311,7 +312,7 @@ const builtInProjects: Project[] = [
     title: t("Total sales were inflated 23.6% before a single broken row was touched", "Total penjualan membengkak 23,6% sebelum satu baris rusak pun disentuh"),
     sentence: t("Cleaning a ten-branch POS export before deciding stock priorities", "Membersihkan ekspor kasir sepuluh cabang sebelum menentukan prioritas stok"),
     tags: [tag.spreadsheet, tag.cleaning],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("penjualan-ritel", "lead-en.png"), label: t("Figure 2: the ten branches on the 2025 net sales axis", "Gambar 2: sepuluh cabang pada sumbu penjualan bersih 2025") },
     summary: t(
       "A ten-branch retail chain had to decide which branches got extra stock and staff first. Its POS export also contained the following year's transactions, so the total was 23.6% too high. After cleaning, only the top two branches stood clearly apart from the rest.",
@@ -355,7 +356,7 @@ const builtInProjects: Project[] = [
     title: t("Seven departments differ by only 7.3 points, so the retention budget can't be split by department", "Tujuh departemen hanya berselisih 7,3 poin, jadi anggaran retensi tidak bisa dibagi per departemen"),
     sentence: t("Finding the employee groups that resign the most", "Mencari kelompok karyawan yang paling banyak resign"),
     tags: [tag.spreadsheet, tag.hr],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("retensi-karyawan", "lead-en.png"), label: t("Figure 1: resignation range across five ways of grouping", "Gambar 1: rentang resign pada lima cara pengelompokan") },
     summary: t(
       "A tech company wanted to split its retention budget between the two departments with the highest resignations. All seven departments differ by only 7.3 points. Working hours and satisfaction separate employees 7.6 to 9.4 times more sharply.",
@@ -396,7 +397,7 @@ const builtInProjects: Project[] = [
     title: t("24.6% growth came from volume, and early-year volume has already stopped rising", "Pertumbuhan 24,6% datang dari volume, dan volume awal tahun sudah berhenti naik"),
     sentence: t("A revenue forecast as a range, for the budget meeting", "Ramalan pendapatan berbentuk rentang untuk rapat anggaran"),
     tags: [tag.spreadsheet, tag.forecasting],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("ramalan-pendapatan", "lead-en.png"), label: t("Figure 1: change in revenue, transaction count, and value per transaction", "Gambar 1: perubahan pendapatan, jumlah transaksi, dan nilai per transaksi") },
     summary: t(
       "The finance lead wanted to set the annual target by extending 24.6% growth. All of that growth came from the number of transactions, and in the first quarter of the current year the transaction count had already fallen. I built a forecast as a range, plus one budget figure.",
@@ -436,7 +437,7 @@ const builtInProjects: Project[] = [
     title: t("All 361 reorder points were too low because of one operator in the formula", "Seluruh 361 ambang pemesanan terlalu rendah karena satu tanda operasi di rumus"),
     sentence: t("Finding the wrong reorder-point formula in an inventory system", "Menemukan rumus ambang stok yang salah di sistem persediaan"),
     tags: [tag.spreadsheet, tag.inventory],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("ambang-persediaan", "lead-en.png"), label: t("Figure 2: system reorder multiplier vs the standard formula, by lead time", "Gambar 2: pengali ambang sistem dibanding rumus baku per waktu tunggu") },
     summary: t(
       "Three products sat empty on the shelf for almost a week without ever appearing on the order list. After recalculating the reorder points, every threshold in the system turned out to be too low. The cause: the system formula added two days to the lead time, when it should have multiplied it by two.",
@@ -460,8 +461,8 @@ const builtInProjects: Project[] = [
       "Dua pekerjaan untuk dua penerima. Tim pengadaan mempercepat pengiriman 68 barang kritis minggu itu, dimulai dari gudang A yang menampung 32 di antaranya. Pemilik sistem mengganti rumus ambang.",
     ),
     limits: t(
-      "There's no holding cost, so higher reorder points can't be claimed as savings. The Rp 234.0 million in at-risk sales is an upper bound.",
-      "Tidak ada biaya penyimpanan, jadi kenaikan ambang tidak bisa diklaim sebagai penghematan. Penjualan berisiko Rp 234,0 juta adalah batas atas.",
+      "There's no holding cost, so higher reorder points can't be claimed as savings. The Rp 66.7 million in sales not covered by stock during the lead time is an upper bound.",
+      "Tidak ada biaya penyimpanan, jadi kenaikan ambang tidak bisa diklaim sebagai penghematan. Penjualan yang tidak tertutup stok selama masa tunggu, Rp 66,7 juta, adalah batas atas.",
     ),
     files: [
       { label: t("CASE 4 folder", "Folder CASE 4"), href: "https://drive.google.com/drive/folders/1YP0nuLTLPG2U77QK-MOC3pW7INbgHFgy", note: folderNote("workbook, memo, and decision log", "workbook, memo, dan catatan keputusan") },
@@ -479,7 +480,7 @@ const builtInProjects: Project[] = [
     title: t("Platforms differ 2.4 times, campaign types differ 4.0 times", "Platform berselisih 2,4 kali, jenis kampanye berselisih 4,0 kali"),
     sentence: t("Splitting an Rp 200 million Lebaran ad budget across three platforms", "Pembagian anggaran iklan Lebaran Rp 200 juta di tiga platform"),
     tags: [tag.spreadsheet, tag.marketing],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("efisiensi-iklan", "lead-en.png"), label: t("Figure 1: efficiency and spend share of three platforms", "Gambar 1: efisiensi dan porsi belanja tiga platform") },
     summary: t(
       "The marketing manager wanted to put the Rp 200 million Lebaran budget on the most efficient ad platform. Facebook is indeed 2.4 times more efficient than Instagram. But campaign type separates results more sharply, at 4.0 times.",
@@ -519,7 +520,7 @@ const builtInProjects: Project[] = [
     title: t("New-cohort retention appears to drop 50 points, and the drop turns out to be a misread matrix", "Retensi kohort baru tampak turun 50 poin, dan penurunan itu ternyata salah baca matriks"),
     sentence: t("A retention matrix for fundraising material", "Matriks retensi untuk materi penggalangan dana"),
     tags: [tag.spreadsheet, tag.cohort],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("retensi-kohort", "lead-en.png"), label: t("Figure 2: month-3 retention range at four requirement levels", "Gambar 2: rentang retensi bulan ketiga pada empat tingkat syarat") },
     summary: t(
       "A software company founder needed a retention matrix for an investor presentation. The matrix as-is showed new cohorts doing much worse. That drop appeared because new cohorts hadn't been observed long enough.",
@@ -561,7 +562,7 @@ const builtInProjects: Project[] = [
     title: t("Clinic branch rankings are no different from a lottery draw", "Peringkat cabang klinik tidak berbeda dari hasil undian"),
     sentence: t("Testing where long patient waiting times come from", "Menguji dari mana waktu tunggu pasien yang panjang berasal"),
     tags: [tag.spreadsheet, tag.stats],
-    info: [t("Spreadsheet", "Spreadsheet"), windata],
+    info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
     figure: { src: img("waktu-tunggu-klinik", "lead-en.png"), label: t("Figure 1: permutation test results for branch, department, and medical staff", "Gambar 1: hasil uji acak untuk cabang, departemen, dan tenaga medis") },
     summary: t(
       "An eight-branch clinic network wanted to add doctors at the branch with the longest waiting time. The gap between branches is no larger than chance alone would produce. The real difference is between medical staff, and it's less than half the raw figure.",
@@ -599,7 +600,7 @@ const builtInProjects: Project[] = [
     title: t("8% of customers hold 28.7% of value, yet the retention budget is split evenly", "8% pelanggan memegang 28,7% nilai, tapi anggaran retensi dibagi rata"),
     sentence: t("RFM segmentation for an Rp 150 million quarterly retention budget", "Segmentasi RFM untuk anggaran retensi Rp 150 juta per kuartal"),
     tags: [tag.sql, tag.segmentation],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("segmentasi-rfm", "lead-en.png"), label: t("Customer share and value share by segment", "Grafik pangsa pelanggan dan pangsa nilai per segmen") },
     summary: t(
       "The Rp 150 million quarterly retention budget had been split evenly across 5,000 customers, about Rp 30,000 each. RFM segmentation shows 400 customers hold 28.7% of transaction value, and 900 customers who used to be regulars have disappeared.",
@@ -642,7 +643,7 @@ const builtInProjects: Project[] = [
     title: t("Phone verification holds back 6,730 of 14,874 sign-ups", "Verifikasi nomor telepon menahan 6.730 dari 14.874 pendaftar"),
     sentence: t("A five-stage onboarding funnel to pick the first fix", "Funnel onboarding lima tahap untuk menentukan perbaikan pertama"),
     tags: [tag.sql, tag.funnel, tag.cohort],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("analisis-funnel", "lead-en.png"), label: t("Figure 1: users per funnel stage", "Gambar 1: pengguna per tahap funnel") },
     summary: t(
       "A super-app knew its total conversion was 19.88%, but not at which stage new users were lost. A five-stage funnel shows the phone verification step loses 45.25% of sign-ups. The difference between platforms at that step is too small to split by.",
@@ -686,7 +687,7 @@ const builtInProjects: Project[] = [
     title: t("Behind 1,395 suspicious transactions there are only 56 people", "Di balik 1.395 transaksi mencurigakan hanya ada 56 orang"),
     sentence: t("A review priority queue for a digital wallet's risk team", "Antrean prioritas tinjauan untuk tim risiko dompet digital"),
     tags: [tag.sql, tag.rules],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("deteksi-kecurangan", "lead-en.png"), label: t("Figure 3: users affected at three threshold positions", "Gambar 3: pengguna yang tersentuh pada tiga posisi ambang") },
     summary: t(
       "A digital wallet's risk team can only review 200 cases a day. Four behavioral signals produce a queue of 1,395 transactions belonging to 56 users over 15 months. Lowering the threshold would touch 2,581 people without adding a single check.",
@@ -728,7 +729,7 @@ const builtInProjects: Project[] = [
     title: t("Three high-volume routes account for 34.77% of late-delivery penalties", "Tiga jalur bervolume besar menyumbang 34,77% denda keterlambatan"),
     sentence: t("Finding the source of late-delivery penalties at a courier company", "Mencari sumber denda keterlambatan di perusahaan pengiriman"),
     tags: [tag.sql, tag.stats, tag.supplyChain],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("rantai-pasok", "lead-en.png"), label: t("Figure 1: penalties by route", "Gambar 1: denda per jalur") },
     summary: t(
       "An intercity delivery company pays an Rp 50,000 penalty for every late parcel. Penalties pile up on three high-volume routes out of Jakarta, and none of the three is the worst performer. So the improvement priority is taken from volume.",
@@ -750,8 +751,8 @@ const builtInProjects: Project[] = [
       t("2,113 shipments without an arrival date are already past their promise by 222 days on average.", "2.113 kiriman tanpa tanggal tiba sudah lewat janji rata-rata 222 hari."),
     ],
     recommendation: t(
-      "Focus improvement on the three Jakarta routes. If all three reach 97%, penalties drop by Rp 19.55 million. Review the bottom ten couriers as a group. Check the physical status of the 2,126 undelivered shipments, and start recording the reason for every delay.",
-      "Fokus perbaikan di tiga jalur Jakarta. Kalau ketiganya mencapai 97%, denda turun Rp 19,55 juta. Tinjau sepuluh kurir terbawah sebagai kelompok. Cek status fisik 2.126 kiriman yang belum tiba, dan mulai catat alasan setiap keterlambatan.",
+      "Focus improvement on the three Jakarta routes. If all three reach 97%, penalties drop by Rp 19.55 million. Review the bottom ten couriers as a group. Check the physical status of the 2,113 undelivered shipments already past their promised date, and start recording the reason for every delay.",
+      "Fokus perbaikan di tiga jalur Jakarta. Kalau ketiganya mencapai 97%, denda turun Rp 19,55 juta. Tinjau sepuluh kurir terbawah sebagai kelompok. Cek status fisik 2.113 kiriman belum tiba yang sudah lewat tanggal janji, dan mulai catat alasan setiap keterlambatan.",
     ),
     limits: t(
       "There's no delay-cause column, so this analysis shows where delays pile up, not why. The 97% target comes from outside the data.",
@@ -773,7 +774,7 @@ const builtInProjects: Project[] = [
     title: t("New users fell from 340 to 25 a month while stickiness stayed at 24%", "Pengguna baru turun dari 340 ke 25 orang sebulan saat stickiness diam di 24%"),
     sentence: t("Deciding which feature to fund first from an Rp 500 million budget", "Menentukan fitur yang dibiayai lebih dulu dari anggaran Rp 500 juta"),
     tags: [tag.sql, tag.stats, tag.experiment],
-    info: [t("SQL", "SQL"), windata],
+    info: [t("SQL", "SQL"), ...windataMeta],
     figure: { src: img("aktivitas-pengguna", "lead-en.png"), label: t("Figure 1: new users per month", "Gambar 1: pengguna baru per bulan") },
     summary: t(
       "The head of product at a video subscription service had to pick which feature to fund from an Rp 500 million budget. Stickiness had sat around 24% for months, far from the 35% target. What most shapes the order of steps is that new users have almost stopped arriving.",
@@ -818,7 +819,7 @@ const builtInProjects: Project[] = [
     title: t("SARIMA scored as most accurate, but missed by 14% to 80% when tested on a full month", "SARIMA tercatat paling akurat, tapi meleset 14% sampai 80% saat diuji satu bulan penuh"),
     sentence: t("Weekly demand forecast for August 2022 across five hubs, with stock targets for fresh products", "Forecast permintaan mingguan Agustus 2022 untuk lima hub dan target stok produk segar"),
     tags: [tag.python, tag.forecasting, tag.inventory],
-    info: [t("Python, Google Colab, Canva", "Python, Google Colab, Canva"), t("Team 6", "Team 6"), t("Forecasting, Inventory", "Forecasting, Inventory")],
+    info: [t("Python, Google Colab, Canva", "Python, Google Colab, Canva"), t("Solo (RevoU group Team 6)", "Dikerjakan sendiri (kelompok RevoU Team 6)"), t("February to May 2025, redone October 2026", "Februari sampai Mei 2025, dikerjakan ulang Oktober 2026"), t("Forecasting, Inventory", "Forecasting, Inventory")],
     figure: { src: img("q-commerce", "grafik-forecast-en.png"), label: t("Weekly Shipped Qty and the August forecast (Figure 4 in the full case study)", "Grafik Shipped Qty mingguan dan forecast Agustus, Gambar 4 di studi kasus lengkap") },
     summary: t(
       "The operations team for five Q-Commerce hubs needed weekly demand figures for August 2022 to prepare stock. The first version picked SARIMA with a 5.04% MAPE and concluded demand would peak in week three. On re-checking, that \"August\" turned out to be shifted by one month, and the correct test picked seasonal naive. The August forecast is 394,242 units, 40% of it in the last week.",
@@ -870,7 +871,7 @@ const builtInProjects: Project[] = [
       "Cleaning ulang dataset final project dan mencari penyebab 57% pesanan ritel e-commerce terlambat",
     ),
     tags: [tag.python, tag.cleaning, tag.stats, tag.supplyChain],
-    info: [t("Python (pandas, SciPy), Google Colab", "Python (pandas, SciPy), Google Colab"), t("Independent", "Mandiri"), t("Data Cleaning, Supply Chain", "Data Cleaning, Supply Chain")],
+    info: [t("Python (pandas, SciPy), Google Colab", "Python (pandas, SciPy), Google Colab"), t("Solo", "Dikerjakan sendiri"), t("February to May 2025, redone October 2026", "Februari sampai Mei 2025, dikerjakan ulang Oktober 2026"), t("Data Cleaning, Supply Chain", "Data Cleaning, Supply Chain")],
     figure: { src: img("dataco", "grafik-mode-en.png"), label: t("Actual shipping days by mode vs the promise (Figure 1 in the full case study)", "Sebaran hari kirim aktual per mode dan janjinya, Gambar 1 di studi kasus lengkap") },
     summary: t(
       "I reopened my RevoU final-project dataset without a brief. The first version concluded that the 54.83% late rate came from region, product, and stockouts. After cleaning, the real late rate is 57.3% per order and is almost entirely decided by shipping mode. Region and product have no effect, and the data doesn't record stockouts.",
@@ -913,7 +914,7 @@ const builtInProjects: Project[] = [
     name: t("Asset Management Information System", "Sistem Informasi Manajemen Aset"),
     industry: t("Higher education", "Pendidikan tinggi"),
     field: field.asset,
-    tools: [],
+    tools: ["Laravel"],
     category: "bsa",
     title: t(
       "Asset proposals moved from Excel files on OneDrive into one web system, accepted at 88.35% in UAT",
@@ -925,7 +926,7 @@ const builtInProjects: Project[] = [
     ),
     tags: [tag.systems, t("RAD", "RAD"), t("UML / ERD", "UML / ERD"), t("UAT", "UAT")],
     info: [
-      t("RAD, UML, ERD, UAT", "RAD, UML, ERD, UAT"),
+      t("Laravel, RAD, UML, ERD, UAT", "Laravel, RAD, UML, ERD, UAT"),
       t("Thesis, 2024", "Skripsi, 2024"),
       t("Solo, with two advisors", "Dikerjakan sendiri, dengan dua pembimbing"),
       t("Telkom University", "Telkom University"),
