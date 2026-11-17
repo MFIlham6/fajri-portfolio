@@ -155,6 +155,76 @@ export const studiKasus: CaseStudy[] = [
     images: ["gambar-1.png", "gambar-2.png", "gambar-3.png"],
   },
   {
+    no: 19,
+    slug: "suara-pelanggan",
+    title: "Skor Kepuasan Naik, Niat Berhenti Ikut Naik: Menyajikan Ulang 4.723 Respons Survei",
+    titleEn: "Satisfaction Scores Rose, and So Did the Intent to Leave: Re-presenting 4,723 Survey Responses",
+    summary:
+      "Skor kepuasan keseluruhan naik karena promo harga, sementara layanan pelanggan turun setiap bulan dan menjadi satu-satunya dimensi yang membedakan responden yang berniat berhenti.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png", "gambar-6.png"],
+  },
+  {
+    no: 20,
+    slug: "pengiriman-same-day",
+    title: "Usulan 12 Van Senilai Rp 2,1 Miliar Hampir Disetujui, Padahal Tambahan Waktunya Muncul Sebelum Kendaraan Berangkat",
+    titleEn: "A Proposal for 12 Vans Worth Rp 2.1 Billion Was Nearly Approved, Yet the Extra Time Appears Before the Vehicles Leave",
+    summary:
+      "On-time turun dari 94,2% ke 82,6% setelah cut-off digeser, dan 78,2% tambahan waktunya muncul di antrean dispatch, bukan di last mile tempat van bekerja.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png", "gambar-6.png"],
+  },
+  {
+    no: 21,
+    slug: "gerai-ditutup",
+    title: "Tiga daftar tanpa irisan: memilih 20 dari 180 gerai kopi ketika tidak ada grafik baku yang sanggup memuat 180 lintasan",
+    titleEn: "Three lists with no overlap: choosing 20 of 180 coffee outlets when no standard chart can hold 180 trajectories",
+    summary:
+      "Tiga cara mengurutkan yang sama sahnya memberi tiga daftar tanpa irisan; daftar termurah memuat 15 gerai baru yang sedang tumbuh, jadi usulannya menutup 16 gerai yang menurun bertahap.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png"],
+  },
+  {
+    no: 22,
+    slug: "margin-kategori",
+    title: "Margin gabungan naik 4,84 poin sementara margin ketujuh kategorinya turun: menyusun satu layar yang memuat keduanya",
+    titleEn: "Combined margin rose 4.84 points while all seven category margins fell: building one screen that holds both",
+    summary:
+      "Margin gabungan naik +4,84 poin karena bauran bergeser (+7,02 poin), sementara margin ketujuh kategori turun di setiap panjang jendela; keputusan insentif Rp 34 miliar diusulkan dipisah dan ditunda.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png", "gambar-6.png"],
+  },
+  {
+    no: 23,
+    slug: "acuan-cabang",
+    title: "Dua daftar cabang yang sama-sama benar, satu berkas: menyusun layar yang menyatakan acuannya",
+    titleEn: "Two branch lists, both correct, one file: building a screen that states its reference",
+    summary:
+      "Peringkat pertumbuhan dan peringkat pencapaian target hanya berbeda karena tiga target yang disetel tangan; 10 dari 24 cabang sepakat pada kelima acuan, dan juara pencapaian target berada di peringkat 17 dalam rupiah.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png", "gambar-6.png"],
+  },
+  {
+    no: 24,
+    slug: "dua-sistem",
+    title: "Dua sistem, satu bingkai: menyusun layar rapat anggaran yang tidak menjanjikan perbandingan yang tidak ada di data",
+    titleEn: "Two systems, one frame: building a budget-meeting screen that doesn't promise a comparison the data doesn't have",
+    summary:
+      "Grafik dua sumbu menyatukan sesi dan rupiah dari dua sistem berbeda; dipisahkan, kanal nomor dua dalam volume ternyata terendah dalam pendapatan per sesi, dan Rp 2.794 juta pendapatan tidak punya sumber.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png", "gambar-6.png"],
+  },
+  {
+    no: 25,
+    slug: "garis-belum-terjadi",
+    title: "Grafik rapat bilang gudang penuh April 2027, padahal tanggal itu masih tebakan",
+    titleEn: "The meeting chart said the warehouse fills in April 2027, but that date is still a guess",
+    summary:
+      "Grafik rapat menunjukkan gudang penuh April 2027 dari satu versi tebakan; digambar ulang, tanggal penuhnya berkisar Februari 2027 sampai tidak penuh, dan jawaban tidak penuh bergantung pada rak yang belum dipasang.",
+    tool: "Power BI",
+    images: ["gambar-1.png", "gambar-2.png", "gambar-3.png", "gambar-4.png", "gambar-5.png"],
+  },
+  {
     no: 15,
     slug: "q-commerce",
     title: "Forecast Stok Agustus 2022 untuk Lima Hub Q-Commerce: Metode Paling Sederhana Ternyata Paling Akurat",

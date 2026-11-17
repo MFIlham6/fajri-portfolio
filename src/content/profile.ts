@@ -191,6 +191,12 @@ const builtInExperience: Experience[] = [
       ),
     ],
     related: ["telkom-m1", "telkom-m2"],
+    photo: {
+      src: "/images/experience/revou-telkom-virtual-internship.jpg",
+      width: 1400,
+      height: 675,
+      alt: t("Opening slide of the RevoU x Telkom Indonesia Virtual Internship, Data Analytics Next Project", "Slide pembuka Virtual Internship RevoU x Telkom Indonesia, Data Analytics Next Project"),
+    },
   },
   {
     id: "duniatex",

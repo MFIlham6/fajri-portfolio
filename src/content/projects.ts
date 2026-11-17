@@ -87,6 +87,8 @@ const tag = {
   supplyChain: t("Supply Chain", "Supply Chain"),
   experiment: t("Experimentation", "Eksperimen"),
   systems: t("Systems Analysis", "Analisis Sistem"),
+  powerbi: t("Power BI", "Power BI"),
+  viz: t("Data Visualization", "Visualisasi Data"),
 };
 /** Business areas, shared so the field filter groups projects under one label. */
 const field = {
@@ -104,6 +106,7 @@ const field = {
 };
 const windata = t("Windata Academy", "Windata Academy");
 const windataMeta = [windata, t("October 2026", "Oktober 2026"), t("Simulated data", "Data simulasi")];
+const vizMeta = [windata, t("November 2026", "November 2026"), t("Simulated data", "Data simulasi")];
 const img = (folder: string, file: string) => `/studi-kasus/${folder}/images/${file}`;
 const folderNote = (en: string, id: string) => t(en, id);
 
@@ -834,6 +837,315 @@ const builtInProjects: Project[] = [
     ],
   },
 
+  /* ---------------- CASE 15–21 (visualization) ---------------- */
+  {
+    slug: "case-15",
+    code: "CASE 15",
+    name: t("Customer Survey Dashboard", "Dashboard Suara Pelanggan"),
+    industry: t("Telecommunications", "Telekomunikasi"),
+    field: field.customer,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("Satisfaction scores rose while the intent to leave rose too", "Skor kepuasan naik, niat berhenti ikut naik"),
+    sentence: t("Rebuilding a board-meeting screen from 4,723 survey responses before a Rp 4.8 billion technician decision", "Menyusun ulang layar rapat dari 4.723 respons survei sebelum keputusan teknisi Rp 4,8 miliar"),
+    tags: [tag.powerbi, tag.viz, tag.dashboard],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("suara-pelanggan", "gambar-6.png"), label: t("Figure 6: the Overview page of the Power BI dashboard", "Gambar 6: halaman Overview dashboard Power BI") },
+    summary: t(
+      "A home internet provider was about to spend Rp 4.8 billion a year on 40 field technicians, assuming customers leave because of the network. The meeting screen only showed the overall score going up. I rebuilt that screen from the same survey data until it showed which dimension sets apart the customers who intend to leave.",
+      "Sebuah penyedia internet rumahan hendak membelanjakan Rp 4,8 miliar per tahun untuk 40 teknisi lapangan, dengan anggapan pelanggan pergi karena jaringan. Layar rapat hanya menampilkan skor keseluruhan yang naik. Saya menyusun ulang layar itu dari data survei yang sama sampai terlihat dimensi mana yang membedakan pelanggan yang berniat berhenti.",
+    ),
+    data: t(
+      "4,723 survey responses from six cities, January to December 2025: five rated dimensions, an overall score, intent to continue, and complaint categories from 1,564 respondents. June was only surveyed for one week.",
+      "4.723 respons survei dari enam kota, Januari sampai Desember 2025: lima dimensi penilaian, skor keseluruhan, niat melanjutkan, dan kategori keluhan dari 1.564 responden. Juni hanya disurvei satu minggu.",
+    ),
+    decisions: [
+      t("The overall score was split into three lines, with customer service the only colored one. A single overall line was rejected because its rise hides the dimension falling beneath it.", "Skor keseluruhan dipecah menjadi tiga garis, dengan layanan pelanggan satu-satunya yang berwarna. Satu garis keseluruhan ditolak karena kenaikannya menutupi dimensi yang turun di bawahnya."),
+      t("Drivers are shown as the score gap between those who stay and those who intend to leave, not as yearly averages.", "Pendorong ditampilkan sebagai selisih skor antara yang bertahan dan yang berniat berhenti, bukan rata-rata setahun."),
+      t("Speed is shown as the spread of ratings per city, because its average falls on the rating respondents chose least often.", "Kecepatan ditampilkan sebagai sebaran nilai per kota, karena rata-ratanya jatuh di nilai yang paling jarang dipilih responden."),
+    ],
+    findings: [
+      t("The overall score rose from 3.40 to 3.65 with the July price promotion, while customer service fell every month, from 3.66 to 2.77.", "Skor keseluruhan naik dari 3,40 ke 3,65 bersama promo harga Juli, sementara layanan pelanggan turun setiap bulan, dari 3,66 ke 2,77."),
+      t("Customer service differs by +0.37 between those who stay and those who intend to leave; speed and stability only +0.06.", "Layanan pelanggan berselisih +0,37 antara yang bertahan dan yang berniat berhenti; kecepatan dan stabilitas hanya +0,06."),
+      t("1,271 of 1,272 low speed ratings come from Bandung, Medan, and Balikpapan. The network problem is real, but it isn't what sets leavers apart.", "1.271 dari 1.272 nilai kecepatan rendah datang dari Bandung, Medan, dan Balikpapan. Masalah jaringan nyata, tetapi bukan pembeda yang berniat pergi."),
+    ],
+    recommendation: t(
+      "Postpone the 40 technicians until the next meeting and decide again alongside a customer service plan. Shift this quarter's priority to customer service in Jakarta, and keep network work in the three legacy cities as a separate, costed proposal.",
+      "Tunda 40 teknisi sampai rapat berikutnya dan putuskan ulang berdampingan dengan rencana layanan pelanggan. Ubah prioritas kuartal ini ke layanan pelanggan Jakarta, dan jadikan perbaikan jaringan di tiga kota lama usulan terpisah dengan hitungan biayanya sendiri.",
+    ),
+    limits: t(
+      "The survey measures intent to leave (18.3%), not actual churn (2.6% a month), and the two aren't multiplied into rupiah. The relationships shown are associations, not causes.",
+      "Survei mengukur niat berhenti (18,3%), bukan churn aktual (2,6% per bulan), dan keduanya tidak dikalikan menjadi rupiah. Hubungan yang ditunjukkan bersifat asosiasi, bukan sebab.",
+    ),
+    files: [
+      { label: t("CASE 15 folder", "Folder CASE 15"), href: "https://drive.google.com/drive/folders/1x2iE7gseqa-SZi07KUkPvKSEuRGiA7pC", note: folderNote("Power BI dashboard, form rationale, decision memo, and test notes", "dashboard Power BI, alasan bentuk, memo keputusan, dan catatan uji") },
+    ],
+    fullCase: "suara-pelanggan",
+  },
+  {
+    slug: "case-16",
+    code: "CASE 16",
+    name: t("Same-Day Delivery Decline Diagnosis", "Diagnosis Penurunan Pengiriman Same-Day"),
+    industry: t("Logistics", "Logistik"),
+    field: field.supplyChain,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("78.2% of the extra time appears in the dispatch queue, so the 12-van proposal targets a stage that barely changed", "78,2% tambahan waktu muncul di antrean dispatch, jadi usulan 12 van menyasar tahap yang hampir tidak berubah"),
+    sentence: t("Diagnosing an on-time drop before a Rp 2.1 billion van lease", "Mendiagnosis turunnya ketepatan waktu sebelum sewa van Rp 2,1 miliar"),
+    tags: [tag.powerbi, tag.viz, tag.supplyChain],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("pengiriman-same-day", "gambar-4.png"), label: t("Figure 4: extra minutes per order by process stage", "Gambar 4: tambahan menit per order menurut tahap proses") },
+    summary: t(
+      "A same-day delivery operator was about to lease 12 vans worth Rp 2.1 billion a year after on-time fell from 94.2% to 82.6%. The extra time turns out to appear before the vehicles leave: the dispatch queue accounts for 78.2%, last mile for 3.8%.",
+      "Sebuah operator pengiriman same-day hendak menyewa 12 van senilai Rp 2,1 miliar per tahun setelah on-time turun dari 94,2% ke 82,6%. Tambahan waktunya ternyata muncul sebelum kendaraan berangkat: antrean dispatch menyumbang 78,2%, last mile 3,8%.",
+    ),
+    data: t(
+      "72,000 orders from 1 May to 29 June 2026 across eight hubs, with the duration of each process stage, plus hub-day and hub-day-hour summaries. The same-day cut-off moved from 14:00 to 16:00 on 17 June.",
+      "72.000 order dari 1 Mei sampai 29 Juni 2026 di delapan hub, dengan durasi tiap tahap proses, ditambah ringkasan hub-hari dan hub-hari-jam. Cut-off same-day digeser dari 14:00 ke 16:00 pada 17 Juni.",
+    ),
+    decisions: [
+      t("The decline is shown as a daily control chart, because two before-and-after bars can't tell a lasting shift from a few bad days.", "Penurunan ditampilkan sebagai grafik kendali harian, karena dua batang sebelum dan sesudah tidak bisa membedakan pergeseran yang bertahan dari beberapa hari buruk."),
+      t("Hubs are shown with late count and late rate in two panels, because a count ranking always puts the biggest hub on top.", "Hub ditampilkan dengan jumlah terlambat dan late rate di dua panel, karena peringkat jumlah saja selalu menaruh hub terbesar di puncak."),
+      t("Every rate is a total divided by a total. Averaging per hub-day overstated on-time by 1.88 points.", "Setiap rate dihitung sebagai jumlah dibagi jumlah. Rata-rata per hub-hari melebihkan on-time 1,88 poin."),
+    ],
+    findings: [
+      t("All thirteen days after the change sit below the baseline's lower limit of 92.2%.", "Ketiga belas hari sesudah perubahan berada di bawah batas bawah baseline 92,2%."),
+      t("Jakarta and Bandung carry 64.1% of the extra lateness. Their orders placed 15:00 to 17:59 were late 49.5% and 59.9% of the time.", "Jakarta dan Bandung membawa 64,1% tambahan keterlambatan. Order mereka pukul 15:00 sampai 17:59 terlambat 49,5% dan 59,9%."),
+      t("Same-day orders in that window now wait 54.1 minutes at dispatch instead of 31.0. Average van utilization is 65.1%, and no hub is above 69.9%.", "Order same-day di jam itu kini menunggu 54,1 menit di dispatch, bukan 31,0. Utilisasi van rata-rata 65,1%, dan tidak ada hub di atas 69,9%."),
+    ],
+    recommendation: t(
+      "Hold the 12-van contract for two weeks. Test extra dispatch capacity from 15:00 to 18:00 in Jakarta and Bandung with the number of vans held fixed. It succeeds if the test group's on-time returns to 92.2% or higher and dispatch excess minutes fall by at least 50%.",
+      "Tunda kontrak 12 van selama dua minggu. Uji tambahan kapasitas dispatch pukul 15:00 sampai 18:00 di Jakarta dan Bandung dengan jumlah van ditahan tetap. Berhasil kalau on-time kelompok uji kembali ke 92,2% atau lebih dan menit kelebihan dispatch turun minimal 50%.",
+    ),
+    limits: t(
+      "This analysis is observational, so the cut-off change coincides with the decline but isn't proven as the cause. Utilization is a daily average and could hide hourly peaks. Rp 2.1 billion is a contract on hold, not a saving.",
+      "Analisis ini observasional, jadi perubahan cut-off bertepatan dengan penurunan tetapi belum terbukti sebagai sebab. Utilisasi adalah rata-rata harian dan bisa menyembunyikan puncak per jam. Rp 2,1 miliar adalah nilai kontrak yang ditunda, belum penghematan.",
+    ),
+    files: [
+      { label: t("CASE 16 folder", "Folder CASE 16"), href: "https://drive.google.com/drive/folders/1QJ--OCQC5WO2xKShJ7HGPMlFzLFvxAov", note: folderNote("Power BI dashboard, design decisions, validation notes, and decision memo", "dashboard Power BI, catatan keputusan desain, catatan validasi, dan memo keputusan") },
+    ],
+    fullCase: "pengiriman-same-day",
+  },
+  {
+    slug: "case-17",
+    code: "CASE 17",
+    name: t("Choosing Outlets to Close", "Pemilihan Gerai yang Ditutup"),
+    industry: t("Food & beverage", "Makanan & minuman"),
+    field: field.sales,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("The cheapest closure list would close fifteen outlets that are still growing", "Daftar penutupan termurah ternyata menutup lima belas gerai yang sedang tumbuh"),
+    sentence: t("Choosing 20 of 180 coffee outlets to close from 24 months of revenue", "Memilih 20 dari 180 gerai kopi yang ditutup dari pendapatan 24 bulan"),
+    tags: [tag.powerbi, tag.viz, tag.dashboard],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("gerai-ditutup", "gambar-1.png"), label: t("Figure 1: who each ranking method picks, by trajectory group", "Gambar 1: siapa yang dipilih tiap cara mengurutkan, menurut kelompok lintasan") },
+    summary: t(
+      "A coffee chain had to close 20 of 180 outlets at a fixed cost of Rp 17 billion. The proposed list held the 20 outlets with the lowest latest-month revenue. Splitting that list by each outlet's 24-month trajectory showed 15 of the 20 were newly opened outlets still growing.",
+      "Sebuah jaringan kedai kopi harus menutup 20 dari 180 gerai dengan biaya tetap Rp 17 miliar. Daftar usulan berisi 20 gerai dengan pendapatan bulan terakhir terendah. Setelah isinya dipecah menurut lintasan 24 bulan tiap gerai, 15 dari 20 namanya ternyata gerai baru yang masih tumbuh.",
+    ),
+    data: t(
+      "Monthly revenue for 180 outlets, January 2024 to December 2025, 3,975 filled rows. 19 outlets opened mid-period. Revenue only: no costs, profit, or events.",
+      "Pendapatan bulanan 180 gerai, Januari 2024 sampai Desember 2025, 3.975 baris terisi. 19 gerai dibuka di tengah periode. Hanya pendapatan: tanpa biaya, laba, atau peristiwa.",
+    ),
+    decisions: [
+      t("Level and direction are drawn on two axes. A combined score was rejected because six pairs of outlets have identical figures in both columns and only their trajectory tells them apart.", "Tingkat dan arah digambar di dua sumbu. Skor gabungan ditolak karena enam pasang gerai punya angka sama persis di kedua kolom dan hanya lintasannya yang memisahkan mereka."),
+      t("All three rankings are shown side by side, so the reader sees that equally valid rankings give different lists.", "Ketiga peringkat ditampilkan berdampingan, supaya pembaca melihat bahwa peringkat yang sama sahnya memberi daftar berbeda."),
+      t("Small-multiple panels share a fixed axis, because automatic axes made flat outlets look as steep as ones that fell 38%.", "Panel kecil memakai sumbu tetap yang sama, karena sumbu otomatis membuat gerai datar tampak securam gerai yang jatuh 38%."),
+    ],
+    findings: [
+      t("Three valid rankings give three lists with no shared outlet; lost revenue ranges from Rp 4.22 billion to Rp 19.02 billion.", "Tiga peringkat yang sama sahnya memberi tiga daftar tanpa gerai yang sama; pendapatan yang ikut hilang berkisar Rp 4,22 miliar sampai Rp 19,02 miliar."),
+      t("15 of the 20 cheapest outlets opened between May and September 2025, and their revenue has risen 38% to 120% since their first month.", "15 dari 20 gerai termurah dibuka Mei sampai September 2025, dan pendapatannya sudah naik 38% sampai 120% sejak bulan pertama."),
+      t("23 outlets fell together from March to April 2025 while 122 other established outlets rose 5.5%.", "23 gerai turun bersama dari Maret ke April 2025, sementara 122 gerai lama lain naik 5,5%."),
+    ],
+    recommendation: t(
+      "Close the 16 outlets declining gradually. Investigate the 23 April outlets as one question for two weeks before filling the remaining four seats, and review the 19 new outlets after 12 months of full operation.",
+      "Tutup 16 gerai yang menurun bertahap. Telusuri 23 gerai April sebagai satu pertanyaan selama dua minggu sebelum mengisi empat kursi sisanya, dan tinjau ulang 19 gerai baru sesudah 12 bulan beroperasi penuh.",
+    ),
+    limits: t(
+      "The data only holds revenue, so nothing is said about which outlets lose money, and the cause of the April 2025 drop isn't in the data. The Rp 17 billion cost isn't claimed as a saving.",
+      "Data hanya memuat pendapatan, jadi tidak ada pernyataan tentang gerai mana yang merugi, dan sebab penurunan April 2025 tidak ada di data. Biaya Rp 17 miliar tidak diklaim sebagai penghematan.",
+    ),
+    files: [
+      { label: t("CASE 17 folder", "Folder CASE 17"), href: "https://drive.google.com/drive/folders/1zeqrcmc0G5HRuh0ePB65YKEn2-bdkypm", note: folderNote("Power BI dashboard, design decisions, validation notes, and closure memo", "dashboard Power BI, catatan keputusan desain, catatan validasi, dan memo penutupan") },
+    ],
+    fullCase: "gerai-ditutup",
+  },
+  {
+    slug: "case-18",
+    code: "CASE 18",
+    name: t("Category Margin Analysis", "Analisis Margin Kategori"),
+    industry: t("E-commerce", "E-commerce"),
+    field: field.finance,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("Combined margin rose 4.84 points while all seven categories fell", "Margin gabungan naik 4,84 poin sementara ketujuh kategori turun"),
+    sentence: t("Splitting a combined margin before a Rp 34 billion incentive and a fee increase", "Memecah margin gabungan sebelum insentif Rp 34 miliar dan kenaikan biaya layanan"),
+    tags: [tag.powerbi, tag.viz, tag.finance],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("margin-kategori", "gambar-5.png"), label: t("Figure 5: breaking down the +4.84-point rise", "Gambar 5: penguraian kenaikan +4,84 poin") },
+    summary: t(
+      "A marketplace was about to pay a Rp 34 billion incentive to its pricing team and raise seller fees in every category, because combined gross margin rose from 15.58% to 20.43%. That figure is correct. Split by category without changing a number, all seven category margins moved the other way.",
+      "Sebuah marketplace hendak mencairkan insentif Rp 34 miliar untuk tim penetapan harga dan menaikkan biaya layanan penjual di semua kategori, karena margin kotor gabungan naik dari 15,58% ke 20,43%. Angka itu benar. Dipecah per kategori tanpa mengubah satu angka pun, margin ketujuh kategori bergerak ke arah sebaliknya.",
+    ),
+    data: t(
+      "Monthly GMV and gross profit for seven categories, July 2024 to June 2026, 168 rows. No margin column, operating costs, prices, or promotions.",
+      "GMV dan laba kotor bulanan tujuh kategori, Juli 2024 sampai Juni 2026, 168 baris. Tanpa kolom margin, biaya operasi, harga, atau promosi.",
+    ),
+    decisions: [
+      t("Margin is SUM(profit)/SUM(GMV), written on screen. The unweighted average many BI tools default to gives −1.98 points instead.", "Margin dihitung SUM(laba)/SUM(GMV) dan ditulis di layar. Rata-rata tak tertimbang yang jadi bawaan banyak alat BI memberi −1,98 poin."),
+      t("The rise is broken into a mix effect and a rate effect, rather than showing each category's ending margin alone.", "Kenaikan diurai menjadi efek bauran dan efek margin, tidak hanya menampilkan margin akhir tiap kategori."),
+      t("The 24-month window is written in the title with a curve for every window length, because a 12-month window gives −0.25 points.", "Jendela 24 bulan ditulis di judul beserta kurva untuk setiap panjang jendela, karena jendela 12 bulan memberi −0,25 poin."),
+    ],
+    findings: [
+      t("All seven category margins fell, by −1.13 to −3.00 points.", "Margin ketujuh kategori turun, antara −1,13 dan −3,00 poin."),
+      t("The +4.84-point rise is +7.02 points of mix effect, −1.84 of rate effect, and −0.34 of interaction. The rate effect is negative at every window length.", "Kenaikan +4,84 poin terdiri dari efek bauran +7,02 poin, efek margin −1,84, dan interaksi −0,34. Efek margin negatif di setiap panjang jendela."),
+      t("Combined margin peaked in November 2025 and the mix effect over the last six months is almost zero, so the source of the rise has run out.", "Margin gabungan memuncak pada November 2025 dan efek bauran enam bulan terakhir hampir nol, jadi sumber kenaikannya sudah habis."),
+    ],
+    recommendation: t(
+      "Separate the two decisions attached to one figure. Postpone the incentive one meeting and judge it against the per-category breakdown, and calculate the service fee proposal per category before deciding.",
+      "Pisahkan dua keputusan yang menempel pada satu angka. Tunda insentif satu rapat dan nilai terhadap pecahan per kategori, dan hitung usulan biaya layanan per kategori sebelum diputuskan.",
+    ),
+    limits: t(
+      "The breakdown is arithmetic on the data: it shows where the rise comes from, not why the mix shifted or whether the margin decline was deliberate. There is no claim about net profit.",
+      "Penguraian ini aritmetika atas data: ia menunjukkan dari mana kenaikan berasal, bukan kenapa bauran bergeser atau apakah penurunan margin disengaja. Tidak ada klaim tentang laba bersih.",
+    ),
+    files: [
+      { label: t("CASE 18 folder", "Folder CASE 18"), href: "https://drive.google.com/drive/folders/1D1KzbcM_rOj1ptBoQqHtrWSUsoYL9Y6z", note: folderNote("Power BI dashboard, design decisions, validation notes, and incentive memo", "dashboard Power BI, catatan keputusan desain, catatan validasi, dan memo penundaan insentif") },
+    ],
+    fullCase: "margin-kategori",
+  },
+  {
+    slug: "case-19",
+    code: "CASE 19",
+    name: t("Benchmarking 24 Branches", "Acuan Penilaian 24 Cabang"),
+    industry: t("Distribution", "Distribusi"),
+    field: field.reporting,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("The target-achievement winner ranks 17th of 24 in rupiah", "Juara pencapaian target berada di peringkat 17 dari 24 dalam rupiah"),
+    sentence: t("Rereading 24 branches from the same zero before a Rp 6 billion bonus and a Rp 12 billion budget", "Membaca ulang 24 cabang dari nol yang sama sebelum bonus Rp 6 miliar dan anggaran Rp 12 miliar"),
+    tags: [tag.powerbi, tag.viz, tag.kpi],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("acuan-cabang", "gambar-5.png"), label: t("Figure 5: the 24-branch table on the same zero", "Gambar 5: tabel 24 cabang pada nol yang sama") },
+    summary: t(
+      "An auto parts distributor rated 24 branches by percent of target to split a Rp 6 billion bonus and a Rp 12 billion marketing budget. Each bar was measured from the branch's own target, and the largest target is 46 times the smallest. I re-presented the same branches on references with the same zero for all.",
+      "Sebuah distributor suku cadang menilai 24 cabang dari persen pencapaian target untuk membagi Rp 6 miliar bonus dan Rp 12 miliar anggaran pemasaran. Tiap batang diukur dari target cabangnya sendiri, dan target terbesar 46 kali target terkecil. Saya menyajikan ulang cabang yang sama pada acuan yang nolnya sama untuk semua.",
+    ),
+    data: t(
+      "Monthly revenue and units for 24 branches over 36 months (864 rows), plus a reference file with targets, prior-year revenue, and regional market benchmarks.",
+      "Pendapatan dan unit bulanan 24 cabang selama 36 bulan (864 baris), ditambah berkas acuan berisi target, pendapatan tahun sebelumnya, dan tolok ukur pasar per wilayah.",
+    ),
+    decisions: [
+      t("The main panel is framed in added rupiah against last year, the only reference where all 24 bars start from the same zero.", "Panel utama dibingkai dengan tambahan rupiah terhadap tahun lalu, satu-satunya acuan yang ke-24 batangnya mulai dari nol yang sama."),
+      t("Agreement is shown as a 24 x 5 matrix cut at each reference's median, instead of five bar charts in five different orders.", "Kesepakatan ditampilkan sebagai matriks 24 x 5 dengan batas median tiap acuan, bukan lima grafik batang dengan lima urutan berbeda."),
+      t("All panels share one row order and have no reference picker or region filter, so no setting silently changes the winner.", "Semua panel memakai satu urutan baris tanpa pemilih acuan atau filter wilayah, supaya tidak ada setelan yang diam-diam mengganti juara."),
+    ],
+    findings: [
+      t("Ten of 24 branches agree on all five references; the debate is about 14.", "Sepuluh dari 24 cabang sepakat pada kelima acuan; perdebatannya menyangkut 14 cabang."),
+      t("21 of 24 targets are last year × 1.15, so the two lists only differ because of three hand-set targets.", "21 dari 24 target adalah tahun lalu × 1,15, jadi kedua daftar hanya berbeda karena tiga target yang disetel tangan."),
+      t("Tasikmalaya leads on target but ranks 17th in added rupiah, while four of the six biggest contributors read as missing their targets.", "Tasikmalaya memimpin pencapaian target tetapi peringkat 17 dalam tambahan rupiah, sementara empat dari enam penambah terbesar terbaca meleset dari target."),
+    ],
+    recommendation: t(
+      "Split the bonus by target achievement with the target method written on the panel, and decide openly how the three hand-set targets are paid. Read the marketing budget from the revenue index against FY24 together with added rupiah, not from annual growth.",
+      "Bagi bonus menurut pencapaian target dengan cara penyusunan target tertulis di panelnya, dan putuskan secara terbuka cara membayar tiga target yang disetel tangan. Baca anggaran pemasaran dari indeks pendapatan terhadap FY24 bersama tambahan rupiah, bukan dari pertumbuhan tahunan.",
+    ),
+    limits: t(
+      "The data holds no costs, so there's no claim about which branch is most profitable. Targets are a planning decision; this work shows their effect, not whether they are fair.",
+      "Data tidak memuat biaya, jadi tidak ada klaim tentang cabang yang paling menguntungkan. Target adalah keputusan perencanaan; pekerjaan ini menunjukkan akibatnya, bukan kewajarannya.",
+    ),
+    files: [
+      { label: t("CASE 19 folder", "Folder CASE 19"), href: "https://drive.google.com/drive/folders/1E1jwTAQzrSVMTtqfoxx9UFmrMG0B3HCD", note: folderNote("Power BI dashboard, reference rationale, and recommendation memo", "dashboard Power BI, dokumen alasan acuan, dan memo rekomendasi") },
+    ],
+    fullCase: "acuan-cabang",
+  },
+  {
+    slug: "case-20",
+    code: "CASE 20",
+    name: t("Two-System Marketing Channel Attribution", "Atribusi Kanal Pemasaran Dua Sistem"),
+    industry: t("Software (B2B)", "Perangkat lunak (B2B)"),
+    field: field.marketing,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("The number two channel by volume is at the bottom in efficiency", "Kanal nomor dua dalam volume berada di dasar dalam efisiensi"),
+    sentence: t("Re-presenting six acquisition channels for an Rp 14.4 billion budget meeting", "Menyajikan ulang enam kanal akuisisi untuk rapat anggaran Rp 14,4 miliar"),
+    tags: [tag.powerbi, tag.viz, tag.marketing],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("dua-sistem", "gambar-3.png"), label: t("Figure 3: revenue per session by channel, two ways", "Gambar 3: pendapatan per sesi per kanal, dua cara hitung") },
+    summary: t(
+      "A software company was about to reallocate its marketing budget, and the meeting opened with a dual-axis chart showing traffic and revenue rising together. Over 24 months, organic sessions rose 2.4× while deal value rose 1.3×, and the ad channel with the second-most visits produced the lowest value per visit. I re-presented the same figures with a frame that separates the three recording systems.",
+      "Sebuah perusahaan perangkat lunak hendak membagi ulang anggaran pemasarannya, dan rapatnya dibuka dengan grafik bersumbu ganda yang memperlihatkan trafik dan pendapatan naik bersama. Selama 24 bulan, sesi organik naik 2,4× sementara nilai deal naik 1,3×, dan kanal iklan dengan kunjungan terbanyak kedua menghasilkan nilai per kunjungan terendah. Saya menyajikan ulang angka yang sama dengan bingkai yang memisahkan tiga sistem pencatatnya.",
+    ),
+    data: t(
+      "One table of 24 months × 6 channels (1,034,769 sessions, 907 deals worth Rp 12,173 million, Rp 1,188 million of ad spend) and its three raw exports from analytics, the ad platform, and the CRM.",
+      "Satu tabel 24 bulan × 6 kanal (1.034.769 sesi, 907 deal senilai Rp 12.173 juta, belanja iklan Rp 1.188 juta) dan tiga ekspor mentahnya dari analytics, platform iklan, dan CRM.",
+    ),
+    decisions: [
+      t("Traffic and revenue are two stacked panels, each from zero. The dual-axis chart was rejected because right-axis limits of Rp 500, 900, and 1,400 million give 2, 7, and 0 crossings from the same figures.", "Trafik dan pendapatan dibuat dua panel bertumpuk, masing-masing dari nol. Grafik dua sumbu ditolak karena batas kanan Rp 500, 900, dan 1.400 juta memberi 2, 7, dan 0 persilangan dari angka yang sama."),
+      t("Untraceable revenue is a named, hatched slice, so a filtered stack can't look whole while Rp 2,794 million goes missing.", "Pendapatan tak terlacak ditampilkan sebagai potongan bernama dan diarsir, supaya tumpukan tersaring tidak tampak utuh sementara Rp 2.794 juta hilang."),
+      t("Cost per acquisition shows two ratios with the denominator in the label, because swapping it reverses the order of the two paid channels.", "Biaya per akuisisi menampilkan dua rasio dengan penyebut di label, karena menukar penyebut membalik urutan dua kanal berbayar."),
+    ],
+    findings: [
+      t("Social Ads ranks 2nd in sessions but produces Rp 5,868 per session; Partner Referral produces Rp 28,339, 4.8× higher, on any calculation.", "Iklan Media Sosial peringkat 2 dalam sesi tetapi menghasilkan Rp 5.868 per sesi; Rujukan Mitra Rp 28.339, 4,8× lebih tinggi, pada cara hitung mana pun."),
+      t("The April 2025 campaign reads as a failure by signing month and a success by first-visit month: 52 deals against 38 and 39 in the months beside it.", "Kampanye April 2025 terbaca gagal menurut bulan tanda tangan dan berhasil menurut bulan kunjungan pertama: 52 deal dibanding 38 dan 39 di bulan sebelahnya."),
+      t("202 of 907 deals (Rp 2,794 million, 23.0% of value) have no source in the CRM.", "202 dari 907 deal (Rp 2.794 juta, 23,0% nilai) tidak punya sumber di CRM."),
+    ],
+    recommendation: t(
+      "Start cuts with Social Ads spend, gradually, reassessed after at least one quarter because the visit-to-contract lag has a median of 75 days. Paid ad spend is only Rp 542 million a year against a Rp 2,880 million cut, so people and time costs per channel need splitting before the rest is allocated.",
+      "Mulai pemotongan dari belanja Iklan Media Sosial secara bertahap, dinilai ulang paling cepat satu kuartal kemudian karena jeda kunjungan ke kontrak bermedian 75 hari. Belanja iklan berbayar hanya Rp 542 juta setahun dibanding pemotongan Rp 2.880 juta, jadi biaya orang dan waktu per kanal perlu dipecah sebelum sisanya dibagi.",
+    ),
+    limits: t(
+      "There is no cause-and-effect claim: the April cohort is one event without a controlled comparison. Revenue per session is past efficiency, not a promise for extra spend, and the attribution model is taken as given.",
+      "Tidak ada klaim sebab-akibat: kohort April adalah satu peristiwa tanpa pembanding terkendali. Pendapatan per sesi adalah efisiensi masa lalu, bukan janji untuk belanja tambahan, dan model penelusuran diterima apa adanya.",
+    ),
+    files: [
+      { label: t("CASE 20 folder", "Folder CASE 20"), href: "https://drive.google.com/drive/folders/18u1VnHJBnp1iKX6jpdPlNmPTnFRk7z-E", note: folderNote("Power BI dashboard, conclusion sentences, form rationale, and recommendation memo", "dashboard Power BI, kalimat kesimpulan, dokumen alasan bentuk, dan memo rekomendasi") },
+    ],
+    fullCase: "dua-sistem",
+  },
+  {
+    slug: "case-21",
+    code: "CASE 21",
+    name: t("Fifth Warehouse Capacity Projection", "Proyeksi Kapasitas Gudang Kelima"),
+    industry: t("Cold-chain logistics", "Logistik rantai dingin"),
+    field: field.supplyChain,
+    tools: ["Power BI"],
+    category: "data",
+    title: t("The meeting chart said the warehouse fills in April 2027, but that date is still a guess", "Grafik rapat bilang gudang penuh April 2027, padahal tanggal itu masih tebakan"),
+    sentence: t("Separating fact from forecast before a Rp 48 billion warehouse decision", "Memisahkan fakta dari tebakan sebelum keputusan gudang Rp 48 miliar"),
+    tags: [tag.powerbi, tag.viz, tag.forecasting],
+    info: [t("Power BI", "Power BI"), ...vizMeta],
+    figure: { src: img("garis-belum-terjadi", "gambar-2.png"), label: t("Figure 2: the same chart after redrawing, with three forecast versions", "Gambar 2: grafik yang sama setelah digambar ulang, dengan tiga versi tebakan") },
+    summary: t(
+      "A cold-storage company was about to build a new Rp 48 billion warehouse. The meeting chart showed the warehouse full in April 2027, though real data only ran to June 2026 and the rest was a guess. I redrew the chart without changing a figure, so the committee can see what is fact and what is still a guess.",
+      "Sebuah perusahaan gudang berpendingin hendak membangun gudang baru seharga Rp 48 miliar. Grafik di rapat menunjukkan gudang penuh April 2027, padahal data asli hanya sampai Juni 2026 dan sisanya tebakan. Saya menggambar ulang grafiknya tanpa mengubah angka, supaya komite bisa melihat mana yang fakta dan mana yang tebakan.",
+    ),
+    data: t(
+      "42 months of warehouse orders (30 real, 12 guessed in three versions), capacity, last year's forecast, and the board target. Simulated data.",
+      "42 bulan pesanan gudang (30 asli, 12 tebakan dalam tiga versi), kapasitas, ramalan tahun lalu, dan target direksi. Data simulasi.",
+    ),
+    decisions: [
+      t("A dated boundary line at June 2026 and dashed guess lines, because dashes alone disappear when the chart is shrunk.", "Garis batas bertanggal di Juni 2026 dan garis tebakan putus-putus, karena garis putus-putus saja hilang kalau grafiknya diperkecil."),
+      t("All three guess versions are shown, because the meeting chart only used the medium one.", "Ketiga versi tebakan ditampilkan, karena grafik rapat hanya memakai versi sedang."),
+      t("Existing capacity is separated from extra racks that aren't installed yet.", "Kapasitas yang sudah ada dipisahkan dari rak tambahan yang belum dipasang."),
+    ],
+    findings: [
+      t("The warehouse fills in February 2027 (fast), April 2027 (medium), or isn't full by June 2027 (slow).", "Gudang penuh Februari 2027 (versi cepat), April 2027 (versi sedang), atau belum penuh sampai Juni 2027 (versi pelan)."),
+      t("If the extra racks are cancelled, even the slow version fills in June 2027.", "Kalau rak tambahan batal, versi pelan pun penuh di Juni 2027."),
+      t("Last year's similar forecast was too high by 17.1% on average, more than the gap between the medium and slow versions.", "Ramalan sejenis tahun lalu terlalu tinggi rata-rata 17,1%, lebih besar dari jarak versi sedang dan versi pelan."),
+    ],
+    recommendation: t(
+      "The committee no longer only chooses between signing and postponing. A third option: start work that is cheap to cancel, such as permits and site selection, while waiting three more months of data to see which version is happening.",
+      "Komite tidak lagi hanya memilih tanda tangan atau tunda. Ada pilihan ketiga: mulai pekerjaan yang murah kalau dibatalkan, seperti izin dan pemilihan lahan, sambil menunggu tiga bulan data untuk melihat versi mana yang terjadi.",
+    ),
+    limits: t(
+      "This work doesn't judge which guess is most likely; the gap between versions is not a statistical range. The emergency rental figures stop at June 2027 because the data does.",
+      "Pekerjaan ini tidak menilai versi tebakan mana yang paling mungkin; jarak antarversi bukan rentang statistik. Hitungan sewa darurat berhenti di Juni 2027 karena datanya berhenti di situ.",
+    ),
+    files: [
+      { label: t("CASE 21 folder", "Folder CASE 21"), href: "https://drive.google.com/drive/folders/1PvX-B1ly-Fcafq6_kds5Z9JRw26iFyu8", note: folderNote("Power BI dashboard, design decisions, validation notes, and investment committee memo", "dashboard Power BI, catatan keputusan desain, catatan validasi, dan memo komite investasi") },
+    ],
+    fullCase: "garis-belum-terjadi",
+  },
   /* ---------------- Q-Commerce & DataCo ---------------- */
   {
     slug: "q-commerce",

@@ -454,6 +454,7 @@ section[id] { scroll-margin-top: 20px; }
 /* Experience text is justified, like About; hyphenation keeps the spacing even. */
 .xp__panel-text, .xp__body li > span { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .xp__body:has(.xp__photo) { grid-template-columns: minmax(0, 1fr) 260px; }
+.xp__side { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .xp__photo { margin: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); align-self: start; }
 .xp__photo img { display: block; width: 100%; height: auto; }
 .xp__aside { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }

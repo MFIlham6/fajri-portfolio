@@ -44,23 +44,27 @@ export function Experience({ lang }: { lang: Lang }) {
                       ))}
                     </ul>
                   </div>
-                  {item.photo && (
-                    <figure className="xp__photo">
-                      <Image src={item.photo.src} width={item.photo.width} height={item.photo.height} alt={item.photo.alt[lang]} sizes="(max-width: 900px) 100vw, 260px" />
-                    </figure>
-                  )}
-                  {item.related.length > 0 && (
-                    <div className="xp__aside">
-                      <span className="mono">{ui.experience.related}</span>
-                      {item.related.map((slug) => {
-                        const p = getProject(slug);
-                        if (!p) return null;
-                        return (
-                          <Link key={slug} className="link-arrow" href={`/${lang}/projects/${slug}`} data-transition={projectLabel(p, lang)}>
-                            {projectLabel(p, lang)} <ArrowRight aria-hidden="true" />
-                          </Link>
-                        );
-                      })}
+                  {(item.photo || item.related.length > 0) && (
+                    <div className="xp__side">
+                      {item.photo && (
+                        <figure className="xp__photo">
+                          <Image src={item.photo.src} width={item.photo.width} height={item.photo.height} alt={item.photo.alt[lang]} sizes="(max-width: 900px) 100vw, 260px" />
+                        </figure>
+                      )}
+                      {item.related.length > 0 && (
+                        <div className="xp__aside">
+                          <span className="mono">{ui.experience.related}</span>
+                          {item.related.map((slug) => {
+                            const p = getProject(slug);
+                            if (!p) return null;
+                            return (
+                              <Link key={slug} className="link-arrow" href={`/${lang}/projects/${slug}`} data-transition={projectLabel(p, lang)}>
+                                {projectLabel(p, lang)} <ArrowRight aria-hidden="true" />
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
