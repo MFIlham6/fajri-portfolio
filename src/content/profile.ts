@@ -158,8 +158,8 @@ export type Experience = {
   intro?: L;
   bullets: L[];
   related: string[];
-  /** Optional photo label (placeholder until the photo arrives). */
-  photo?: L;
+  /** Optional photo (public/images/experience), shown beside the bullets. */
+  photo?: { src: string; width: number; height: number; alt: L };
 };
 
 const builtInExperience: Experience[] = [
@@ -221,8 +221,13 @@ const builtInExperience: Experience[] = [
       ),
     ],
     related: [],
-    // Optional photo: in front of the company gate or sign. No production areas, documents, or system screens.
-    photo: t("Photo at the company gate or sign (optional)", "Foto di depan gerbang atau papan nama perusahaan (opsional)"),
+    // Outdoor photo only. No production areas, documents, or system screens.
+    photo: {
+      src: "/images/experience/duniatex-ungaran.jpg",
+      width: 868,
+      height: 1160,
+      alt: t("Road between two factory buildings at PT Duniatex, Ungaran, with a mountain behind", "Jalan di antara dua gedung pabrik PT Duniatex, Ungaran, dengan gunung di belakangnya"),
+    },
   },
 ];
 

@@ -1,93 +1,91 @@
-Year-on-year growth analysis case study, SQL, practice data
+**RetailMax revenue grew 12.37% and cleared the 10% bar, carried by larger orders in four of five product lines**
 
-# 12.37% Growth Clears the 10% Bar, Carried by Volume and Four of Five Product Lines
+Revenue at the fictional distributor RetailMax rose from 5,120.15 million to 5,753.58 million rupiah. That figure holds after 2,020 dirty rows were removed and stays above 10% in three of the four quarters of 2025. The only line that shrank, Grocery, lost 8.35% of its orders.
 
-Revenue at the fictional distributor RetailMax rose from Rp 5,120.15 million to Rp 5,753.58 million. That figure held after 2,020 dirty rows were removed, but only six of the twelve months of 2025 actually cleared the bar.
-
-Mochamad Fajri Ilham Nurdin, completed October 2026, full queries and their results: [Google Drive folder](https://drive.google.com/drive/folders/1KmSMKyHa7fL0Gdp-20WZ4ePFMs4QqNUi), mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, completed October 2026, full queries and results: Google Drive folder, mfajriilhamn@gmail.com
 
 The company and its data are fictional, made for Windata Academy practice. Every figure below is calculated from the same transaction file and can be recalculated by anyone.
 
-## 1. Summary
+## Summary
 
-**The problem.** RetailMax sells consumer goods to 200 retail outlets in five trade regions. Its head of finance will discuss Rp 12 billion of growth funding, and the term sheet holds one numeric condition: annual revenue must grow above 10%. What needs answering is whether that growth figure still holds once the data is cleaned and split by month, product line, and region.
+The problem. RetailMax sells consumer goods to 200 retail outlets in five sales regions. Its head of finance will discuss Rp 12 billion of growth funding, and the term sheet has one numeric condition: annual revenue must grow above 10%. What needs answering is whether that growth figure still holds after the data is cleaned and broken down by month, product line, and region.
 
-**The core finding.** 2025 revenue grew 12.37% over 2024, 2.37 points above the bar. Gross margin also rose from 26.48% to 26.99%. The growth came from volume: units sold rose 15.57% while rupiah per unit in each line barely moved. The unevenness sits in two places. Only six of the twelve months of 2025 cleared 10%, and Grocery, the largest line with 24.98% of revenue, shrank 1.67%. All five regions grew within a narrow 9.88% to 15.04% range.
+The core finding. 2025 revenue grew 12.37% over 2024, 2.37 points above the bar, and 12.27% once returns are subtracted. Gross margin also rose from 26.48% to 26.99%. The growth came from what's inside each order: orders rose 4.72%, units per order rose 10.34%, and rupiah per unit in each line stayed almost the same. By quarter, growth was 9.59% to 13.89%. Grocery, the largest line with 24.98% of revenue, shrank 1.67%, with orders down 8.35%. All five regions grew, by 9.88% to 15.04%.
 
-**The recommendation.** The 12.37% figure is fit to take to the meeting together with the monthly and per-line breakdowns. An answer on Grocery's decline needs preparing before it's asked, because it touches almost a quarter of revenue. Whether the funding itself is justified is a decision that needs material beyond this data.
+The recommendation. The 12.37% figure is fit to take to the meeting together with the quarterly and per-line figures. An answer on the drop in Grocery orders should be ready before anyone asks, because that line holds almost a quarter of revenue. Whether the funding makes sense is a decision that needs material outside this data.
 
-## 2. How the data was cleaned
+## How this data was cleaned
 
-The raw file holds 40,800 rows. 38,780 rows are used to calculate growth. The difference, 2,020 rows or 4.95% of the file, leaves through four steps in order.
+The raw file has 40,800 rows. 38,780 rows are used to calculate growth. The difference, 2,020 rows or 4.95% of the file, leaves through four steps in order.
 
-| Step | Rows left | Out | Reason |
-| --- | --- | --- | --- |
+| Step | Rows left | Removed | Why |
+|---|---|---|---|
 | Raw file | 40,800 |  | The file's contents as they are. |
-| 1. Duplicate orders | 40,000 | 800 | The same order sent more than once by the till. The copies aren't new sales. |
-| 2. Empty order value | 39,515 | 485 | Rows without a rupiah value. If treated as zero, the order count rises without any sale. |
-| 3. Returns separated | 38,922 | 593 | Returned goods, with negative values. Kept in their own table and not counted as sales. |
+| 1. Duplicate orders | 40,000 | 800 | The same order sent more than once by the till. The copies are not new sales. |
+| 2. Empty order value | 39,515 | 485 | Rows without a rupiah value. Counted as zero, they would add orders without any sale. |
+| 3. Returns set aside | 38,922 | 593 | Returned goods, with a negative value. Kept in a separate table and not counted as sales. |
 | 4. After the cut-off date | 38,780 | 142 | Orders dated after 31 March 2026, the last date with complete data. |
 
-There are 148 rows dated after the cut-off, but only 142 leave in the fourth step. The other six had already left in steps two and three because their values were empty or negative. Both numbers are correct and answer different questions.
+There are 148 rows dated after the cut-off, but only 142 leave in step four. The other six had already left in steps two and three because their value was empty or negative. The 148 figure is counted from canonical rows, the 142 figure is counted at step four.
 
-The order of the first step also shapes the result. 120 order numbers have a failed attempt with an empty value on the same date as the real transaction. I numbered the rows on the raw table by earliest date, then rows with a filled-in value, then rows with a positive value, so that the real transaction is the one kept.
+The order of the first step also shapes the result. 120 order numbers have a failed attempt with an empty value on the same date as the real transaction. I numbered rows over the raw table ordered by earliest date, then rows with a value filled in, then rows with a positive value, so the real transaction is the one kept.
 
-If cleaning is skipped, growth reads as 13.09%. The error leans upward because the value of 2025's duplicates (Rp 113.50 million) is almost twice that of 2024's (Rp 63.83 million). The margin over the bar then looks looser than it really is.
+If cleaning is skipped, growth reads 13.09%. Most of that 0.72-point gap comes from duplicates: the value of 2025 duplicates (113.50 million) is almost twice that of 2024 duplicates (63.83 million), while returns only rose from 77.30 million to 91.73 million. Duplicate rows themselves rose from 291 to 389, much faster than orders.
 
-## 3. Findings
+## Findings
 
-**Finding 1. Half of 2025 grew below 10%.** The 12.37% annual figure is built from very different months: June only 3.83% and November 24.31%. January, February, May, June, July, and December are below the bar. A reader who only sees the annual figure will assume growth was even across the year.
+Finding 1. Three of the four quarters of 2025 grew above 10%. The first quarter grew 9.59%, the second 12.77%, the third 13.02%, and the fourth 13.89%. Monthly figures swing more, from 3.83% (June) to 24.31% (November), and six months fall below 10%. Part of that swing comes from the comparison month. December 2024 jumped 22.67% over November 2024, so December 2025, up 3.36% over November 2025, grew only 4.74% year on year. The standard deviation of monthly growth is 7.24 points. If every month grew 12.37% with a spread of 4 to 5 points, six months below 10% would still appear with an 8 to 15% chance, so those six months are not yet a sign of weakening growth.
 
-**Figure 1. Year-on-year growth, the twelve months of 2025**
+**Figure 1. Revenue growth in each month of 2025 against the same month of 2024**
 
-![figure 1](images/fig-1.svg)
+![gambar 1](images/gambar-1.png)
 
-*What it shows: Revenue growth for each month of 2025 against the same month of 2024, with a dashed line at 10%.*
+What it shows. Revenue growth in each month of 2025 against the same month of 2024, with a dashed line at 10%.
 
-*Data range: 38,780 clean orders from 200 outlets, January 2024 to December 2025.*
+Data range. 38,780 clean orders from 200 outlets, January 2024 to December 2025.
 
-*What to see: Six green bars cross the line and six grey bars stop below it.*
+What to notice. Six red bars stop below the line and six gray bars pass it.
 
-**Finding 2. Four lines grew, the largest line shrank.** Snacks grew 32.49%, Beverages 19.21%, PersonalCare 15.52%, and Household 9.43%. Grocery fell 1.67%, even though it accounts for 24.98% of 2025 revenue, the largest share of the five lines. If that decline continues, the other four lines have to cover a growing hole. The breakdown by region shows Grocery fell in four of five regions, most deeply in Kalimantan (−5.16%) and JawaBarat (−4.35%), and its order count fell in all five regions.
+Finding 2. Four lines grew; Grocery lost orders. Snacks grew 32.49%, Beverages 19.21%, Personal Care 15.52%, and Household 9.43%. Grocery fell 1.67% in rupiah, even though it accounts for 24.98% of 2025 revenue, the largest share of the five lines. The stronger signal is in its order count: 4,802 to 4,401, down 8.35% (z = −4.18). Grocery's rupiah per order rose 7.29%, so its rupiah drop is small. Grocery orders fell in all five regions by a similar amount, from 6.2% (Jabodetabek) to 11.7% (Kalimantan), and the differences between regions aren't meaningful (chi-square 1.05, df 4). As a measure of impact: without the Grocery drop, total growth would be 12.85%, and the 121.41 million of headroom above the bar equals 8.45% of Grocery's 2025 revenue.
 
 **Figure 2. Growth by product line, 2025 against 2024**
 
-![figure 2](images/fig-2.svg)
+![gambar 2](images/gambar-2.png)
 
-*What it shows: Each line's revenue growth in percent, sorted from fastest, with zero in the middle and the 2025 share in the right-hand column.*
+What it shows. Each line's revenue growth in percent, sorted from fastest, with the zero line as the divider. Each line's 2025 share is in the product line and region table in the Data report section.
 
-*Data range: Two full years, 2024 and 2025. The first quarter of 2026 isn't included.*
+Data range. Two full years, 2024 and 2025. The first quarter of 2026 isn't included.
 
-*What to see: One bar points left, and that bar belongs to the line with the largest share.*
+What to notice. One red bar points left: Grocery, the line with the largest share.
 
-**Finding 3. The growth came from volume, and it's spread across the network.** Units sold rose from 304,245 to 351,627 (15.57%) and units per order from 18.08 to 19.95. Rupiah per unit in each line only shifted −0.11% to +0.05%, so the revenue increase didn't come from price. Each line's margin also rose by a similar amount, about half a point. On the retailer side, all 200 outlets ordered in both years with no new or departing outlets, 112 of them grew above 10%, and the median growth per outlet is 13.65%. The 12.37% figure doesn't depend on a handful of large retailers. Growth that comes from volume requires warehousing and delivery to grow too, and that needs to be part of the discussion about how the funds are used.
+Finding 3. The growth comes from what's inside each order, and it's spread across the network. Orders rose 4.72%, from 16,826 to 17,621. Units sold rose 15.57% (304,245 to 351,627), because units per order rose from 18.08 to 19.95. Rupiah per unit in each line moved only −0.11% to +0.05%, so the revenue increase didn't come from price. Combined rupiah per unit fell 2.77% because the mix shifted toward lines that are cheaper per unit, mainly Snacks. Each line's margin rose by a similar amount, about half a point. On the retailer side, all 200 outlets ordered in both years with no new or departed outlets: 112 grew above 10%, 41 grew 0 to 10%, 47 shrank, and the median growth per outlet is 13.65%.
 
-**Finding 4. The seasonal pattern isn't used to correct growth.** December (1.178) and March (1.167) are the busiest months, February (0.874) the quietest. This index explains the pattern in revenue levels, not corrected growth. A year-on-year comparison already compares the same month, so dividing it by this index counts the same thing twice. No figure in this file is called seasonally adjusted growth.
+Finding 4. The seasonal pattern isn't used to adjust growth. Averaging 2024 and 2025, December (1.194) and March (1.126) are the busiest months and February (0.842) the quietest. The 27-month index in the query file (March 1.167, February 0.874) gives January to March three observations, including 2026, which is already higher because of growth, so those three months are lifted. A year-on-year comparison already compares the same months, so dividing it again by a seasonal index would count the seasonal pattern twice.
 
-**Figure 3. Seasonal index for the twelve calendar months**
+**Figure 3. Seasonal index for each calendar month, average of 2024 and 2025**
 
-![figure 3](images/fig-3.svg)
+![gambar 3](images/gambar-3.png)
 
-*What it shows: Average revenue for each calendar month divided by the average of all months, with a dashed line at 1.*
+What it shows. Average revenue for each calendar month in 2024 and 2025 divided by the average of those 24 months, with a dashed line at 1.
 
-*Data range: 27 months, January 2024 to March 2026. The divisor is Rp 459.06 million per month.*
+Data range. 24 months, January 2024 to December 2025. The divisor is 453.07 million rupiah a month.
 
-*What to see: Two green bars, March and December, sit furthest above the line. February is the shortest.*
+What to notice. Two red bars, March and December, sit furthest above the line. February is the shortest.
 
-**Finding 5. Regional risk is covered.** All five regions grew 9.88% to 15.04%, much tighter than the range between lines, and none shrank. Jabodetabek grew fastest (15.04%) with a 33.13% share. JawaBarat is the only one below the bar, narrowly, at 9.88%. Combined growth doesn't depend on one market.
+Finding 5. No region shrank. All five regions grew 9.88% to 15.04%, a tighter range than between lines. Jabodetabek grew fastest (15.04%) with a 33.13% share. West Java grew 9.88%, but the 10% bar applies to the total, and without the Grocery drop that region grew 11.13%.
 
-## 4. Limits of the conclusions
+## Limits of the conclusion
 
-The data available is one table with ten columns: order number, date, outlet, city, region, product line, product, units, order value, and cost of goods. From that, there are some questions this file has no right to answer.
+The available data is one table with ten columns: order number, date, outlet, city, region, product line, product, units, order value, and cost of goods. From that, there are some questions this file has no right to answer.
 
-- Grocery's decline is proven and its location is visible, but its cause isn't. There are no columns about competitors, market prices, discounts, product launches, shelf changes, or marketing.
-- The data stops on 31 March 2026. The first quarter of 2026 grew 12.79% over the first quarter of 2025, but one quarter isn't enough for a projection. Comparing 2026 to date with all of 2025 gives −73.57%, a meaningless figure because it compares three months with twelve.
-- The margin rise of about half a point in every line is measured, but whether it came from cheaper purchase prices or a change of supplier can't be seen in this data.
-- The growth condition is met. Whether Rp 12 billion of funding is justified is a decision that needs cash flow, liabilities, and a plan for using the funds.
+- The drop in Grocery orders is proven; its cause isn't. There are no columns about competitors, market prices, discounts, product launches, shelf changes, or marketing.
+- The data stops on 31 March 2026. The first quarter of 2026 grew 12.79% over the first quarter of 2025, but one quarter isn't enough for a projection. Comparing 2026 so far with all of 2025 gives −73.57%, a meaningless figure because it compares three months with twelve.
+- The margin rise of about half a point in every line is measured, but whether it comes from cheaper purchase prices or a change of supplier can't be seen from this data.
+- I haven't seen the term sheet's definition of revenue. After returns are subtracted, growth is 12.27%, and trade discounts, if any, aren't recorded in this data. Whether Rp 12 billion of funding makes sense is a decision that needs cash flow, liabilities, and a plan for using the funds.
 
-## 5. Query appendix
+## Query appendix
 
-The snippet that produces the main figures. It runs as it is.
+The excerpt that produces the main figure. It can be run as it is on ClickHouse.
 
 ```sql
 WITH deduped_sales AS (
@@ -127,14 +125,12 @@ INNER JOIN monthly_revenue prev
 ORDER BY month ASC
 ```
 
-The queries for the per-line and per-region breakdown, margin, seasonal index, and six consistency checks are in the full query file. All six checks pass: the monthly growth range, quarters summing to the same total as months, cost of goods never exceeding order value, no month-to-month jumps outside 0.33 to 3 times, the five regions summing to 2025 revenue, and no rows breaking the cleaning rules.
+The queries for the line and region breakdowns, margin, seasonal index, and six consistency checks are in the full query file. All six checks pass: the range of monthly growth, the quarters adding up to the months, cost of goods never exceeding order value, no month-to-month jump outside 0.33 to 3 times, the five regions adding up to 2025 revenue, and no rows breaking the cleaning rules.
 
-## 6. Data report
-
-### Monthly revenue and year-on-year growth
+## Monthly revenue and year-on-year growth
 
 | Month | Revenue (million) | Cost of goods (million) | Orders | Units | Margin | YoY growth |
-| --- | --- | --- | --- | --- | --- | --- |
+|---|---|---|---|---|---|---|
 | Jan 2024 | 388.11 | 286.43 | 1,274 | 23,241 | 26.20% |  |
 | Feb 2024 | 369.90 | 271.46 | 1,240 | 22,111 | 26.61% |  |
 | Mar 2024 | 472.33 | 345.14 | 1,550 | 28,826 | 26.93% |  |
@@ -163,12 +159,12 @@ The queries for the per-line and per-region breakdown, margin, seasonal index, a
 | Feb 2026 | 441.00 | 320.23 | 1,241 | 26,622 | 27.39% | 12.29% |
 | Mar 2026 | 586.39 | 426.86 | 1,640 | 34,705 | 27.21% | 7.04% |
 
-The twelve months of 2024 have no comparison, so their growth column is empty. Totals over 27 months: 38,780 orders and 746,770 units.
+The twelve months of 2024 have no comparison, so their growth column is empty. Total over 27 months: 38,780 orders and 746,770 units.
 
-### Quarterly rollup
+## Quarterly rollup
 
 | Quarter | Revenue (million) | Cost of goods (million) | Orders |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | 2024 Q1 | 1,230.34 | 903.03 | 4,064 |
 | 2024 Q2 | 1,285.66 | 945.30 | 4,264 |
 | 2024 Q3 | 1,211.26 | 891.68 | 3,913 |
@@ -179,12 +175,12 @@ The twelve months of 2024 have no comparison, so their growth column is empty. T
 | 2025 Q4 | 1,586.41 | 1,160.10 | 4,819 |
 | 2026 Q1 | 1,520.84 | 1,103.55 | 4,333 |
 
-Assembled from the monthly table. The nine quarters sum to the same total as the 27 months at full precision, within one cent.
+Assembled from the monthly table. The nine quarters add up to the 27 months at full value, within a tolerance of one cent.
 
-### Product lines and regions, 2025 against 2024
+## Product lines and regions, 2025 against 2024
 
 | Line or region | 2024 (million) | 2025 (million) | Growth | 2025 share | Unit growth |
-| --- | --- | --- | --- | --- | --- |
+|---|---|---|---|---|---|
 | Snacks | 675.64 | 895.16 | 32.49% | 15.56% | 32.46% |
 | Beverages | 1,024.65 | 1,221.49 | 19.21% | 21.23% | 19.22% |
 | PersonalCare | 933.36 | 1,078.22 | 15.52% | 18.74% | 15.65% |
@@ -196,4 +192,6 @@ Assembled from the monthly table. The nine quarters sum to the same total as the
 | Bali | 773.09 | 853.26 | 10.37% | 14.83% |  |
 | JawaBarat | 1,040.79 | 1,143.62 | 9.88% | 19.88% |  |
 
-Unit growth is only calculated per line. The five lines and the five regions each sum to Rp 5,753.58 million.
+Unit growth is only calculated per line. The five lines and the five regions each add up to 5,753.58 million.
+
+Completed 17 October 2026 with a data cut-off of 31 March 2026, revised 9 November 2026. Query: 1-Kueri SQL.sql. Full output of every statement: 3-Hasil Kueri. Data for all three figures and extra calculations (quarters, Grocery, returns, 24-month index): 5-Data Grafik. All in the same folder.

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, Plus } from "lucide-react";
@@ -43,6 +44,11 @@ export function Experience({ lang }: { lang: Lang }) {
                       ))}
                     </ul>
                   </div>
+                  {item.photo && (
+                    <figure className="xp__photo">
+                      <Image src={item.photo.src} width={item.photo.width} height={item.photo.height} alt={item.photo.alt[lang]} sizes="(max-width: 900px) 100vw, 260px" />
+                    </figure>
+                  )}
                   {item.related.length > 0 && (
                     <div className="xp__aside">
                       <span className="mono">{ui.experience.related}</span>

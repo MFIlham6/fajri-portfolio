@@ -1,8 +1,6 @@
-Studi kasus, SQL, ketepatan waktu pengiriman
+**Denda keterlambatan mengikuti volume: tiga jalur Jakarta memegang 34,99% kiriman dan 34,77% denda**
 
-# Tiga jalur bervolume besar menyumbang 34,77% denda keterlambatan, dan tidak satu pun termasuk jalur dengan kinerja terendah
-
-Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri dan berkas pemeriksaan: [folder Google Drive](https://drive.google.com/drive/folders/1z1ksCqZQyWMhGfFgOlkHnpAUVc1-hwCC), mfajriilhamn@gmail.com
+Mochamad Fajri Ilham Nurdin, dikerjakan Oktober 2026, kueri dan berkas pemeriksaan: folder Google Drive, mfajriilhamn@gmail.com
 
 Penafian: perusahaan dan datanya rekaan. Pekerjaan ini studi kasus latihan dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.
 
@@ -16,19 +14,19 @@ Pekerjaan ini menjawab pertanyaan itu dari catatan pengiriman lima belas bulan: 
 
 Langkahnya: memberi nomor urut per nomor kiriman, menyingkirkan tiga golongan baris yang tidak menggambarkan kejadian nyata, memisahkan kiriman yang belum tiba ke aliran sendiri, menandai tiap kiriman yang tersisa terlambat atau tidak, lalu memecah hasilnya tiga cara (jalur, hari pengambilan, kurir) dan menerjemahkan cacah keterlambatan ke rupiah. Empat keputusan saya tulis sebelum kueri analisis pertama dijalankan.
 
-**Penentu terlambat: tanggal tiba melewati tanggal janji milik kiriman itu sendiri.**
+Penentu terlambat: tanggal tiba melewati tanggal janji milik kiriman itu sendiri.
 
 Ditolak: satu batas lama perjalanan untuk semua jalur. Janji antarkota dekat dan antarpulau berbeda, jadi batas tunggal akan menghasilkan peringkat yang berurutan menurut jarak.
 
-**Kiriman yang belum tiba dipisahkan dan cacahnya dilaporkan, tidak dibuang dan tidak dihitung.**
+Kiriman yang belum tiba dipisahkan dan cacahnya dilaporkan, tidak dibuang dan tidak dihitung.
 
 Ditolak: menghitungnya sebagai terlambat. Angka yang dihasilkan akan terus memburuk tiap kali data diambil lebih dekat ke hari ini, tanpa ada yang berubah di lapangan. Cara itu baru tepat untuk pertanyaan lain, yaitu berapa paket yang saat ini sedang ditunggu melewati janji.
 
-**Tiga pemecahan ditetapkan di muka, masing-masing sesuai satu jenis tindakan perusahaan: jalur bisa diubah rutenya, kurir bisa ditinjau, dan hari ambil bisa dijadwal ulang.**
+Tiga pemecahan ditetapkan di muka, masing-masing sesuai satu jenis tindakan perusahaan: jalur bisa diubah rutenya, kurir bisa ditinjau, dan hari ambil bisa dijadwal ulang.
 
 Ditolak: mencoba banyak pemecahan lalu melaporkan yang hasilnya paling mencolok. Dengan cukup banyak percobaan, cara itu pasti menemukan pola di dalam derau.
 
-**Kurir baru dinilai kalau punya sedikitnya tiga puluh kiriman terukur, ditulis sebelum peringkatnya dilihat. Tiap kurir disertai selang kepercayaan 95%.**
+Kurir baru dinilai kalau punya sedikitnya tiga puluh kiriman terukur, ditulis sebelum peringkatnya dilihat. Tiap kurir disertai selang kepercayaan 95%.
 
 Ditolak: menyetel ambang sesudah melihat daftar terbawah, cara yang membuat ambang berhenti menjadi aturan.
 
@@ -36,54 +34,54 @@ Pembersihan berjalan empat tahap. Tiap tahap tercatat berapa baris keluar dan si
 
 ## Temuan
 
-1. **Keterlambatan terkumpul di jalur bervolume besar, bukan di jalur berkinerja terendah.** Dari 22.614 kiriman yang sudah selesai perjalanannya, 1.809 tiba melewati janjinya, sehingga ketepatan waktu 92,00%. Tiga jalur dari Jakarta menyumbang 34,77% denda periode dengan 245, 217, dan 167 keterlambatan, dari 3.141, 2.687, dan 2.085 kiriman. Ketepatan ketiganya 91,92% sampai 92,20%, di sekitar rata-rata perusahaan. Urutan prioritas perbaikan karena itu diturunkan dari volume.
-2. **Tidak ada jalur yang kinerjanya jauh berbeda dari yang lain.** Kelima belas jalur berada dalam rentang 2,53 poin, dari 90,32% sampai 92,86%, dengan 906 sampai 3.141 kiriman per jalur. Uji chi-kuadrat atas kelima belas jalur memberi p = 0,62, jadi rentang ini tidak bisa dibedakan dari kebetulan, dan peringkat ketepatan tidak bisa dipakai menentukan jalur mana yang dikerjakan dulu.
-3. **Peringkat kurir belum bisa dipakai menjatuhkan penilaian atas seseorang.** Kurir dengan ketepatan terendah tercatat 78,57% dari 42 kiriman, dan selang kepercayaan 95% untuk angka itu membentang dari 64,06% sampai 88,29%. Cukup untuk menyatakan kurir ini di bawah rata-rata perusahaan, tidak cukup untuk menyebutnya yang terburuk dari 500. Sebagai kelompok, sepuluh kurir terbawah tercatat 81,53% dari 406 kiriman, terpisah jelas dari 490 kurir lain (92,19% dari 22.208), dan layak ditinjau bersama.
-4. **Hari pengambilan tidak menentukan ketepatan waktu.** Hari terbaik dan terburuk berselisih 0,97 poin, dari 91,50% sampai 92,47%, atas 3.145 sampai 3.283 kiriman per hari. Uji chi-kuadrat memberi p = 0,87. Menjadwal ulang pengambilan karena itu tidak menjanjikan penurunan denda.
+1. Denda mengikuti volume. Dari 22.614 kiriman yang tercatat tiba, 1.809 tiba melewati janjinya, sehingga ketepatan waktu 92,00%. Tiga jalur dari Jakarta memegang 34,99% kiriman dan menyumbang 34,77% denda periode, dengan 245, 217, dan 167 keterlambatan dari 3.141, 2.687, dan 2.085 kiriman. Ketepatan ketiganya 91,92% sampai 92,20%, di sekitar rata-rata perusahaan. Urutan prioritas perbaikan karena itu diturunkan dari volume, dengan alasan jangkauan: perbaikan di jalur terbesar menyentuh kiriman paling banyak.
+2. Tidak ada jalur yang kinerjanya jauh berbeda dari yang lain. Kelima belas jalur berada dalam rentang 2,53 poin, dari 90,32% sampai 92,86%, dengan 906 sampai 3.141 kiriman per jalur. Uji chi-kuadrat atas kelima belas jalur memberi p = 0,62, jadi rentang ini tidak bisa dibedakan dari kebetulan, dan peringkat ketepatan tidak bisa dipakai menentukan jalur mana yang dikerjakan dulu.
+3. Peringkat kurir belum bisa dipakai menjatuhkan penilaian atas seseorang. Kurir dengan ketepatan terendah tercatat 78,57% dari 42 kiriman, dengan selang kepercayaan 95% dari 64,06% sampai 88,29%, dan selang itu bertumpang tindih dengan selang sembilan kurir di atasnya. Sebagai kelompok, sepuluh kurir terbawah berbeda dari yang lain: mereka tercatat 78,57% sampai 82,93%, kurir ke-11 sudah 91,30%, dan tidak ada satu kurir pun di antara kedua angka itu. Kesepuluhnya memegang 406 kiriman dengan ketepatan 81,53% dan layak ditinjau bersama.
+4. Tidak ada hari pengambilan yang tertinggal 2 poin atau lebih. Hari terbaik dan terburuk berselisih 0,97 poin, dari 91,50% sampai 92,47%, atas 3.145 sampai 3.283 kiriman per hari. Uji chi-kuadrat memberi p = 0,87, dan dengan volume sebesar itu selisih sekitar 2 poin akan terlihat. Menjadwal ulang pengambilan karena itu tidak menjanjikan penurunan denda.
 
 **Gambar 1. Dari mana denda periode datang**
 
-![gambar 1](images/fig-1.svg)
+![gambar 1](images/gambar-1.png)
 
-*Apa yang tergambar: Denda periode tiap jalur dalam juta rupiah, diurutkan menurut denda, dengan ketepatan dan cacah kiriman di sampingnya. Sumbu mulai dari nol.*
+Apa yang tergambar. Denda periode tiap jalur dalam juta rupiah, diurutkan menurut denda. Sumbu mulai dari nol. Ketepatan dan cacah kiriman tiap jalur ada di tabel lapisan bukti.
 
-*Rentang data: 22.614 kiriman terukur, 1.809 terlambat, Januari 2025 sampai Maret 2026.*
+Rentang data. 22.614 kiriman terukur, 1.809 terlambat, Januari 2025 sampai Maret 2026.
 
-*Yang terlihat: Tiga batang teratas berwarna hijau, semuanya jalur dari Jakarta. Ketepatan di sampingnya berada di 91,92% sampai 92,20%. Makassar ke Pontianak, jalur dengan ketepatan terendah, ada di urutan kesepuluh. Menopang temuan 1.*
+Yang terlihat. Tiga batang teratas berwarna merah, semuanya jalur dari Jakarta, dengan ketepatan 91,92% sampai 92,20%. Makassar ke Pontianak, jalur dengan ketepatan terendah, ada di urutan kesepuluh. Menopang temuan 1.
 
 **Gambar 2. Kelima belas jalur pada sumbu penuh nol sampai seratus**
 
-![gambar 2](images/fig-2.svg)
+![gambar 2](images/gambar-2.png)
 
-*Apa yang tergambar: Ketepatan tiap jalur sebagai satu titik pada sumbu 0% sampai 100%.*
+Apa yang tergambar. Ketepatan tiap jalur sebagai satu batang pada sumbu 0% sampai 100%, diurutkan dari yang terendah.
 
-*Rentang data: Sama seperti Gambar 1.*
+Rentang data. Sama seperti Gambar 1.
 
-*Yang terlihat: Kelima belas titik berimpit di satu tempat. Gambar ini sengaja memakai sumbu penuh karena klaim yang ditopangnya adalah tidak ada jalur yang jauh berbeda. Menopang temuan 2.*
+Yang terlihat. Kelima belas batang hampir sama panjang. Gambar ini sengaja memakai sumbu penuh karena klaim yang ditopangnya adalah tidak ada jalur yang jauh berbeda. Menopang temuan 2.
 
 **Gambar 3. Sepuluh kurir terbawah dan lebar ketidakpastiannya**
 
-![gambar 3](images/fig-3.svg)
+![gambar 3](images/gambar-3.png)
 
-*Apa yang tergambar: Ketepatan tercatat sepuluh kurir terbawah dengan selang kepercayaan Wilson 95%, garis putus di 92,00% untuk seluruh perusahaan, dan selang gabungan 490 kurir lain di baris terakhir.*
+Apa yang tergambar. Selang kepercayaan Wilson 95% untuk ketepatan sepuluh kurir terbawah. Bagian abu-abu tua berjalan dari batas bawah selang ke nilai tercatat, bagian abu-abu muda dari nilai tercatat ke batas atas. Baris terakhir, berwarna merah, adalah selang gabungan 490 kurir lain, 91,83% sampai 92,54%.
 
-*Rentang data: 500 kurir, 33 sampai 52 kiriman per kurir, periode yang sama.*
+Rentang data. 500 kurir, 33 sampai 52 kiriman per kurir, periode yang sama.
 
-*Yang terlihat: Kesepuluh selang berada di kiri garis putus dan saling bertumpang tindih. Sumbu dipotong pada 60% dan pemotongannya disebut di bawah gambar. Menopang temuan 3.*
+Yang terlihat. Batas atas kesepuluh selang berada di bawah 92,00%, ketepatan seluruh perusahaan, dan kesepuluhnya saling bertumpang tindih. Sumbu mendatar dimulai pada 60%, dan pemotongan itu tertulis di judul sumbu. Menopang temuan 3.
 
 **Gambar 4. Ketepatan menurut hari pengambilan**
 
-![gambar 4](images/fig-4.svg)
+![gambar 4](images/gambar-4.png)
 
-*Apa yang tergambar: Ketepatan tiap hari pengambilan, Senin sampai Minggu, dengan sumbu tegak dari nol.*
+Apa yang tergambar. Ketepatan tiap hari pengambilan, Senin sampai Minggu, dengan sumbu tegak dari nol.
 
-*Rentang data: 22.614 kiriman terukur, 3.145 sampai 3.283 per hari.*
+Rentang data. 22.614 kiriman terukur, 3.145 sampai 3.283 per hari.
 
-*Yang terlihat: Ketujuh batang hampir sama tinggi. Memotong sumbu di 91% akan membuat Rabu tampak jauh lebih rendah, dan gambar itu akan menyesatkan. Menopang temuan 4.*
+Yang terlihat. Ketujuh batang hampir sama tinggi. Memotong sumbu di 91% akan membuat Rabu tampak jauh lebih rendah, dan gambar itu akan menyesatkan. Menopang temuan 4.
 
 ## Usul
 
-Arahkan perbaikan ke tiga jalur bervolume terbesar. Kalau ketiganya mencapai ketepatan 97%, denda periode turun Rp 19.550.000. Seandainya kelima belas jalur mencapainya, penurunannya Rp 56.400.000, sehingga tiga jalur saja mencakup 34,66% dari yang tersedia. Target 97% diambil dari luar data: ketepatan tertinggi yang pernah tercatat di jalur mana pun 92,86%. Tinjau sepuluh kurir terbawah sebagai satu kelompok, dan jangan pakai peringkat untuk menilai perorangan. Mulai catat alasan pada setiap kiriman yang meleset, karena tanpa catatan itu pertanyaan tentang penyebab tidak akan pernah bisa dijawab dari data ini.
+Arahkan perbaikan ke tiga jalur bervolume terbesar. Kalau ketiganya mencapai ketepatan 97%, denda periode turun Rp 19.550.000. Seandainya kelima belas jalur mencapainya, penurunannya Rp 56.400.000, sehingga tiga jalur saja mencakup 34,66% dari yang tersedia. Target 97% diambil dari luar data: ketepatan tertinggi yang pernah tercatat di jalur mana pun 92,86%. Rupiah di sini berskala data, rata-rata 54 kiriman per hari. Kalau data ini contoh dari volume sekitar 10.000 kiriman per hari, penghematan tiga jalur setara sekitar Rp 7,9 juta per hari. Tinjau sepuluh kurir terbawah sebagai satu kelompok, dan jangan pakai peringkat untuk menilai perorangan. Mulai catat alasan pada setiap kiriman yang meleset, karena tanpa catatan itu pertanyaan tentang penyebab tidak akan pernah bisa dijawab dari data ini.
 
 Yang berubah karena pekerjaan ini ada tiga. Urutan prioritas pindah dari peringkat kinerja ke volume. Menjadwal ulang pengambilan dicoret dari daftar perbaikan. Rencana memakai peringkat kurir untuk menilai orang ditunda, dengan alasan yang berupa angka.
 
@@ -91,26 +89,26 @@ Yang berubah karena pekerjaan ini ada tiga. Urutan prioritas pindah dari peringk
 
 2.126 kiriman belum punya tanggal tiba saat data ditutup dan tidak masuk hitungan mana pun di atas. Dari jumlah itu, 2.113 sudah lewat tanggal janjinya pada 31 Maret 2026, rata-rata 222,0 hari. Angka ini tidak dijumlahkan dengan 1.809 dan tidak dikalikan denda.
 
-Kelompok ini ternyata tidak sedang dalam perjalanan. Kiriman tanpa tanggal tiba tersebar rata di kelima belas bulan ambil, 117 sampai 163 per bulan, dan 1.951 sudah lewat janji lebih dari 30 hari. Data tidak bisa membedakan barang hilang dari pemindaian tiba yang tidak tercatat, jadi status fisiknya perlu dicek sebelum angka apa pun dihitung ulang.
+Kelompok ini ternyata tidak sedang dalam perjalanan. Kiriman tanpa tanggal tiba tersebar rata di kelima belas bulan ambil, 117 sampai 163 per bulan, dan 1.951 sudah lewat janji lebih dari 30 hari. Data tidak bisa membedakan barang hilang dari pemindaian tiba yang tidak tercatat, jadi status fisiknya perlu dicek sebelum angka apa pun dihitung ulang. Kelompok ini juga lebih besar dari keterlambatan yang tercatat: 2.126 kiriman adalah 8,59% kiriman sah, sedangkan yang terlambat 7,31%. Ketepatan 92,00% karena itu hanya berlaku untuk kiriman yang tercatat tiba. Kalau 2.113 kiriman yang lewat janji ternyata tiba terlambat, ketepatan seluruhnya 84,14%, dan kalau seluruh 2.126 tiba tepat waktu tanpa tercatat, 92,69%. Sebaran kelompok ini per jalur belum dihitung. Kalau ia menumpuk di jalur tertentu, urutan denda bisa berubah.
 
 **Gambar 5. Kiriman tanpa tanggal tiba menurut bulan ambil**
 
-![gambar 5](images/fig-5.svg)
+![gambar 5](images/gambar-5.png)
 
-*Apa yang tergambar: Cacah kiriman tanpa tanggal tiba per bulan barangnya diambil, dipisah antara yang janjinya sudah lewat dan belum.*
+Apa yang tergambar. Cacah kiriman tanpa tanggal tiba per bulan barangnya diambil, dipisah antara yang janjinya sudah lewat (merah) dan belum (abu-abu).
 
-*Rentang data: 2.126 kiriman sah tanpa tanggal tiba, diambil Januari 2025 sampai Maret 2026.*
+Rentang data. 2.126 kiriman sah tanpa tanggal tiba, diambil Januari 2025 sampai Maret 2026.
 
-*Yang terlihat: Kelima belas batang hampir sama tinggi. Bagian abu-abu cuma muncul di Maret 2026, sebanyak 13 kiriman.*
+Yang terlihat. Kelima belas batang hampir sama tinggi. Bagian abu-abu cuma muncul di Maret 2026, sebanyak 13 kiriman.
 
 ## Lapisan bukti
 
 Keterangan untuk semua tabel: periode 2025-01-01 sampai 2026-03-31, tanggal batas 2026-03-31 ditulis harfiah, 2.126 kiriman yang belum tiba dipisahkan, berat nol atau negatif dibuang, ambang kurir 30 kiriman. Denda Rp 50.000 per kiriman terlambat, dihitung dari cacah.
 
-### Rekonsiliasi empat tahap
+## Rekonsiliasi empat tahap
 
 | tahap | sebelum | keluar | sifat | sesudah |
-| --- | --- | --- | --- | --- |
+|---|---|---|---|---|
 | kiriman kembar dari pemindaian ulang | 25.800 | 800 | dibuang | 25.000 |
 | tanggal ambil sesudah 31 Maret 2026 | 25.000 | 160 | dibuang | 24.840 |
 | berat nol atau negatif | 24.840 | 100 | dibuang | 24.740 |
@@ -118,10 +116,10 @@ Keterangan untuk semua tabel: periode 2025-01-01 sampai 2026-03-31, tanggal bata
 
 Yang dibuang 1.060 baris, yang dipisahkan 2.126. Tanggal ambil dibandingkan sebagai toDate(PickupDate). Tanpa toDate() di sisi kiri, tahap kedua mengeluarkan 24.804 baris karena seluruh kiriman sepanjang 31 Maret ikut terbuang.
 
-### Ketepatan per jalur, urut menurut ketepatan
+## Ketepatan per jalur, urut menurut ketepatan
 
 | jalur | kiriman | terlambat | ketepatan | denda |
-| --- | --- | --- | --- | --- |
+|---|---|---|---|---|
 | Makassar ke Pontianak | 930 | 90 | 90,32 | 4.500.000 |
 | Jakarta ke Medan | 1.528 | 139 | 90,90 | 6.950.000 |
 | Surabaya ke Balikpapan | 1.114 | 98 | 91,20 | 4.900.000 |
@@ -139,10 +137,10 @@ Yang dibuang 1.060 baris, yang dipisahkan 2.126. Tanggal ambil dibandingkan seba
 | Bandung ke Yogyakarta | 1.092 | 78 | 92,86 | 3.900.000 |
 | jumlah | 22.614 | 1.809 | 92,00 | 90.450.000 |
 
-### Ketepatan per hari pengambilan
+## Ketepatan per hari pengambilan
 
 | hari | kiriman | terlambat | ketepatan |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | Senin | 3.213 | 242 | 92,47 |
 | Selasa | 3.145 | 252 | 91,99 |
 | Rabu | 3.235 | 275 | 91,50 |
@@ -152,12 +150,12 @@ Yang dibuang 1.060 baris, yang dipisahkan 2.126. Tanggal ambil dibandingkan seba
 | Minggu | 3.192 | 257 | 91,95 |
 | jumlah | 22.614 | 1.809 | 92,00 |
 
-### Sepuluh kurir dengan ketepatan terendah
+## Sepuluh kurir dengan ketepatan terendah
 
 Ambang 30 kiriman. Yang dinilai 500 dari 500 kurir, 0 tersingkir, paling sedikit 33 kiriman, rata-rata 45,2. Kurir ke-11 tercatat 91,30%.
 
 | kurir | kiriman | terlambat | ketepatan | selang 95% |
-| --- | --- | --- | --- | --- |
+|---|---|---|---|---|
 | CRR-395 | 42 | 9 | 78,57 | 64,06 sampai 88,29 |
 | CRR-485 | 39 | 8 | 79,49 | 64,47 sampai 89,22 |
 | CRR-254 | 41 | 8 | 80,49 | 65,99 sampai 89,77 |
@@ -169,20 +167,20 @@ Ambang 30 kiriman. Yang dinilai 500 dari 500 kurir, 0 tersingkir, paling sedikit
 | CRR-224 | 41 | 7 | 82,93 | 68,74 sampai 91,47 |
 | CRR-357 | 41 | 7 | 82,93 | 68,74 sampai 91,47 |
 
-### Skenario target 97%
+## Skenario target 97%
 
 | pilihan | kiriman | terlambat | dicegah | penghematan bila 97% tercapai |
-| --- | --- | --- | --- | --- |
+|---|---|---|---|---|
 | tiga terburuk menurut ketepatan | 3.572 | 327 | 220 | Rp 11.000.000 |
 | tiga termahal menurut denda | 7.913 | 629 | 391 | Rp 19.550.000 |
 | seluruh lima belas jalur | 22.614 | 1.809 | 1.128 | Rp 56.400.000 |
 
-Semua angka di tabel ini berlaku hanya kalau ketepatan jalur yang dipilih mencapai 97%. Sisa keterlambatan pada target dihitung dari volume × 3%, dibulatkan ke bilangan bulat terdekat. Pada pilihan ketiga masih tersisa 681 keterlambatan atau Rp 34.050.000, karena target 97% tidak berarti nol denda.
+Semua angka di tabel ini berlaku hanya kalau ketepatan jalur yang dipilih mencapai 97%. Sisa keterlambatan pada target dihitung per jalur dari volume × 3% dan dibulatkan ke bilangan bulat terdekat sebelum dijumlahkan. Pada pilihan ketiga masih tersisa 681 keterlambatan atau Rp 34.050.000, karena target 97% tidak berarti nol denda.
 
-### Pemeriksaan
+## Pemeriksaan
 
 | pemeriksaan | jenis | diharapkan | hasil |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | rekonsiliasi tertutup di tiap tahap | kebenaran | ya | ya |
 | jalur, hari, dan kurir penuh berjumlah sama | kebenaran | 22.614 dan 1.809 | ya, di ketiganya |
 | nilai mustahil di ketiga tabel | kebenaran | 0 baris | 0 baris |
@@ -192,13 +190,13 @@ Semua angka di tabel ini berlaku hanya kalau ketepatan jalur yang dipilih mencap
 
 Lima pemeriksaan pertama punya jawaban pasti kalau pipeline-nya benar. Yang keenam menilai kekuatan kesimpulan. Pemetaan toDayOfWeek juga dicocokkan dengan tanggal yang harinya diketahui, karena label hari yang tertukar tidak tertangkap pemeriksaan penjumlahan.
 
-### Variasi: Januari sampai Maret 2026 saja
+## Variasi: Januari sampai Maret 2026 saja
 
-Pada potongan ini (4.401 kiriman terukur, 387 terlambat, ketepatan 91,21%), tiga jalur Jakarta tetap menyumbang denda terbesar dengan 49, 47, dan 45 keterlambatan (36,43% denda triwulan), dan hari pengambilan tetap tidak bisa dibedakan dari kebetulan (rentang 4,62 poin dari sekitar 600 kiriman per hari, p = 0,11). Pernyataan tentang peringkat tidak bertahan. Rentang antarjalur melebar jadi 7,20 poin dan Surabaya ke Balikpapan pindah dari tiga terburuk ke yang terbaik. Jakarta ke Semarang turun ke 88,69%, di bawah rata-rata triwulan. Peringkat kurir tidak bisa disusun sama sekali, karena kurir dengan kiriman terbanyak cuma memegang 16 kiriman dan ambang 30 menyingkirkan ke-500 kurir.
+Pada potongan ini (4.401 kiriman terukur, 387 terlambat, ketepatan 91,21%), tiga jalur Jakarta tetap menyumbang denda terbesar dengan 49, 47, dan 45 keterlambatan (36,43% denda triwulan), dan hari pengambilan tetap tidak bisa dibedakan dari kebetulan (rentang 4,62 poin dari sekitar 600 kiriman per hari, p = 0,11), walau pada volume ini hanya selisih sekitar 4,3 poin yang akan terlihat. Ketepatan triwulan ini 91,21%, lebih rendah dari 92,19% di dua belas bulan sebelumnya (z = 2,16). Penurunannya hampir seluruhnya dari Januari 2026 (90,05%), sedangkan Februari dan Maret 91,81%. Pernyataan tentang peringkat tidak bertahan. Rentang antarjalur melebar jadi 7,20 poin dan Surabaya ke Balikpapan pindah dari tiga terburuk ke yang terbaik. Jakarta ke Semarang turun ke 88,69%, di bawah rata-rata triwulan. Peringkat kurir tidak bisa disusun sama sekali, karena kurir dengan kiriman terbanyak cuma memegang 16 kiriman dan ambang 30 menyingkirkan ke-500 kurir.
 
-### Kueri yang dijalankan
+## Kueri yang dijalankan
 
-Pipeline lengkap dengan komentar di tiap keputusan. Berkas 1-Kueri SQL.sql di folder Drive memuat 14 statement, semuanya sudah dijalankan ulang dan menghasilkan angka di halaman ini.
+Pipeline lengkap dengan komentar di tiap keputusan. Berkas 1-Kueri SQL.sql di folder Drive memuat 14 statement yang sudah dijalankan ulang di ClickHouse dan menghasilkan angka di halaman ini. Revisinya menambah satu kueri yang belum dijalankan, sebaran kiriman tanpa tanggal tiba per jalur.
 
 ```sql
 WITH kiriman_bernomor AS (
@@ -264,7 +262,7 @@ per_jalur AS (
 ),
 
 per_hari AS (
-    -- toDayOfWeek: 1 Senin sampai 7 Minggu. Sudah dicocokkan dengan
+    -- toDayOfWeek di ClickHouse: 1 Senin sampai 7 Minggu. Sudah dicocokkan dengan
     -- tanggal yang harinya diketahui: 2025-01-06 = 1 (Senin), 2026-03-29 = 7 (Minggu),
     -- 2026-03-31 = 2 (Selasa). Tidak ada kolom denda, karena hari ambil tidak bisa
     -- ditindaklanjuti.
@@ -332,3 +330,5 @@ SELECT jalur, kiriman, lambat AS terlambat, ketepatan, denda
 FROM per_jalur
 ORDER BY ketepatan ASC;
 ```
+
+Catatan data: angka di halaman ini dihitung dari dataset latihan yang dirancang meniru catatan pengiriman perusahaan logistik antarkota. Data dan grafik Gambar 1 sampai 5 ada di lembar 6-Data Grafik.

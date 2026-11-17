@@ -215,14 +215,14 @@ const builtInProjects: Project[] = [
     tools: ["SQL"],
     category: "data",
     featured: true,
-    title: t("12.37% growth clears the 10% bar, but only six months did", "Pertumbuhan 12,37% lolos ambang 10%, tapi hanya enam bulan yang melewatinya"),
+    title: t("12.37% growth clears the 10% bar, carried by larger orders in four of five product lines", "Pertumbuhan 12,37% lolos ambang 10%, ditopang pesanan yang lebih besar di empat dari lima lini produk"),
     sentence: t("Year-on-year growth analysis ahead of a Rp 12 billion funding decision", "Analisis pertumbuhan tahunan sebelum keputusan pendanaan Rp 12 miliar"),
     tags: [tag.sql, tag.finance],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("pertumbuhan-tahunan", "lead-en.png"), label: t("Figure 1: year-on-year growth by month, 2025", "Gambar 1: pertumbuhan tahun ke tahun per bulan 2025") },
+    figure: { src: img("pertumbuhan-tahunan", "gambar-1.png"), label: t("Figure 1: year-on-year revenue growth by month, 2025", "Gambar 1: pertumbuhan pendapatan tahun ke tahun per bulan 2025") },
     summary: t(
-      "A distributor needed proof of growth above 10% to apply for Rp 12 billion in funding. 2025 revenue grew 12.37% over 2024. That figure held up after cleaning, but the growth wasn't even.",
-      "Sebuah distributor butuh bukti pertumbuhan di atas 10% untuk mengajukan pendanaan Rp 12 miliar. Pendapatan 2025 naik 12,37% dari 2024. Angka itu bertahan setelah data dibersihkan, tapi pertumbuhannya tidak merata.",
+      "A distributor needed proof of growth above 10% to apply for Rp 12 billion in funding. 2025 revenue grew 12.37% over 2024, held up after cleaning, and stayed above 10% in three of four quarters. The growth came from larger orders, while Grocery, the largest line, lost orders.",
+      "Sebuah distributor butuh bukti pertumbuhan di atas 10% untuk mengajukan pendanaan Rp 12 miliar. Pendapatan 2025 naik 12,37% dari 2024, bertahan setelah data dibersihkan, dan tetap di atas 10% pada tiga dari empat kuartal. Pertumbuhannya datang dari pesanan yang lebih besar, sedangkan Grocery, lini terbesar, kehilangan pesanan.",
     ),
     data: t(
       "40,800 raw rows, 38,780 used. Dropped: 800 duplicate orders, 485 with no value, 593 returns, and 142 orders after the cut-off date. Without cleaning, growth reads 13.09%.",
@@ -233,15 +233,18 @@ const builtInProjects: Project[] = [
       t("No seasonal index was used to adjust growth, because a year-on-year comparison already compares the same months.", "Indeks musim tidak dipakai untuk mengoreksi pertumbuhan, karena perbandingan tahun ke tahun sudah membandingkan bulan yang sama."),
     ],
     findings: [
-      t("Only 6 of 12 months grew above 10%, ranging from 3.83% in June to 24.31% in November.", "Hanya 6 dari 12 bulan yang tumbuh di atas 10%, dari 3,83% di Juni sampai 24,31% di November."),
-      t("Grocery, the largest line with 24.98% of revenue, fell 1.67%. Its order count fell in all five regions.", "Grocery, lini terbesar dengan 24,98% pendapatan, turun 1,67%. Jumlah pesanannya turun di kelima wilayah."),
-      t("Growth came from volume: units sold rose 15.57% while price per unit stayed almost flat. All 200 outlets ordered in both years, and 112 of them grew above 10%.", "Pertumbuhan datang dari volume: unit terjual naik 15,57% sementara harga per unit hampir tetap. Ke-200 outlet memesan di kedua tahun, dan 112 di antaranya tumbuh di atas 10%."),
+      t("Quarterly growth was 9.59% to 13.89%. Six months fell below 10%, but with a 7.24-point monthly spread that isn't yet a sign of weakening.", "Pertumbuhan per kuartal 9,59% sampai 13,89%. Enam bulan jatuh di bawah 10%, tapi dengan simpangan bulanan 7,24 poin itu belum menjadi tanda melemah."),
+      t("Grocery, the largest line with 24.98% of revenue, fell 1.67%, and its orders fell 8.35% in all five regions.", "Grocery, lini terbesar dengan 24,98% pendapatan, turun 1,67%, dan pesanannya turun 8,35% di kelima wilayah."),
+      t("Units per order rose from 18.08 to 19.95 while rupiah per unit in each line stayed almost flat. All 200 outlets ordered in both years, and 112 grew above 10%.", "Unit per pesanan naik dari 18,08 ke 19,95 sementara rupiah per unit di tiap lini hampir tetap. Ke-200 outlet memesan di kedua tahun, dan 112 tumbuh di atas 10%."),
     ],
     recommendation: t(
-      "Take the 12.37% figure to the meeting together with the monthly and per-line breakdown. Prepare an answer on Grocery before anyone asks, since that line holds almost a quarter of revenue.",
-      "Bawa angka 12,37% ke rapat bersama rincian bulanan dan per lini. Siapkan jawaban soal Grocery sebelum ditanya, karena lini ini memegang hampir seperempat pendapatan.",
+      "Take the 12.37% figure to the meeting together with the quarterly and per-line breakdown. Prepare an answer on Grocery orders before anyone asks, since that line holds almost a quarter of revenue.",
+      "Bawa angka 12,37% ke rapat bersama rincian per kuartal dan per lini. Siapkan jawaban soal pesanan Grocery sebelum ditanya, karena lini ini memegang hampir seperempat pendapatan.",
     ),
-    limits: t("The data only covers sales. Whether the funding makes sense needs material beyond this data.", "Data hanya berisi penjualan. Layak tidaknya pendanaan butuh bahan lain di luar data ini."),
+    limits: t(
+      "The data only covers sales, so the cause of the Grocery drop isn't known. Whether the funding makes sense needs cash flow and liabilities beyond this data.",
+      "Data hanya berisi penjualan, jadi penyebab turunnya Grocery belum diketahui. Layak tidaknya pendanaan butuh arus kas dan kewajiban di luar data ini.",
+    ),
     files: [
       {
         label: t("CASE 14 folder", "Folder CASE 14"),
@@ -264,10 +267,10 @@ const builtInProjects: Project[] = [
     sentence: t("Choosing three product bundles for an Rp 80 million campaign", "Pemilihan tiga bundel produk untuk kampanye Rp 80 juta"),
     tags: [tag.sql, tag.stats, tag.basket],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("analisis-keranjang", "lead-en.png"), label: t("Figure 1: distribution of 105 product pairs", "Gambar 1: sebaran 105 pasangan produk") },
+    figure: { src: img("analisis-keranjang", "gambar-1.png"), label: t("Figure 1: times-chance co-occurrence and basket count, 105 product pairs", "Gambar 1: kali lipat kemunculan bersama dan jumlah keranjang, 105 pasangan produk") },
     summary: t(
-      "A beauty e-commerce business was preparing an Rp 80 million bundle campaign. Of 105 product pairs, three qualified as bundles. I rejected the pair with the highest association score because too few customers bought it.",
-      "Sebuah e-commerce kecantikan menyiapkan kampanye bundel Rp 80 juta. Dari 105 pasangan produk, tiga lolos sebagai bundel. Pasangan dengan angka hubungan tertinggi saya tolak karena terlalu sedikit pembelinya.",
+      "A beauty e-commerce business was preparing an Rp 80 million bundle campaign. Of 105 product pairs, three qualified as bundles, but most of their buyers already buy both. I rejected the pair with the highest association score because too few customers bought it.",
+      "Sebuah e-commerce kecantikan menyiapkan kampanye bundel Rp 80 juta. Dari 105 pasangan produk, tiga lolos sebagai bundel, tetapi sebagian besar pembelinya sudah membeli keduanya. Pasangan dengan angka hubungan tertinggi saya tolak karena terlalu sedikit pembelinya.",
     ),
     data: t(
       "18,815 order-item rows, 3,000 baskets, January 2025 to March 2026. 1,556 rows (8.3%) were dropped: 835 duplicates, 374 with no product code, 200 returns, and 147 free samples.",
@@ -276,20 +279,20 @@ const builtInProjects: Project[] = [
     decisions: [
       t("Baskets are counted from unique products per order. Using raw rows raises the pair count by 14.2%, and unevenly.", "Keranjang dihitung dari produk unik per order. Kalau baris mentah dipakai, jumlah pasangan naik 14,2% dan kenaikannya tidak merata."),
       t("A pair has to pass three tests at once: more frequent than chance, present in at least 200 baskets, and a significant difference. Ranking by a single measure would put the 146-basket pair first.", "Pasangan harus lolos tiga syarat sekaligus: lebih sering dari kebetulan, ada di minimal 200 keranjang, dan selisihnya signifikan. Mengurutkan dengan satu ukuran saja akan menaruh pasangan 146 keranjang di posisi pertama."),
-      t("The 200-basket threshold was tested from 0 to 1,500. The same three bundles come out for thresholds from 147 to 1,231.", "Ambang 200 keranjang diuji dari 0 sampai 1.500. Tiga bundel yang sama keluar untuk ambang 147 sampai 1.231."),
+      t("The 200-basket threshold was tested from 0 to 1,500. The same three bundles come out for thresholds from 147 to 1,231, and again on the last six months alone.", "Ambang 200 keranjang diuji dari 0 sampai 1.500. Tiga bundel yang sama keluar untuk ambang 147 sampai 1.231, dan juga pada enam bulan terakhir saja."),
     ],
     findings: [
-      t("The three bundles appear in 1,231 to 1,395 baskets and occur together 1.41 to 1.68 times more often than chance.", "Tiga bundel ada di 1.231 sampai 1.395 keranjang dan muncul bersama 1,41 sampai 1,68 kali lipat dari kebetulan."),
+      t("The three bundles appear in 1,231 to 1,395 baskets and occur together 1.41 to 1.68 times more often than chance. Their six products are the six best sellers, with 2.1 to 2.4 baskets holding both for every basket holding one.", "Tiga bundel ada di 1.231 sampai 1.395 keranjang dan muncul bersama 1,41 sampai 1,68 kali lipat dari kebetulan. Keenam produknya enam produk terlaris, dengan 2,1 sampai 2,4 keranjang berisi keduanya untuk tiap keranjang berisi salah satu."),
       t("The rejected pair occurs together 13.46 times more often than chance, but appears in only 146 baskets (4.9%).", "Pasangan yang ditolak muncul bersama 13,46 kali lipat dari kebetulan, tapi hanya ada di 146 keranjang (4,9%)."),
       t("47 of 105 pairs look associated, but only 4 have a difference too large to be chance.", "47 dari 105 pasangan tampak berhubungan, tapi hanya 4 yang selisihnya terlalu besar untuk kebetulan."),
     ],
     recommendation: t(
-      "Run the three bundles as a test with a control group. Move the rejected pair to automatic recommendations on the product page, which cost almost nothing.",
-      "Jalankan tiga bundel sebagai uji dengan kelompok pembanding. Pasangan yang ditolak dipindah ke rekomendasi otomatis di halaman produk, yang biayanya hampir nol.",
+      "Run the three bundles as a test with a comparison group, because only the gap between groups shows extra sales. Move the rejected pair to automatic recommendations on the product page, which cost almost nothing.",
+      "Jalankan tiga bundel sebagai uji dengan kelompok pembanding, karena hanya selisih antarkelompok yang menunjukkan penjualan tambahan. Pasangan yang ditolak dipindah ke rekomendasi otomatis di halaman produk, yang biayanya hampir nol.",
     ),
     limits: t(
-      "The data has no promotion results or margins, so the bundles' added sales and profit can't be estimated.",
-      "Data tidak memuat hasil promosi atau margin, jadi tambahan penjualan dan untung bundel tidak bisa diperkirakan.",
+      "The data has no promotion results or margins, so the bundles' added sales and profit can't be estimated. Ramadan pair patterns weren't checked separately.",
+      "Data tidak memuat hasil promosi atau margin, jadi tambahan penjualan dan untung bundel tidak bisa diperkirakan. Pola pasangan selama Ramadan belum diperiksa terpisah.",
     ),
     files: [
       {
@@ -313,32 +316,32 @@ const builtInProjects: Project[] = [
     sentence: t("Cleaning a ten-branch POS export before deciding stock priorities", "Membersihkan ekspor kasir sepuluh cabang sebelum menentukan prioritas stok"),
     tags: [tag.spreadsheet, tag.cleaning],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("penjualan-ritel", "lead-en.png"), label: t("Figure 2: the ten branches on the 2025 net sales axis", "Gambar 2: sepuluh cabang pada sumbu penjualan bersih 2025") },
+    figure: { src: img("penjualan-ritel", "gambar-2.png"), label: t("Figure 2: clean 2025 net sales by branch", "Gambar 2: penjualan bersih 2025 per cabang") },
     summary: t(
-      "A ten-branch retail chain had to decide which branches got extra stock and staff first. Its POS export also contained the following year's transactions, so the total was 23.6% too high. After cleaning, only the top two branches stood clearly apart from the rest.",
-      "Jaringan ritel sepuluh cabang harus menentukan cabang mana yang mendapat stok dan staf tambahan lebih dulu. Ekspor kasirnya ikut memuat transaksi tahun berikutnya, sehingga totalnya 23,6% terlalu tinggi. Setelah dibersihkan, hanya dua cabang teratas yang terpisah jelas dari cabang lain.",
+      "A ten-branch retail chain needed to decide which branches to prepare first for its biggest shopping period. Its POS export also contained 2026 transactions, so 2025 sales read 23.6% too high. After cleaning, only the top two branches led clearly enough to be prioritized.",
+      "Jaringan ritel sepuluh cabang perlu menentukan cabang mana yang disiapkan lebih dulu untuk periode belanja terbesarnya. Ekspor kasirnya ikut memuat transaksi 2026, sehingga penjualan 2025 terbaca 23,6% terlalu tinggi. Setelah dibersihkan, hanya dua cabang teratas yang unggul cukup jelas untuk diprioritaskan.",
     ),
     data: t(
-      "5,145 POS export rows, 4,112 clean 2025 transactions. 1,000 rows fell outside the period, and 7 rows had negative Qty or Price worth Rp 144.3 million.",
-      "5.145 baris ekspor kasir, 4.112 transaksi bersih 2025. Sebanyak 1.000 baris jatuh di luar periode, dan 7 baris punya Qty atau Price negatif senilai Rp 144,3 juta.",
+      "5,145 POS export rows, 4,112 clean 2025 transactions. 1,000 rows fell outside the period (Rp 4.78 billion), and 7 rows had negative Qty or Price worth Rp 144.3 million.",
+      "5.145 baris ekspor kasir, 4.112 transaksi bersih 2025. Sebanyak 1.000 baris jatuh di luar periode (Rp 4,78 miliar), dan 7 baris punya Qty atau Price minus senilai Rp 144,3 juta.",
     ),
     decisions: [
-      t("The period was limited first, because the scope error shifted the total by 23.6% while the broken rows were only 1.09%.", "Periode dibatasi lebih dulu, karena kesalahan cakupan menggeser total 23,6%, sedangkan baris rusak hanya 1,09%."),
-      t("Anomalies were checked from Qty × Price. The TotalSales column held no negative values at all, even though seven of its rows were wrong.", "Anomali dicek dari Qty × Price. Kolom TotalSales tidak memuat satu pun nilai negatif, padahal tujuh barisnya bermasalah."),
-      t("Months were compared on a per-day average, because February has only 28 days.", "Bulan dibandingkan dengan rata-rata per hari, karena Februari hanya 28 hari."),
+      t("The period was limited first, because out-of-period transactions added 23.6% to the total while the broken rows were only 1.09%.", "Periode dibatasi lebih dulu, karena transaksi di luar periode menambah total 23,6%, sedangkan baris rusak hanya 1,09%."),
+      t("Anomalies were checked from Qty × Price. The TotalSales column held no negative values at all, even though seven rows were wrong.", "Anomali dicek dari Qty × Price. Kolom TotalSales tidak memuat satu pun nilai minus, padahal tujuh barisnya bermasalah."),
+      t("Months were compared on the average per calendar day, because February has only 28 days.", "Bulan dibandingkan dengan rata-rata per hari kalender, karena Februari hanya 28 hari."),
     ],
     findings: [
-      t("Cleaning moved the total by only 1.09%, but that was enough to swap two pairs of branch rankings.", "Pembersihan hanya menggeser total 1,09%, tapi cukup untuk menukar dua pasang peringkat cabang."),
-      t("The top two branches sit Rp 321.9 million above third place, while the five middle branches overlap within Rp 119.4 million.", "Dua cabang teratas berjarak Rp 321,9 juta dari peringkat 3, sedangkan lima cabang di tengah berimpit dalam Rp 119,4 juta."),
-      t("Days 1 to 5 were on average 13.7% busier than the rest of the month. The weekend effect was only 4.0%.", "Tanggal 1 sampai 5 rata-rata 13,7% lebih ramai dari sisa bulan. Efek akhir pekan hanya 4,0%."),
+      t("Yogyakarta and Medan lead third place by Rp 321.9 million, while the next five branches sit within Rp 119.4 million of each other.", "Yogyakarta dan Medan unggul Rp 321,9 juta dari peringkat 3, sedangkan lima cabang berikutnya hanya terpaut Rp 119,4 juta."),
+      t("Cleaning moved the total by only 1.09%, but that was enough to swap two pairs of branch rankings.", "Pembersihan hanya mengubah total 1,09%, tapi cukup untuk menukar dua pasang peringkat cabang."),
+      t("February ranks 9th by monthly total but 2nd by daily average. The 13.7% start-of-month surge comes almost entirely from February and November.", "Februari ada di peringkat 9 menurut total bulanan, tapi peringkat 2 menurut rata-rata harian. Lonjakan awal bulan 13,7% hampir seluruhnya berasal dari Februari dan November."),
     ],
     recommendation: t(
-      "Prioritize the top two branches and treat the five middle branches as equal. Launch promotions before the 1st, because the payday effect is three times the weekend effect.",
-      "Prioritaskan dua cabang teratas dan perlakukan lima cabang tengah setara. Lepas promo sebelum tanggal 1, karena efek gajian tiga kali lebih besar dari efek akhir pekan.",
+      "Prioritize the top two branches and treat the five middle branches as equal. A start-of-month promotion is worth a trial, but not yet a rule, because the surge happened in only two months.",
+      "Prioritaskan dua cabang teratas dan perlakukan lima cabang tengah setara. Promo awal bulan layak diuji coba, tapi belum dijadikan aturan, karena lonjakannya hanya terjadi di dua bulan.",
     ),
     limits: t(
-      "There is no cost data or promo flag, and only one year of data, so seasonal patterns can't be confirmed yet.",
-      "Tidak ada data biaya dan penanda promo, dan data hanya satu tahun, jadi pola musim belum bisa dipastikan.",
+      "There is no cost data or promotion flag, and only one year of data. If the negative rows are valid returns, Surabaya East drops from 4th to 7th; the top two branches don't change.",
+      "Tidak ada data biaya dan penanda promo, dan data hanya satu tahun. Kalau baris minus ternyata retur sah, Surabaya East turun dari peringkat 4 ke 7; dua cabang teratas tidak berubah.",
     ),
     files: [
       { label: t("CASE 1 folder", "Folder CASE 1"), href: "https://drive.google.com/drive/folders/1o_GxkwEQzL3tGqDM0sd5p1mxmnrChTwD", note: folderNote("workbook, memo, and decision log", "workbook, memo, dan catatan keputusan") },
@@ -357,10 +360,10 @@ const builtInProjects: Project[] = [
     sentence: t("Finding the employee groups that resign the most", "Mencari kelompok karyawan yang paling banyak resign"),
     tags: [tag.spreadsheet, tag.hr],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("retensi-karyawan", "lead-en.png"), label: t("Figure 1: resignation range across five ways of grouping", "Gambar 1: rentang resign pada lima cara pengelompokan") },
+    figure: { src: img("retensi-karyawan", "gambar-1.png"), label: t("Figure 1: resignation range across five ways of grouping", "Gambar 1: rentang resign pada lima cara pengelompokan") },
     summary: t(
-      "A tech company wanted to split its retention budget between the two departments with the highest resignations. All seven departments differ by only 7.3 points. Working hours and satisfaction separate employees 7.6 to 9.4 times more sharply.",
-      "Sebuah perusahaan teknologi ingin membagi anggaran retensi ke dua departemen dengan resign tertinggi. Ketujuh departemen hanya berselisih 7,3 poin. Jam kerja dan kepuasan memisahkan karyawan 7,6 sampai 9,4 kali lebih tajam.",
+      "A tech company wanted to split its retention budget between two departments. All seven departments sit within 7.3 points, a gap that can still arise by chance. Working hours and satisfaction separate employees 7.6 and 9.4 times more sharply.",
+      "Sebuah perusahaan teknologi ingin membagi anggaran retensi ke dua departemen. Ketujuh departemen berada dalam rentang 7,3 poin, selisih yang masih bisa muncul secara kebetulan. Jam kerja dan kepuasan memisahkan karyawan 7,6 dan 9,4 kali lebih tajam.",
     ),
     data: t(
       "2,010 rows of HR data, 1,980 clean employees, snapshot as of 1 April 2026. Five employees were recorded working 26 to 29 hours a day, and 240 promotion dates fell after the reference date.",
@@ -368,19 +371,22 @@ const builtInProjects: Project[] = [
     ),
     decisions: [
       t("Rows with an empty promotion date were kept, because empty means never promoted. Dropping them would remove 32.0% of employees.", "Baris dengan tanggal promosi kosong dipertahankan, karena kosong berarti belum pernah dipromosikan. Membuangnya akan menghapus 32,0% karyawan."),
-      t("The per-department analysis was still done in full, then compared with four other groupings.", "Analisis per departemen tetap dikerjakan lengkap, lalu dibandingkan dengan empat pengelompokan lain."),
+      t("The per-department analysis was still done in full, tested with chi-square, then compared with four other groupings.", "Analisis per departemen tetap dikerjakan lengkap, diuji dengan chi-square, lalu dibandingkan dengan empat pengelompokan lain."),
     ],
     findings: [
-      t("Resignation by department ranges from 14.2% to 21.5%. Just 22 people with a different status would move the top department to the bottom.", "Resign per departemen berkisar 14,2% sampai 21,5%. Cukup 22 orang berbeda status untuk memindahkan departemen teratas ke posisi terbawah."),
+      t("Resignation by department ranges from 14.2% to 21.5% (chi-square p = 0.30). Just 22 people with a different status would move HR from the top to the bottom.", "Resign per departemen berkisar 14,2% sampai 21,5% (chi-square p = 0,30). Cukup 22 orang berbeda status untuk memindahkan HR dari posisi teratas ke terbawah."),
       t("Of the 263 employees working under 8 hours a day, none resigned.", "Dari 263 karyawan yang bekerja di bawah 8 jam sehari, tidak ada yang resign."),
-      t("Among employees working 11 hours or more, satisfaction below 3.0 means 68.1% resignation, versus 20.0%.", "Pada karyawan yang bekerja 11 jam ke atas, kepuasan di bawah 3,0 berarti resign 68,1%, dibanding 20,0%."),
+      t("Among employees working 11 hours or more, satisfaction below 3.0 goes with 68.1% resignation, versus 20.0%.", "Pada karyawan yang bekerja 11 jam ke atas, kepuasan di bawah 3,0 berkaitan dengan resign 68,1%, dibanding 20,0%."),
       t("Performance scores and salary don't distinguish who resigns.", "Skor performa dan gaji tidak membedakan siapa yang resign."),
     ],
     recommendation: t(
-      "Target the 360 employees who work 11 hours or more. They are 18.2% of employees, account for 57.4% of resignations, and are in every department. One program aimed at long hours and low satisfaction is enough. Add a range check on working-hours input.",
-      "Sasar 360 karyawan yang bekerja 11 jam ke atas. Mereka 18,2% karyawan, menyumbang 57,4% resign, dan ada di setiap departemen. Cukup satu program yang menyasar jam kerja panjang dan kepuasan rendah. Tambahkan pemeriksaan batas pada input jam kerja.",
+      "Target the 360 employees who work 11 hours or more: 18.2% of staff, 57.4% of resignations, present in every department. One program is enough, starting with low satisfaction. Test whether shorter hours lower resignations in one group first, and add a range check on working-hours input.",
+      "Sasar 360 karyawan yang bekerja 11 jam ke atas: 18,2% karyawan, 57,4% resign, ada di setiap departemen. Cukup satu program, dimulai dari kepuasan rendah. Uji dulu di satu kelompok apakah jam kerja yang lebih pendek menurunkan resign, dan tambahkan pemeriksaan batas pada input jam kerja.",
     ),
-    limits: t("The data is a single snapshot, so it shows association only, not cause and effect.", "Data adalah potret satu waktu, jadi yang terlihat hanya kaitan, belum sebab akibat."),
+    limits: t(
+      "The data is a single snapshot, so it shows association only, not cause and effect. There are no exit interviews or direct-manager data.",
+      "Data adalah potret satu waktu, jadi yang terlihat hanya kaitan, belum sebab akibat. Tidak ada wawancara keluar maupun data atasan langsung.",
+    ),
     files: [
       { label: t("CASE 2 folder", "Folder CASE 2"), href: "https://drive.google.com/drive/folders/1SIBIEpJSDc2486DC2OuuOqIV4GWfMd3r", note: folderNote("workbook, memo, and decision log", "workbook, memo, dan catatan keputusan") },
     ],
@@ -398,19 +404,22 @@ const builtInProjects: Project[] = [
     sentence: t("A revenue forecast as a range, for the budget meeting", "Ramalan pendapatan berbentuk rentang untuk rapat anggaran"),
     tags: [tag.spreadsheet, tag.forecasting],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("ramalan-pendapatan", "lead-en.png"), label: t("Figure 1: change in revenue, transaction count, and value per transaction", "Gambar 1: perubahan pendapatan, jumlah transaksi, dan nilai per transaksi") },
+    figure: { src: img("ramalan-pendapatan", "gambar-1.png"), label: t("Figure 1: change in revenue, transaction count, and value per transaction", "Gambar 1: perubahan pendapatan, jumlah transaksi, dan nilai per transaksi") },
     summary: t(
-      "The finance lead wanted to set the annual target by extending 24.6% growth. All of that growth came from the number of transactions, and in the first quarter of the current year the transaction count had already fallen. I built a forecast as a range, plus one budget figure.",
-      "Pimpinan keuangan ingin menyusun target tahunan dengan melanjutkan pertumbuhan 24,6%. Seluruh kenaikan itu ternyata datang dari jumlah transaksi, dan di kuartal pertama tahun berjalan jumlah transaksi sudah turun. Saya menyusun ramalan berbentuk rentang beserta satu angka anggaran.",
+      "The finance lead wanted to set the annual target by extending 24.6% growth. All of that growth came from the number of transactions, and in the first quarter of the current year that number had stopped rising. I built a forecast as a range, one budget figure with its reasoning, and monthly indicators to track.",
+      "Pimpinan keuangan ingin menyusun target tahunan dengan melanjutkan pertumbuhan 24,6%. Seluruh kenaikan itu ternyata datang dari jumlah transaksi, dan di kuartal pertama tahun berjalan jumlah itu sudah tidak bertambah. Saya menyusun ramalan berbentuk rentang, satu angka anggaran beserta alasannya, dan indikator yang bisa dipantau bulanan.",
     ),
-    data: t("500 rows of financial records over 27 months, 482 clean. The last period contains only three months.", "500 baris catatan keuangan selama 27 bulan, 482 bersih. Periode terakhir hanya berisi tiga bulan."),
+    data: t(
+      "500 rows of financial records over 27 months, 482 clean. The last period contains only three months.",
+      "500 baris catatan keuangan selama 27 bulan, 482 bersih. Periode terakhir hanya berisi tiga bulan.",
+    ),
     decisions: [
-      t("The last three months weren't compared against a full year, since that would show a 74.3% drop. I compared January–March with the same period last year.", "Tiga bulan terakhir tidak dibandingkan dengan satu tahun penuh, karena hasilnya akan tampak turun 74,3%. Yang dipakai adalah perbandingan Januari sampai Maret dengan periode yang sama tahun lalu."),
+      t("The last three months weren't treated as a yearly point, since that would show a 74.3% drop. I compared January–March with the same period last year.", "Tiga bulan terakhir tidak dijadikan titik tahunan, karena hasilnya akan tampak turun 74,3%. Yang dipakai adalah perbandingan Januari sampai Maret dengan periode yang sama tahun lalu."),
       t("Cleaning was still done even though the total moved only 1.4%, because eleven of twelve monthly figures shifted too, the largest by 18.7%.", "Pembersihan tetap dilakukan walaupun total hanya bergeser 1,4%, karena sebelas dari dua belas angka bulanan ikut bergeser, terbesar 18,7%."),
     ],
     findings: [
       t("Revenue rose 24.6%, transaction count rose 26.9%, and value per transaction fell 1.8%.", "Pendapatan naik 24,6%, jumlah transaksi naik 26,9%, dan nilai per transaksi turun 1,8%."),
-      t("Monthly revenue correlates 0.967 with transaction count. Value per transaction barely moves, around Rp 32.3 million.", "Pendapatan bulanan berkorelasi 0,967 dengan jumlah transaksi. Nilai per transaksi hampir tidak bergerak di sekitar Rp 32,3 juta."),
+      t("Monthly revenue correlates 0.967 with transaction count. Value per transaction has no trend (r = −0.194) and stays around Rp 32.3 million.", "Pendapatan bulanan berkorelasi 0,967 dengan jumlah transaksi. Nilai per transaksi tidak punya tren (r = −0,194) dan bertahan di sekitar Rp 32,3 juta."),
       t("On a like-for-like period, revenue fell 12.8% and transaction count fell 10.4%.", "Pada periode yang setara, pendapatan turun 12,8% dan jumlah transaksi turun 10,4%."),
     ],
     recommendation: t(
@@ -418,8 +427,8 @@ const builtInProjects: Project[] = [
       "Target disusun dari nilai per transaksi yang stabil dikali jumlah transaksi yang divariasikan. Rentangnya Rp 7,6 sampai 9,7 miliar. Angka anggaran yang diusulkan Rp 7,6 miliar, sesuai laju transaksi kuartal pertama. Jumlah transaksi per bulan dijadikan indikator yang dipantau.",
     ),
     limits: t(
-      "There's no customer or unit data, so the cause of the volume increase can't be confirmed. 27 months is also too short to separate seasonal patterns.",
-      "Tidak ada data pelanggan dan unit, jadi penyebab naiknya volume tidak bisa dipastikan. 27 bulan juga terlalu pendek untuk memisahkan pola musim.",
+      "There's no customer or unit data, so the cause of the volume increase can't be confirmed, and 27 months is too short to separate seasonal patterns. If last year's strong first quarter repeats, the current pace equals about Rp 6.8 billion, below the budget figure.",
+      "Tidak ada data pelanggan dan unit, jadi penyebab naiknya volume tidak bisa dipastikan, dan 27 bulan terlalu pendek untuk memisahkan pola musim. Kalau kuartal pertama yang kuat tahun lalu berulang, laju sekarang setara sekitar Rp 6,8 miliar, di bawah angka anggaran.",
     ),
     files: [
       { label: t("CASE 3 folder", "Folder CASE 3"), href: "https://drive.google.com/drive/folders/17GkkMEL0L_JaDW4AVMdL2ABWmmkXfwPR", note: folderNote("workbook, memo, and decision log", "workbook, memo, dan catatan keputusan") },
@@ -438,10 +447,10 @@ const builtInProjects: Project[] = [
     sentence: t("Finding the wrong reorder-point formula in an inventory system", "Menemukan rumus ambang stok yang salah di sistem persediaan"),
     tags: [tag.spreadsheet, tag.inventory],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("ambang-persediaan", "lead-en.png"), label: t("Figure 2: system reorder multiplier vs the standard formula, by lead time", "Gambar 2: pengali ambang sistem dibanding rumus baku per waktu tunggu") },
+    figure: { src: img("ambang-persediaan", "gambar-2.png"), label: t("Figure 2: how far the recorded reorder point sits below the standard formula, by lead time", "Gambar 2: seberapa jauh ambang tercatat di bawah rumus baku, per waktu tunggu") },
     summary: t(
-      "Three products sat empty on the shelf for almost a week without ever appearing on the order list. After recalculating the reorder points, every threshold in the system turned out to be too low. The cause: the system formula added two days to the lead time, when it should have multiplied it by two.",
-      "Tiga produk sempat kosong di rak hampir seminggu tanpa pernah muncul di daftar pesanan. Setelah ambang pemesanan dihitung ulang, semua ambang di sistem ternyata terlalu rendah. Penyebabnya rumus sistem menambahkan dua hari pada waktu tunggu, padahal seharusnya dikali dua.",
+      "Three products sat empty on the shelf for almost a week without ever appearing on the order list. After recalculating the reorder points, every threshold in the system turned out to be too low. The system formula adds two days to the lead time, while its own safety stock equals one full lead time.",
+      "Tiga produk sempat kosong di rak hampir seminggu tanpa pernah muncul di daftar pesanan. Setelah ambang pemesanan dihitung ulang, semua ambang di sistem ternyata terlalu rendah. Rumus sistem menambahkan dua hari pada waktu tunggu, padahal stok pengaman yang dihitung sistem sendiri sebesar satu masa tunggu penuh.",
     ),
     data: t(
       "401 rows of inventory data from three warehouses, 361 clean SKUs. Dropped: duplicates, negative stock, empty or zero prices, and empty lead times.",
@@ -453,12 +462,12 @@ const builtInProjects: Project[] = [
     ],
     findings: [
       t("Reorder points were too low on 361 of 361 items, short by 24.9 units on average.", "Ambang terlalu rendah pada 361 dari 361 barang, rata-rata kurang 24,9 unit."),
-      t("System formula: daily sales × (lead time + 2). Standard formula: daily sales × (lead time × 2). The shortfall grows from 16.7% at a 3-day lead time to 40.0% at 10 days.", "Rumus sistem: penjualan harian × (waktu tunggu + 2). Rumus baku: penjualan harian × (waktu tunggu × 2). Kekurangannya naik dari 16,7% pada waktu tunggu 3 hari sampai 40,0% pada 10 hari."),
+      t("System formula: daily sales × (lead time + 2). Standard formula: daily sales × (lead time × 2). The gap grows from 16.7% at a 3-day lead time to 40.0% at 10 days.", "Rumus sistem: penjualan harian × (waktu tunggu + 2). Rumus baku: penjualan harian × (waktu tunggu × 2). Celahnya naik dari 16,7% pada waktu tunggu 3 hari sampai 40,0% pada 10 hari."),
       t("The order list held 118 items when it should have held 193. Separately, 68 items already had stock below their lead-time requirement.", "Daftar pesanan berisi 118 barang, padahal seharusnya 193. Terpisah dari itu, 68 barang stoknya sudah di bawah kebutuhan selama waktu tunggu."),
     ],
     recommendation: t(
-      "Two jobs for two owners. Procurement expedites the 68 critical items that week, starting with warehouse A, which holds 32 of them. The system owner replaces the reorder formula.",
-      "Dua pekerjaan untuk dua penerima. Tim pengadaan mempercepat pengiriman 68 barang kritis minggu itu, dimulai dari gudang A yang menampung 32 di antaranya. Pemilik sistem mengganti rumus ambang.",
+      "Two jobs for two owners. Procurement expedites or transfers stock for the 68 critical items that week, starting with the Jakarta warehouse, which holds 32 of them. The system owner replaces the reorder formula.",
+      "Dua pekerjaan untuk dua penerima. Tim pengadaan mempercepat pengiriman atau memindahkan stok 68 barang kritis minggu itu, dimulai dari gudang Jakarta yang menampung 32 di antaranya. Pemilik sistem mengganti rumus ambang.",
     ),
     limits: t(
       "There's no holding cost, so higher reorder points can't be claimed as savings. The Rp 66.7 million in sales not covered by stock during the lead time is an upper bound.",
@@ -481,21 +490,21 @@ const builtInProjects: Project[] = [
     sentence: t("Splitting an Rp 200 million Lebaran ad budget across three platforms", "Pembagian anggaran iklan Lebaran Rp 200 juta di tiga platform"),
     tags: [tag.spreadsheet, tag.marketing],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("efisiensi-iklan", "lead-en.png"), label: t("Figure 1: efficiency and spend share of three platforms", "Gambar 1: efisiensi dan porsi belanja tiga platform") },
+    figure: { src: img("efisiensi-iklan", "gambar-1.png"), label: t("Figure 1: share of spend and share of revenue for three platforms", "Gambar 1: porsi belanja dan porsi pendapatan tiga platform") },
     summary: t(
-      "The marketing manager wanted to put the Rp 200 million Lebaran budget on the most efficient ad platform. Facebook is indeed 2.4 times more efficient than Instagram. But campaign type separates results more sharply, at 4.0 times.",
-      "Manajer pemasaran ingin menaruh anggaran Lebaran Rp 200 juta di platform iklan paling efisien. Facebook memang 2,4 kali lebih efisien dari Instagram. Tapi jenis kampanye memisahkan hasil lebih tajam, 4,0 kali.",
+      "The marketing manager wanted to put the Rp 200 million Lebaran budget on the most efficient ad platform. Facebook is indeed 2.4 times more efficient than Instagram, with the same share of spend. But campaign type separates results more sharply, at 4.0 times.",
+      "Manajer pemasaran ingin menaruh anggaran Lebaran Rp 200 juta di platform iklan paling efisien. Facebook memang 2,4 kali lebih efisien dari Instagram, dengan porsi belanja yang sama. Tapi jenis kampanye memisahkan hasil lebih tajam, 4,0 kali.",
     ),
     data: t(
-      "1,012 campaign rows on Facebook, Instagram, and TikTok, 975 clean. After March 2026 recording almost stopped: eight months hold only five campaigns.",
-      "1.012 baris kampanye di Facebook, Instagram, dan TikTok, 975 bersih. Setelah Maret 2026 pencatatan hampir berhenti: delapan bulan hanya berisi lima kampanye.",
+      "1,012 campaign rows on Facebook, Instagram, and TikTok, 975 clean. Five campaigns are dated after the 1 April 2026 data position even though their results are recorded, so the trend stops at March 2026.",
+      "1.012 baris kampanye di Facebook, Instagram, dan TikTok, 975 bersih. Lima kampanye bertanggal sesudah posisi data 1 April 2026 padahal hasilnya sudah tercatat, jadi tren dibatasi sampai Maret 2026.",
     ),
     decisions: [
       t("Efficiency is total revenue divided by total spend. The per-campaign average wasn't used because it weights small and large campaigns equally.", "Efisiensi dihitung dari total pendapatan dibagi total belanja. Rata-rata per kampanye tidak dipakai karena memberi bobot sama pada kampanye kecil dan besar."),
       t("The budget wasn't split in straight proportion to efficiency, because the data shows no saturation point.", "Anggaran tidak dibagi sebanding lurus dengan efisiensi, karena data tidak menunjukkan titik jenuh."),
     ],
     findings: [
-      t("Facebook returns Rp 3.65 per rupiah, Instagram Rp 1.54. Both received the same share of spend, 31.5%.", "Facebook menghasilkan Rp 3,65 per rupiah, Instagram Rp 1,54. Keduanya menerima porsi belanja yang sama, 31,5%."),
+      t("Facebook returns Rp 3.65 per rupiah, Instagram Rp 1.54. Both received the same share of spend, 31.5%. The order is the same in the last year alone.", "Facebook menghasilkan Rp 3,65 per rupiah, Instagram Rp 1,54. Keduanya menerima porsi belanja yang sama, 31,5%. Urutannya sama bila dibatasi ke setahun terakhir."),
       t("Retargeting returns Rp 4.51 per rupiah, Brand Awareness Rp 1.13.", "Retargeting menghasilkan Rp 4,51 per rupiah, Brand Awareness Rp 1,13."),
       t("Facebook leads in four of five campaign types. In Traffic, TikTok leads narrowly (1.84 vs 1.66).", "Facebook unggul di empat dari lima jenis kampanye. Di Traffic, TikTok unggul tipis (1,84 lawan 1,66)."),
     ],
@@ -503,7 +512,10 @@ const builtInProjects: Project[] = [
       "Facebook Rp 80 million, TikTok Rp 70 million, Instagram Rp 50 million. Put Conversion and Retargeting first, and stop Brand Awareness and Engagement on Instagram.",
       "Facebook Rp 80 juta, TikTok Rp 70 juta, Instagram Rp 50 juta. Dahulukan Conversion dan Retargeting, dan hentikan Brand Awareness serta Engagement di Instagram.",
     ),
-    limits: t("ROAS isn't a profit measure because margins weren't recorded. There's no cross-campaign attribution data.", "ROAS bukan ukuran untung karena margin tidak tercatat. Tidak ada data atribusi antarkampanye."),
+    limits: t(
+      "ROAS isn't a profit measure because margins weren't recorded. There's no cross-campaign attribution data.",
+      "ROAS bukan ukuran untung karena margin tidak tercatat. Tidak ada data atribusi antarkampanye.",
+    ),
     files: [
       { label: t("CASE 5 folder", "Folder CASE 5"), href: "https://drive.google.com/drive/folders/17gX1c7eC_3dxxsFRGVF7r2Zfqr4Oe-uZ", note: folderNote("workbook, memo, and scope notes", "workbook, memo, dan catatan cakupan") },
     ],
@@ -517,14 +529,14 @@ const builtInProjects: Project[] = [
     field: field.customer,
     tools: ["Spreadsheet"],
     category: "data",
-    title: t("New-cohort retention appears to drop 50 points, and the drop turns out to be a misread matrix", "Retensi kohort baru tampak turun 50 poin, dan penurunan itu ternyata salah baca matriks"),
+    title: t("New-cohort retention appears to drop 50 points, and most of that drop comes from the observation window", "Retensi kohort baru tampak turun 50 poin, dan sebagian besar penurunan itu berasal dari jendela pengamatan"),
     sentence: t("A retention matrix for fundraising material", "Matriks retensi untuk materi penggalangan dana"),
     tags: [tag.spreadsheet, tag.cohort],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("retensi-kohort", "lead-en.png"), label: t("Figure 2: month-3 retention range at four requirement levels", "Gambar 2: rentang retensi bulan ketiga pada empat tingkat syarat") },
+    figure: { src: img("retensi-kohort", "gambar-2.png"), label: t("Figure 2: month-3 retention range at four levels of conditions", "Gambar 2: rentang retensi bulan ketiga pada empat tingkat syarat") },
     summary: t(
-      "A software company founder needed a retention matrix for an investor presentation. The matrix as-is showed new cohorts doing much worse. That drop appeared because new cohorts hadn't been observed long enough.",
-      "Pendiri perusahaan perangkat lunak butuh matriks retensi untuk presentasi ke investor. Matriks apa adanya menunjukkan kohort baru jauh lebih buruk. Penurunan itu muncul karena kohort baru belum cukup lama diamati.",
+      "A software company founder needed a retention matrix for an investor presentation. The matrix as-is showed new cohorts doing much worse. Most of that drop appeared because new cohorts hadn't been observed long enough; a smaller gap of 4 to 5 points remains real.",
+      "Pendiri perusahaan perangkat lunak butuh matriks retensi untuk presentasi ke investor. Matriks apa adanya menunjukkan kohort baru jauh lebih buruk. Sebagian besar penurunan itu muncul karena kohort baru belum cukup lama diamati; sisa selisih 4 sampai 5 poin tetap nyata.",
     ),
     data: t(
       "More than 10,000 users in 15 monthly cohorts. The data only holds the last-active date, so \"retained\" is measured from the gap between sign-up date and last-active date.",
@@ -532,20 +544,23 @@ const builtInProjects: Project[] = [
     ),
     decisions: [
       t("Cells that couldn't be measured yet were left empty, not written as zero.", "Sel yang belum sempat diukur dikosongkan, tidak ditulis nol."),
-      t("Cohorts are only compared with cohorts observed for an equal length of time.", "Kohort hanya dibandingkan dengan kohort yang lama pengamatannya setara."),
+      t("Cohorts are only compared with cohorts observed for an equal length of time, and the remaining gap was tested statistically.", "Kohort hanya dibandingkan dengan kohort yang lama pengamatannya setara, dan sisa selisihnya diuji secara statistik."),
       t("Retention was calculated twice: by user count and by revenue.", "Retensi dihitung dua kali: dari jumlah pengguna dan dari pendapatan."),
     ],
     findings: [
-      t("Almost 40% of users were last active in the month the data was pulled. That's the data cut-off date, not necessarily users stopping.", "Hampir 40% pengguna tercatat aktif terakhir di bulan data diambil. Itu tanggal potong data, belum tentu pengguna berhenti."),
+      t("Almost 40% of users were last active in the month the data was pulled. That's the data cut-off date, not a wave of churn.", "Hampir 40% pengguna tercatat aktif terakhir di bulan data diambil. Itu tanggal potong data, bukan gelombang berhenti."),
       t("47% of matrix cells had never been measured but were written as zero.", "47% sel matriks belum pernah diukur tapi tertulis nol."),
-      t("The month-3 retention gap shrinks from 50.2 points to 0.8 points once cohorts are made comparable.", "Selisih retensi bulan ketiga menyusut dari 50,2 poin ke 0,8 poin saat kohortnya dibuat setara."),
-      t("The oldest cohort keeps 52.2% of users at month 12, but 76.0% of its revenue.", "Kohort tertua mempertahankan 52,2% pengguna di bulan ke-12, tapi 76,0% pendapatannya."),
+      t("The month-3 retention gap shrinks from 50.2 points to 0.8 points as cohorts are made comparable. Among six comparable cohorts, May and June 2025 sit at 87.7% versus 92.1% (z = 4.5).", "Selisih retensi bulan ketiga menyusut dari 50,2 poin ke 0,8 poin saat kohortnya dibuat setara. Di antara enam kohort yang sebanding, Mei dan Juni 2025 berada di 87,7% lawan 92,1% (z = 4,5)."),
+      t("The oldest cohort keeps 52.2% of users at month 12, but 76.0% of its revenue (provisional). The settled month-9 figures are 71.1% and 90.8%.", "Kohort tertua mempertahankan 52,2% pengguna di bulan ke-12, tapi 76,0% pendapatannya (sementara). Angka bulan ke-9 yang sudah mapan 71,1% dan 90,8%."),
     ],
     recommendation: t(
-      "Show both retention figures side by side, the lower one first, and state the comparison conditions. Don't claim retention is improving or worsening until there's enough data, about six more months.",
-      "Tampilkan kedua angka retensi berdampingan, yang lebih rendah lebih dulu, dan tulis syarat perbandingannya. Jangan klaim retensi membaik atau memburuk sampai data cukup, sekitar enam bulan lagi.",
+      "Show both retention figures side by side, the lower one first, and state the comparison conditions. Don't claim retention is improving; the remaining gap isn't yet separated from the calendar effect. A full comparison needs about six more months.",
+      "Tampilkan kedua angka retensi berdampingan, yang lebih rendah lebih dulu, dan tulis syarat perbandingannya. Jangan klaim retensi membaik; sisa selisihnya belum terpisah dari efek kalender. Perbandingan penuh butuh sekitar enam bulan lagi.",
     ),
-    limits: t("Last-active date tends to overstate retention compared with subscription status.", "Tanggal aktif terakhir cenderung melebihkan retensi dibanding status langganan."),
+    limits: t(
+      "Last-active date tends to overstate retention compared with subscription status. There's no plan-change history.",
+      "Tanggal aktif terakhir cenderung melebihkan retensi dibanding status langganan. Tidak ada riwayat perpindahan paket.",
+    ),
     files: [
       { label: t("CASE 6 folder", "Folder CASE 6"), href: "https://drive.google.com/drive/folders/1MrsKzDPVZl6rTDuOw3PV4CsxC0IoSgYe", note: folderNote("workbook, memo, and recording notes", "workbook, memo, dan catatan pencatatan") },
     ],
@@ -563,27 +578,33 @@ const builtInProjects: Project[] = [
     sentence: t("Testing where long patient waiting times come from", "Menguji dari mana waktu tunggu pasien yang panjang berasal"),
     tags: [tag.spreadsheet, tag.stats],
     info: [t("Spreadsheet", "Spreadsheet"), ...windataMeta],
-    figure: { src: img("waktu-tunggu-klinik", "lead-en.png"), label: t("Figure 1: permutation test results for branch, department, and medical staff", "Gambar 1: hasil uji acak untuk cabang, departemen, dan tenaga medis") },
+    figure: { src: img("waktu-tunggu-klinik", "gambar-1.png"), label: t("Figure 1: actual range and reshuffled range by grouping", "Gambar 1: rentang nyata dan rentang hasil pengacakan per pengelompokan") },
     summary: t(
-      "An eight-branch clinic network wanted to add doctors at the branch with the longest waiting time. The gap between branches is no larger than chance alone would produce. The real difference is between medical staff, and it's less than half the raw figure.",
-      "Jaringan klinik delapan cabang ingin menambah dokter di cabang dengan waktu tunggu terlama. Selisih antarcabang tidak lebih besar dari yang bisa muncul karena kebetulan. Perbedaan yang nyata ada antartenaga medis, dan besarnya kurang dari separuh angka mentah.",
+      "An eight-branch clinic network wanted to add doctors at the branch with the longest waiting time. The gap between branches is no larger than chance alone would produce. Differences between clinicians exist, but among those with enough data the remaining gap is also equal to chance.",
+      "Jaringan klinik delapan cabang ingin menambah dokter di cabang dengan waktu tunggu terlama. Selisih antarcabang tidak lebih besar dari yang bisa muncul karena kebetulan. Perbedaan antartenaga medis ada, tetapi pada yang berdata memadai sisa selisihnya juga setara kebetulan.",
     ),
-    data: t("782 visit rows, 744 clean. The data doesn't record visit time or the number of doctors per session.", "782 baris kunjungan, 744 bersih. Data tidak mencatat jam kunjungan dan jumlah dokter per sesi."),
+    data: t(
+      "782 visit rows, 744 clean. The data doesn't record visit time or the number of doctors per session.",
+      "782 baris kunjungan, 744 bersih. Data tidak mencatat jam kunjungan dan jumlah dokter per sesi.",
+    ),
     decisions: [
       t("Every difference was tested by reshuffling group labels 2,000 times.", "Setiap perbedaan diuji dengan mengacak ulang label kelompok 2.000 kali."),
-      t("Medical staff with few visits were excluded step by step, because averages from few visits easily go extreme.", "Tenaga medis dengan kunjungan sedikit dikeluarkan bertahap, karena rata-rata dari sedikit kunjungan mudah ekstrem."),
-      t("I didn't build individual rankings, because the cause of the differences isn't known yet.", "Saya tidak menyusun peringkat individu, karena penyebab perbedaannya belum diketahui."),
+      t("Clinicians with few visits were excluded step by step and the test was repeated, because averages from few visits easily go extreme.", "Tenaga medis dengan kunjungan sedikit dikeluarkan bertahap dan ujinya diulang, karena rata-rata dari sedikit kunjungan mudah ekstrem."),
+      t("I didn't build individual rankings, because the cause of the differences isn't known.", "Saya tidak menyusun peringkat individu, karena penyebab perbedaannya tidak diketahui."),
     ],
     findings: [
       t("The highest and lowest branches differ by 4.0 minutes. 31.8% of reshuffles produced a gap that large.", "Cabang tertinggi dan terendah berselisih 4,0 menit. Sebanyak 31,8% pengacakan menghasilkan selisih sebesar itu."),
-      t("Between medical staff the gap is 16.8 minutes, and only 0.7% of reshuffles reach it.", "Antartenaga medis selisihnya 16,8 menit, dan hanya 0,7% pengacakan yang mencapainya."),
-      t("With a minimum of 20 visits, the gap shrinks to 6.4 minutes.", "Dengan syarat minimal 20 kunjungan, selisihnya tinggal 6,4 menit."),
+      t("Between clinicians the gap is 16.8 minutes, and only 0.7% of reshuffles reach it.", "Antartenaga medis selisihnya 16,8 menit, dan hanya 0,7% pengacakan yang mencapainya."),
+      t("With a minimum of 20 visits, the gap shrinks to 6.4 minutes, and 89% of reshuffles reach that.", "Dengan syarat minimal 20 kunjungan, selisihnya tinggal 6,4 menit, dan 89% pengacakan mencapainya."),
     ],
     recommendation: t(
-      "Don't use branch rankings to place doctors, and don't set per-person waiting-time targets. Record visit times and doctors per session for a month.",
-      "Jangan pakai peringkat cabang untuk menempatkan dokter, dan jangan buat target waktu tunggu per orang. Catat jam kunjungan dan jumlah dokter per sesi selama sebulan.",
+      "Don't use branch rankings to place doctors, and don't set per-person waiting-time targets. Record visit times and doctors per session for three months.",
+      "Jangan pakai peringkat cabang untuk menempatkan dokter, dan jangan buat target waktu tunggu per orang. Catat jam kunjungan dan jumlah dokter per sesi selama tiga bulan.",
     ),
-    limits: t("The cause of the 6.4-minute gap is unknown. The most likely explanation, scheduling, isn't in the data.", "Penyebab selisih 6,4 menit belum diketahui. Penjelasan yang paling mungkin, yaitu jadwal, tidak ada di data."),
+    limits: t(
+      "The cause of the differences between clinicians is unknown. The most likely explanation, scheduling, isn't in the data.",
+      "Penyebab perbedaan antartenaga medis belum diketahui. Penjelasan yang paling mungkin, yaitu jadwal, tidak ada di data.",
+    ),
     files: [
       { label: t("CASE 7 folder", "Folder CASE 7"), href: "https://drive.google.com/drive/folders/1KcbA2BdzrKAk2l4nnO8rOKA1IBGcFwLU", note: folderNote("workbook, memo, and recording notes", "workbook, memo, dan catatan pencatatan") },
     ],
@@ -601,10 +622,10 @@ const builtInProjects: Project[] = [
     sentence: t("RFM segmentation for an Rp 150 million quarterly retention budget", "Segmentasi RFM untuk anggaran retensi Rp 150 juta per kuartal"),
     tags: [tag.sql, tag.segmentation],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("segmentasi-rfm", "lead-en.png"), label: t("Customer share and value share by segment", "Grafik pangsa pelanggan dan pangsa nilai per segmen") },
+    figure: { src: img("segmentasi-rfm", "gambar-1.png"), label: t("Figure 1: customer share and value share by segment", "Gambar 1: pangsa pelanggan dan pangsa nilai per segmen") },
     summary: t(
-      "The Rp 150 million quarterly retention budget had been split evenly across 5,000 customers, about Rp 30,000 each. RFM segmentation shows 400 customers hold 28.7% of transaction value, and 900 customers who used to be regulars have disappeared.",
-      "Anggaran retensi Rp 150 juta per kuartal selama ini dibagi rata ke 5.000 pelanggan, sekitar Rp 30.000 per orang. Segmentasi RFM menunjukkan 400 pelanggan memegang 28,7% nilai transaksi, dan 900 pelanggan yang dulu rajin sudah menghilang.",
+      "The Rp 150 million quarterly retention budget had been split evenly across 5,000 customers, about Rp 30,000 each. RFM segmentation shows 400 customers hold 28.7% of transaction value, and 900 customers who used to be regulars have not transacted for more than a quarter.",
+      "Anggaran retensi Rp 150 juta per kuartal selama ini dibagi rata ke 5.000 pelanggan, sekitar Rp 30.000 per orang. Segmentasi RFM menunjukkan 400 pelanggan memegang 28,7% nilai transaksi, dan 900 pelanggan yang dulu rajin sudah lebih dari satu kuartal tidak bertransaksi.",
     ),
     data: t(
       "50,980 transaction rows, 48,130 clean. Dropped: 2,400 duplicates, 350 empty values, 50 non-positive values, and 50 rows after 31 March 2026.",
@@ -617,13 +638,16 @@ const builtInProjects: Project[] = [
     findings: [
       t("Champions: 400 customers, 28.7% of value. Loyal: 1,100 customers, 30.2%. At Risk: 900 customers, 24.7% or Rp 2.74 billion. Lost: 2,600 customers, 16.4%.", "Champions: 400 pelanggan, 28,7% nilai. Loyal: 1.100 pelanggan, 30,2%. At Risk: 900 pelanggan, 24,7% atau Rp 2,74 miliar. Lost: 2.600 pelanggan, 16,4%."),
       t("The Loyal cut-off is the most sensitive: lowering frequency from 8 to 6 moves 824 customers. The Champions recency cut-off moves no one.", "Ambang Loyal paling peka: menurunkan frekuensi dari 8 ke 6 memindahkan 824 pelanggan. Ambang Recency Champions tidak memindahkan siapa pun."),
-      t("Of 2,222 Loyal customers as of December 2025, 857 had become At Risk by March 2026.", "Dari 2.222 pelanggan Loyal per Desember 2025, 857 sudah menjadi At Risk pada Maret 2026."),
+      t("Of 2,222 Loyal customers as of December 2025, 857 had become At Risk by March 2026, 95% of today's At Risk group.", "Dari 2.222 pelanggan Loyal per Desember 2025, 857 sudah menjadi At Risk pada Maret 2026, 95% dari At Risk saat ini."),
     ],
     recommendation: t(
-      "Concentrate the budget on appreciation for Champions and a measured win-back test for At Risk, instead of splitting it evenly.",
-      "Pusatkan anggaran pada apresiasi untuk Champions dan uji win-back terukur untuk At Risk, tidak lagi dibagi rata.",
+      "Concentrate the budget instead of splitting it evenly: 40% on non-discount appreciation for Champions, 40% on a win-back test for At Risk with a 20% comparison group that gets nothing, 15% to keep Loyal, 5% for measurement.",
+      "Pusatkan anggaran, tidak lagi dibagi rata: 40% untuk apresiasi non-diskon bagi Champions, 40% untuk uji win-back At Risk dengan 20% kelompok pembanding yang tidak dikirimi apa pun, 15% menjaga Loyal, 5% untuk pengukuran.",
     ),
-    limits: t("The data has no campaign results or channel costs, so there's no ROI figure.", "Data tidak memuat hasil kampanye dan biaya kanal, jadi tidak ada angka ROI."),
+    limits: t(
+      "There are no campaign results or channel costs, so there's no ROI figure. Champions status rests on a March 2026 surge (without it only 285 qualify), and At Risk formed while January and February 2026 transactions fell sharply.",
+      "Tidak ada hasil kampanye dan biaya kanal, jadi tidak ada angka ROI. Status Champions bertumpu pada lonjakan Maret 2026 (tanpanya hanya 285 yang lolos), dan At Risk terbentuk saat transaksi Januari dan Februari 2026 turun tajam.",
+    ),
     files: [
       { label: t("CASE 8 folder", "Folder CASE 8"), href: "https://drive.google.com/drive/folders/1nfn1i2-QGgt1n8RW9PLb0VgzEM8JM8xP", note: folderNote("decision memo, evidence appendix, and SQL queries", "memo keputusan, lampiran bukti, dan kueri SQL") },
     ],
@@ -644,10 +668,10 @@ const builtInProjects: Project[] = [
     sentence: t("A five-stage onboarding funnel to pick the first fix", "Funnel onboarding lima tahap untuk menentukan perbaikan pertama"),
     tags: [tag.sql, tag.funnel, tag.cohort],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("analisis-funnel", "lead-en.png"), label: t("Figure 1: users per funnel stage", "Gambar 1: pengguna per tahap funnel") },
+    figure: { src: img("analisis-funnel", "gambar-1.png"), label: t("Figure 1: users at each funnel stage, and those who don't reach the next", "Gambar 1: pengguna di tiap tahap funnel, dan yang tidak sampai ke tahap berikutnya") },
     summary: t(
-      "A super-app knew its total conversion was 19.88%, but not at which stage new users were lost. A five-stage funnel shows the phone verification step loses 45.25% of sign-ups. The difference between platforms at that step is too small to split by.",
-      "Sebuah super-app tahu konversi totalnya 19,88%, tapi tidak tahu di tahap mana pengguna baru hilang. Funnel lima tahap menunjukkan langkah verifikasi telepon kehilangan 45,25% pendaftar. Selisih antarplatform di langkah itu terlalu kecil untuk dipecah.",
+      "A super-app knew its total conversion was 19.88%, but not at which stage new users were lost. A five-stage funnel shows the phone verification step loses 45.25% of sign-ups. The difference between platforms at that step is too small to split the fix by.",
+      "Sebuah super-app tahu konversi totalnya 19,88%, tapi tidak tahu di tahap mana pengguna baru hilang. Funnel lima tahap menunjukkan langkah verifikasi telepon kehilangan 45,25% pendaftar. Selisih antarplatform di langkah itu terlalu kecil untuk memecah perbaikannya.",
     ),
     data: t(
       "80,000 event rows from 20,000 users, 76,204 clean. Dropped: 3,150 duplicate rows, 500 with no event name, and 146 timestamped after the end of the data.",
@@ -656,20 +680,20 @@ const builtInProjects: Project[] = [
     decisions: [
       t("People are counted, once per stage. Counting rows inflates the first stage by 4.32%.", "Yang dihitung adalah orang, sekali per tahap. Kalau baris yang dihitung, tahap pertama membengkak 4,32%."),
       t("Each step's conversion is measured against the stage directly before it.", "Konversi tiap langkah dihitung terhadap tahap tepat sebelumnya."),
-      t("The last-six-months test uses a cohort of new visitors. Cutting by date was rejected because it produced 126.87% conversion.", "Uji enam bulan terakhir memakai kohort pengunjung baru. Potongan per tanggal ditolak karena menghasilkan konversi 126,87%."),
+      t("The recent-period test uses a cohort of new visitors since 1 October 2025. Cutting by date was rejected because it produced 126.87% conversion.", "Uji periode terbaru memakai kohort pengunjung baru sejak 1 Oktober 2025. Potongan per tanggal ditolak karena menghasilkan konversi 126,87%."),
     ],
     findings: [
-      t("Verification loses 6,730 of 14,874 sign-ups. The other three steps lose 25.43% to 30.60%.", "Verifikasi kehilangan 6.730 dari 14.874 pendaftar. Tiga langkah lain kehilangan 25,43% sampai 30,60%."),
-      t("Verification conversion by platform is 53.46% to 55.28%. The 1.82-point gap can't yet be told apart from chance.", "Konversi verifikasi per platform 53,46% sampai 55,28%. Selisih 1,82 poin belum bisa dibedakan dari kebetulan."),
-      t("159 stage memberships were recorded without the previous stage, so event logging isn't clean yet.", "159 keanggotaan tahap tercatat tanpa tahap sebelumnya, jadi pencatatan peristiwanya belum bersih."),
+      t("Verification loses 6,730 of 14,874 sign-ups, more than the last two steps combined. The other three steps lose 25.43% to 30.60%.", "Verifikasi kehilangan 6.730 dari 14.874 pendaftar, lebih banyak dari dua langkah terakhir digabung. Tiga langkah lain kehilangan 25,43% sampai 30,60%."),
+      t("Verification conversion by platform is 53.46% to 55.28%. The 1.82-point gap can't yet be told apart from chance (z 1.59).", "Konversi verifikasi per platform 53,46% sampai 55,28%. Selisih 1,82 poin belum bisa dibedakan dari kebetulan (z 1,59)."),
+      t("159 stage records skip the previous stage, and some first-visit timestamps look defective, so event logging isn't clean yet.", "159 catatan melompati tahap sebelumnya, dan sebagian stempel kunjungan pertama tampak cacat, jadi pencatatan peristiwanya belum bersih."),
     ],
     recommendation: t(
-      "One fix at the verification step for all platforms. Audit the logging first, then run the fix as a test with a control group. Baseline to track: 54.75% verification conversion.",
-      "Satu perbaikan di langkah verifikasi untuk semua platform. Audit pencatatan dulu, lalu jalankan perbaikannya sebagai uji dengan kelompok pembanding. Nilai awal yang dipantau: konversi verifikasi 54,75%.",
+      "One fix at the verification step for all platforms. Audit the logging first, starting with the code-delivery records, then run the fix as a test with a comparison group. Baseline to track: 54.37% verification conversion.",
+      "Satu perbaikan di langkah verifikasi untuk semua platform. Audit pencatatan dulu, dimulai dari catatan pengiriman kode, lalu jalankan perbaikannya sebagai uji dengan kelompok pembanding. Nilai awal yang dipantau: konversi verifikasi 54,37%.",
     ),
     limits: t(
-      "There are no records of verification codes being sent and no experiment data, so the cause and size of any improvement can't be estimated yet.",
-      "Tidak ada catatan pengiriman kode verifikasi dan tidak ada data percobaan, jadi penyebab dan besar kenaikannya belum bisa diperkirakan.",
+      "There are no records of verification codes being sent and no experiment data, so the cause and size of any improvement can't be estimated yet. New visitors per month fell 37% from October 2025.",
+      "Tidak ada catatan pengiriman kode verifikasi dan tidak ada data percobaan, jadi penyebab dan besar kenaikannya belum bisa diperkirakan. Pengunjung baru per bulan turun 37% sejak Oktober 2025.",
     ),
     files: [
       { label: t("CASE 10 folder", "Folder CASE 10"), href: "https://drive.google.com/drive/folders/1G4zWKbhuikCkt27hnz621Ik5kkPo6I1O", note: folderNote("decision memo, evidence appendix, and SQL queries", "memo keputusan, lampiran bukti, dan kueri SQL") },
@@ -688,31 +712,34 @@ const builtInProjects: Project[] = [
     sentence: t("A review priority queue for a digital wallet's risk team", "Antrean prioritas tinjauan untuk tim risiko dompet digital"),
     tags: [tag.sql, tag.rules],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("deteksi-kecurangan", "lead-en.png"), label: t("Figure 3: users affected at three threshold positions", "Gambar 3: pengguna yang tersentuh pada tiga posisi ambang") },
+    figure: { src: img("deteksi-kecurangan", "gambar-3.png"), label: t("Figure 3: users touched at three threshold positions", "Gambar 3: pengguna yang tersentuh pada tiga posisi ambang") },
     summary: t(
-      "A digital wallet's risk team can only review 200 cases a day. Four behavioral signals produce a queue of 1,395 transactions belonging to 56 users over 15 months. Lowering the threshold would touch 2,581 people without adding a single check.",
-      "Tim risiko dompet digital hanya sanggup meninjau 200 kasus sehari. Empat isyarat perilaku menghasilkan antrean 1.395 transaksi milik 56 pengguna selama 15 bulan. Menurunkan ambang akan menyentuh 2.581 orang tanpa menambah satu pemeriksaan pun.",
+      "A digital wallet's risk team can only review 200 cases a day. Four behavioral signals produce a queue of 1,395 transactions belonging to 56 users over 15 months. At full volume that becomes about 705 transactions from about 108 users a day, which only fits if reviewed by user. Lowering the threshold would touch 2,581 people without adding a single check.",
+      "Tim risiko dompet digital hanya sanggup meninjau 200 kasus sehari. Empat isyarat perilaku menghasilkan antrean 1.395 transaksi milik 56 pengguna selama 15 bulan. Pada volume penuh itu menjadi sekitar 705 transaksi dari sekitar 108 pengguna sehari, yang hanya muat kalau ditinjau per pengguna. Menurunkan ambang akan menyentuh 2.581 orang tanpa menambah satu pemeriksaan pun.",
     ),
     data: t(
       "101,039 transaction rows from 8,000 users, 98,897 clean. Dropped: 1,200 copies, 148 timestamped after the end of the period, and 794 refunds kept separately.",
       "101.039 baris transaksi dari 8.000 pengguna, 98.897 bersih. Yang dibuang: 1.200 salinan, 148 berstempel setelah akhir periode, dan 794 pengembalian dana yang dipisahkan.",
     ),
     decisions: [
-      t("The output is a review priority level (Low, Medium, High). A fraud label isn't used because the data contains no review outcomes.", "Keluarannya tingkat prioritas tinjauan (Rendah, Sedang, Tinggi). Label curang tidak dipakai karena data tidak memuat hasil pemeriksaan."),
+      t("The output is a review priority level (Low, Medium, High), organized by user. A fraud label isn't used because the data contains no review outcomes.", "Keluarannya tingkat prioritas tinjauan (Rendah, Sedang, Tinggi), disusun per pengguna. Label curang tidak dipakai karena data tidak memuat hasil pemeriksaan."),
       t("The score is rule-based. A machine learning model was rejected because there isn't a single labeled example.", "Skornya berbasis aturan. Model machine learning ditolak karena tidak ada satu pun contoh berlabel."),
       t("Thresholds and weights are marked as not yet calibrated everywhere the numbers appear.", "Ambang dan bobot ditandai belum dikalibrasi di setiap tempat angkanya muncul."),
     ],
     findings: [
       t("At most 3 people enter the queue in a day, with a peak of 14 transactions. Capacity is 200.", "Dalam sehari paling banyak 3 orang masuk antrean, dengan puncak 14 transaksi. Kapasitasnya 200."),
       t("A lowered threshold raises the queue to 4,872 transactions and 2,581 people.", "Ambang yang diturunkan menaikkan antrean menjadi 4.872 transaksi dan 2.581 orang."),
-      t("Different weights don't change the result. The level is decided only by how many signals fire.", "Bobot yang berbeda tidak mengubah hasil. Tingkat hanya ditentukan oleh berapa isyarat yang menyala."),
+      t("Different weights only change the order inside Medium. The level is decided by how many signals fire.", "Bobot yang berbeda hanya mengubah urutan di dalam Sedang. Tingkat ditentukan oleh berapa isyarat yang menyala."),
       t("1,474 of 1,616 amount signals occurred from November 2025 to March 2026, all on transactions above Rp 2 million.", "1.474 dari 1.616 isyarat jumlah terjadi November 2025 sampai Maret 2026, semuanya pada transaksi di atas Rp 2 juta."),
     ],
     recommendation: t(
-      "Review by user, one person one case. Record every review outcome as a label from day one, plus a random sample of 10 transactions outside the queue each week. Don't change thresholds before labels are collected, and don't use this list to freeze accounts automatically.",
-      "Tinjau per pengguna, satu orang satu kasus. Catat hasil tiap tinjauan sebagai label sejak hari pertama, ditambah sampel acak 10 transaksi di luar antrean tiap minggu. Jangan ubah ambang sebelum label terkumpul, dan jangan pakai daftar ini untuk menahan akun otomatis.",
+      "Review by user, one person one case carrying earlier results. Record every review outcome as a label from day one, plus 20 random transactions a day from outside the queue. Don't change thresholds before labels are collected, and don't use this list to freeze accounts automatically.",
+      "Tinjau per pengguna, satu orang satu kasus yang membawa hasil tinjauan sebelumnya. Catat hasil tiap tinjauan sebagai label sejak hari pertama, ditambah 20 transaksi acak sehari dari luar antrean. Jangan ubah ambang sebelum label terkumpul, dan jangan pakai daftar ini untuk menahan akun otomatis.",
     ),
-    limits: t("The queue's accuracy can't be calculated yet because there are no human review outcomes.", "Ketepatan antrean belum bisa dihitung karena belum ada hasil tinjauan manusia."),
+    limits: t(
+      "The queue's accuracy can't be calculated yet because there are no human review outcomes. Full-volume figures are scaled up from a dataset about 1/230 of daily volume.",
+      "Ketepatan antrean belum bisa dihitung karena belum ada hasil tinjauan manusia. Angka volume penuh adalah hasil perkalian dari dataset yang kira-kira 1/230 volume harian.",
+    ),
     files: [
       { label: t("CASE 11 folder", "Folder CASE 11"), href: "https://drive.google.com/drive/folders/1dNayzpUA-FOX7Diu8NGoEzT-vdKCQ91R", note: folderNote("decision memo, decision log, and SQL queries", "memo keputusan, catatan keputusan, dan kueri SQL") },
     ],
@@ -730,10 +757,10 @@ const builtInProjects: Project[] = [
     sentence: t("Finding the source of late-delivery penalties at a courier company", "Mencari sumber denda keterlambatan di perusahaan pengiriman"),
     tags: [tag.sql, tag.stats, tag.supplyChain],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("rantai-pasok", "lead-en.png"), label: t("Figure 1: penalties by route", "Gambar 1: denda per jalur") },
+    figure: { src: img("rantai-pasok", "gambar-1.png"), label: t("Figure 1: the period's penalties by route", "Gambar 1: denda periode per jalur") },
     summary: t(
-      "An intercity delivery company pays an Rp 50,000 penalty for every late parcel. Penalties pile up on three high-volume routes out of Jakarta, and none of the three is the worst performer. So the improvement priority is taken from volume.",
-      "Perusahaan pengiriman antarkota membayar denda Rp 50.000 untuk tiap paket yang terlambat. Denda terkumpul di tiga jalur bervolume besar dari Jakarta, dan ketiganya bukan jalur berkinerja terendah. Prioritas perbaikan karena itu diambil dari volume.",
+      "An intercity delivery company pays an Rp 50,000 penalty for every late parcel. Penalties pile up on three high-volume routes out of Jakarta, whose on-time rates sit around the company average. So the improvement priority is taken from volume.",
+      "Perusahaan pengiriman antarkota membayar denda Rp 50.000 untuk tiap paket yang terlambat. Denda terkumpul di tiga jalur bervolume besar dari Jakarta, yang ketepatannya di sekitar rata-rata perusahaan. Prioritas perbaikan karena itu diambil dari volume.",
     ),
     data: t(
       "25,800 shipment rows over 15 months, 24,740 valid shipments. 2,126 shipments had no arrival date yet and were kept separate, so 22,614 shipments were measured.",
@@ -746,9 +773,9 @@ const builtInProjects: Project[] = [
     ],
     findings: [
       t("1,809 late shipments, 92.00% on time, Rp 90.45 million in total penalties.", "1.809 kiriman terlambat, ketepatan 92,00%, total denda Rp 90,45 juta."),
-      t("All fifteen routes sit between 90.32% and 92.86%. That range can't be told apart from chance (p = 0.62).", "Kelima belas jalur berada di 90,32% sampai 92,86%. Rentang ini tidak bisa dibedakan dari kebetulan (p = 0,62)."),
+      t("All fifteen routes sit between 90.32% and 92.86%. That range can't be told apart from chance (p = 0.62), and neither can pickup days (p = 0.87).", "Kelima belas jalur berada di 90,32% sampai 92,86%. Rentang ini tidak bisa dibedakan dari kebetulan (p = 0,62), begitu juga hari pengambilan (p = 0,87)."),
       t("The lowest courier recorded 78.57% from 42 shipments, but its confidence interval is 64.06% to 88.29%. As a group, the bottom ten couriers are at 81.53%.", "Kurir terendah tercatat 78,57% dari 42 kiriman, tapi selang kepercayaannya 64,06% sampai 88,29%. Sebagai kelompok, sepuluh kurir terbawah 81,53%."),
-      t("2,113 shipments without an arrival date are already past their promise by 222 days on average.", "2.113 kiriman tanpa tanggal tiba sudah lewat janji rata-rata 222 hari."),
+      t("2,113 shipments without an arrival date are already past their promise by 222 days on average. If they all arrived late, on-time delivery would be 84.14%.", "2.113 kiriman tanpa tanggal tiba sudah lewat janji rata-rata 222 hari. Kalau semuanya ternyata tiba terlambat, ketepatan menjadi 84,14%."),
     ],
     recommendation: t(
       "Focus improvement on the three Jakarta routes. If all three reach 97%, penalties drop by Rp 19.55 million. Review the bottom ten couriers as a group. Check the physical status of the 2,113 undelivered shipments already past their promised date, and start recording the reason for every delay.",
@@ -771,31 +798,32 @@ const builtInProjects: Project[] = [
     field: field.product,
     tools: ["SQL"],
     category: "data",
-    title: t("New users fell from 340 to 25 a month while stickiness stayed at 24%", "Pengguna baru turun dari 340 ke 25 orang sebulan saat stickiness diam di 24%"),
+    title: t("First-week users of social features return 6.84 points more often, and experiment size decides which test runs first", "Pemakai fitur sosial di pekan pertama 6,84 poin lebih sering kembali, dan ukuran percobaan menentukan uji mana yang berjalan lebih dulu"),
     sentence: t("Deciding which feature to fund first from an Rp 500 million budget", "Menentukan fitur yang dibiayai lebih dulu dari anggaran Rp 500 juta"),
     tags: [tag.sql, tag.stats, tag.experiment],
     info: [t("SQL", "SQL"), ...windataMeta],
-    figure: { src: img("aktivitas-pengguna", "lead-en.png"), label: t("Figure 1: new users per month", "Gambar 1: pengguna baru per bulan") },
+    figure: { src: img("aktivitas-pengguna", "gambar-3.png"), label: t("Figure 3: 30-day return rate with and without social features in the first week", "Gambar 3: tingkat kembali 30 hari dengan dan tanpa fitur sosial di pekan pertama") },
     summary: t(
-      "The head of product at a video subscription service had to pick which feature to fund from an Rp 500 million budget. Stickiness had sat around 24% for months, far from the 35% target. What most shapes the order of steps is that new users have almost stopped arriving.",
-      "Kepala produk layanan video berlangganan harus memilih fitur yang dibiayai dari anggaran Rp 500 juta. Stickiness berbulan-bulan di sekitar 24%, jauh dari target 35%. Yang paling menentukan urutan langkah adalah pengguna baru yang hampir berhenti datang.",
+      "The head of product at a video subscription service had to pick which feature to fund from an Rp 500 million budget. Stickiness had sat around 24% for months, far from the 35% target. First-week social-feature users return more often, but how many people each experiment needs decides which test can start now.",
+      "Kepala produk layanan video berlangganan harus memilih fitur yang dibiayai dari anggaran Rp 500 juta. Stickiness berbulan-bulan di sekitar 24%, jauh dari target 35%. Pemakai fitur sosial di pekan pertama lebih sering kembali, tetapi berapa orang yang dibutuhkan tiap percobaan menentukan uji mana yang bisa dimulai sekarang.",
     ),
     data: t(
-      "60,000 activity rows, 57,051 clean, from 2,153 active users, July 2025 to March 2026. The data has no revenue, subscription status, or experiment results.",
-      "60.000 baris aktivitas, 57.051 bersih, dari 2.153 pengguna aktif, Juli 2025 sampai Maret 2026. Data tidak memuat pendapatan, status langganan, atau hasil percobaan.",
+      "60,000 activity rows, 57,051 clean, from 2,153 active users, July 2025 to March 2026. The data has no revenue, subscription status, sign-up date, or experiment results.",
+      "60.000 baris aktivitas, 57.051 bersih, dari 2.153 pengguna aktif, Juli 2025 sampai Maret 2026. Data tidak memuat pendapatan, status langganan, tanggal daftar, atau hasil percobaan.",
     ),
     decisions: [
       t("Every user count uses COUNT(DISTINCT). COUNT(*) gives a daily average of 208.2 instead of 204.4, and the error wouldn't be visible.", "Semua cacah pengguna memakai COUNT(DISTINCT). COUNT(*) memberi rata-rata harian 208,2 alih-alih 204,4, dan kesalahannya tidak akan terlihat."),
       t("A full retention curve wasn't used because nine months is only enough for the earliest cohort.", "Kurva retensi penuh tidak dipakai karena sembilan bulan hanya cukup untuk kohort paling awal."),
+      t("First-week active days were matched before comparing return rates, because social-feature users were already more active from the start.", "Jumlah hari aktif pekan pertama disamakan sebelum tingkat kembali dibandingkan, karena pemakai fitur sosial sudah lebih rajin sejak awal."),
     ],
     findings: [
-      t("New users fell 92.65%, from 340 in August 2025 to 25 in March 2026, while monthly active users held at 808 to 840.", "Pengguna baru turun 92,65%, dari 340 di Agustus 2025 ke 25 di Maret 2026, sementara pengguna aktif bulanan tetap 808 sampai 840."),
+      t("Users first seen in the data fell from 340 in August 2025 to 25 in March 2026. Without a sign-up date this may be existing users appearing, not fewer sign-ups.", "Pengguna yang pertama terlihat di data turun dari 340 di Agustus 2025 ke 25 di Maret 2026. Tanpa tanggal daftar, ini bisa jadi pengguna lama yang baru muncul, belum tentu pendaftar berkurang."),
       t("Stickiness is 24.17% to 27.08%. Reaching 35% needs 90 extra daily active users every day.", "Stickiness 24,17% sampai 27,08%. Untuk mencapai 35%, butuh 90 pengguna aktif harian tambahan setiap hari."),
-      t("Users who used social features in their first week came back 67.22% of the time, versus 58.76%. After matching first-week activity, the gap is about 6.8 points.", "Pengguna yang memakai fitur sosial di pekan pertama kembali 67,22%, dibanding 58,76%. Setelah keaktifan pekan pertama disamakan, selisihnya sekitar 6,8 poin."),
+      t("First-week social-feature users came back 67.22% of the time, versus 58.76%. After matching first-week activity, the gap is 6.84 points (2.72 to 10.96).", "Pemakai fitur sosial di pekan pertama kembali 67,22%, dibanding 58,76%. Setelah keaktifan pekan pertama disamakan, selisihnya 6,84 poin (2,72 sampai 10,96)."),
     ],
     recommendation: t(
-      "First ask the acquisition team whether the drop in new users is intentional. Rp 150 million to test viewing recommendations on existing users, Rp 150 million to test a share prompt on new users once the flow is large enough (about 1,022 people), and Rp 200 million in reserve.",
-      "Tanyakan dulu ke tim akuisisi apakah turunnya pengguna baru disengaja. Rp 150 juta untuk uji rekomendasi tayangan pada pengguna lama, Rp 150 juta untuk uji ajakan berbagi pada pengguna baru saat arusnya cukup (sekitar 1.022 orang), dan Rp 200 juta sebagai cadangan.",
+      "First ask the data team for new sign-ups per month and the product team what ran in February 2026. Rp 150 million to test viewing recommendations on existing users now, Rp 150 million to test a share prompt once new sign-ups reach about 1,600 a quarter, and Rp 200 million in reserve.",
+      "Tanyakan dulu ke tim data jumlah pendaftar baru per bulan dan ke tim produk apa yang berjalan pada Februari 2026. Rp 150 juta untuk uji rekomendasi tayangan pada pengguna lama mulai sekarang, Rp 150 juta untuk uji ajakan berbagi saat pendaftar baru cukup sekitar 1.600 orang sekuartal, dan Rp 200 juta sebagai cadangan.",
     ),
     limits: t(
       "The social-feature gap is an association, not cause and effect. Revenue uplift can't be calculated because there are no rupiah figures in the data.",
